@@ -179,7 +179,6 @@ class Main extends egret.DisplayObjectContainer {
         textfield.y = 135;
         this.textfield = textfield;
 
-
     }
 
     /**
