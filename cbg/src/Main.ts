@@ -101,12 +101,10 @@ class Main extends egret.DisplayObjectContainer {
         HttpUtil.http(url,param,"GET",header,data=>{
             // console.log(data)
             let info=JSON.parse(data)
-            console.log(info)
+            // console.log(info)
         },msg=>{
             
         })
-
-        
     }
 
     private async loadResource() {

@@ -18,7 +18,7 @@ typeDic={
 
 def formatValue(v,t):
     if t=="int":
-        return int(math.floor(v))
+        return int(math.floor(int(v)))
     elif t=="float":
         return float(v)
     else:
@@ -35,7 +35,9 @@ def genXlsx2Ts(source_dir,out_file):
         for tmpfile in files:
             name,ext=os.path.splitext(tmpfile)
             if ext==".xlsx" or ext==".xls":
-                dframe=pd.read_excel(os.path.join(source_dir,tmpfile))
+                fullPath=os.path.join(source_dir,tmpfile)
+                print "  ",fullPath
+                dframe=pd.read_excel(fullPath)
                 f.write('\texport interface _%s{'%name)
                 colNum=dframe.columns.size
                 for col in range(0,len(dframe.columns)):
@@ -50,6 +52,7 @@ def genXlsx2Ts(source_dir,out_file):
                     for j in range(0,colNum):
                         f.write('"%s":%s,'%(dframe.columns[j],formatValue(dframe.values[i][j],dframe.values[0][j])))
                     f.write('}\n')
+                f.write("\n")
                     
     f.write("}")               
     f.close()
