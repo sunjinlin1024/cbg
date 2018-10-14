@@ -101,10 +101,28 @@ class Main extends egret.DisplayObjectContainer {
         HttpUtil.http(url,param,"GET",header,data=>{
             // console.log(data)
             let info=JSON.parse(data)
+            if(info.equips&&info.equips.length>0){
+                let equips:ShopItemVO[]=[]
+                for(let item of info.equips){
+                    console.log("")
+                    if(item.desc&&item.desc!=""&&item.desc!="null"){
+                        console.log(item.desc.substr(1085,200))
+                        item.desc=item.desc.replace(/\(\(\[/g,"[").replace(/\,\]\)\)/g,"]").replace(/\(\[/g,"{").replace(/\,\]\)/g,"}")
+                        console.log(item.desc)
+                        
+                        item.desc=JSON.parse(item.desc)
+                    }
+                    if(item.other_info&&item.other_info!=""&&item.other_info!="null")item.other_info=JSON.parse(item.other_info)
+                    equips.push(item)
+                    console.log(item)
+                }
+                
+            }
             // console.log(info)
         },msg=>{
             
         })
+
     }
 
     private async loadResource() {
