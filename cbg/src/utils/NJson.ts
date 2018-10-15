@@ -22,9 +22,10 @@ module NJson{
     }
     
     export function decode(s:string, startPos=0){
+
         startPos = decode_scanWhitespace(s,startPos)
         assert(startPos<s.length, 'Unterminated JSON encoded object found at position in [' + s + ']')
-        
+        console.log(s.substr(startPos,40))
         let substr1=s.charAt(startPos)
         if(substr1=="("){
             let substr2=s.charAt(startPos+1)
@@ -77,7 +78,7 @@ module NJson{
         let obj = {}
         let key:string
         let value:any
-        assert(s.substring(startPos,startPos+1)=="([","decode_scanObject called but object does not start at position " + startPos + " in string:\n" + s)
+        assert(s.substr(startPos,2)=="([","decode_scanObject called but object does not start at position " + startPos + " in string:\n" + s)
         startPos = startPos + 2
         while(true){
             startPos = decode_scanWhitespace(s,startPos)
@@ -157,7 +158,6 @@ module NJson{
         while (endPos<s.length&&acceptableChars.indexOf(s.charAt(endPos))>=0){
             endPos = endPos + 1
         }
-        // console.log(s.substring(startPos, endPos))
         let value = Number(s.substr(startPos, endPos-startPos))
         assert(value!=null, 'Failed to scan number [ ' + value + '] in JSON string at position ' + startPos + ' : ' + endPos)
         return [value, endPos]
@@ -187,7 +187,7 @@ module NJson{
         }while(!bEnded)
         // let stringValue = 'return ' + s.substr( startPos, endPos-1)
         // let stringEval = base.loadstring(stringValue)
-        let stringValue=s.substring( startPos+1, endPos-1)
+        let stringValue=s.substr( startPos+1, endPos-startPos-1)
         assert(stringValue, 'Failed to load string [ ' + stringValue + '] in JSON4Lua.decode_scanString at position ' + startPos + ' : ' + endPos)
         return [stringValue, endPos]
     }
