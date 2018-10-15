@@ -98,31 +98,35 @@ class Main extends egret.DisplayObjectContainer {
             // "Accept-Encoding": "gzip, deflate, br",
             // "Accept-Language": "zh-CN,zh;q=0.9"
         }
-        HttpUtil.http(url,param,"GET",header,data=>{
-            // console.log(data)
-            let info=JSON.parse(data)
-            if(info.equips&&info.equips.length>0){
-                let equips:ShopItemVO[]=[]
-                for(let item of info.equips){
-                    console.log("")
-                    if(item.desc&&item.desc!=""&&item.desc!="null"){
-                        console.log(item.desc.substr(1085,200))
-                        item.desc=item.desc.replace(/\(\(\[/g,"[").replace(/\,\]\)\)/g,"]").replace(/\(\[/g,"{").replace(/\,\]\)/g,"}")
-                        console.log(item.desc)
-                        
-                        item.desc=JSON.parse(item.desc)
-                    }
-                    if(item.other_info&&item.other_info!=""&&item.other_info!="null")item.other_info=JSON.parse(item.other_info)
-                    equips.push(item)
-                    console.log(item)
-                }
-                
-            }
-            // console.log(info)
-        },msg=>{
-            
-        })
+        // HttpUtil.http(url,param,"GET",header,data=>{
+        //     // console.log(data)
 
+        //     // let info=JSON.parse(data)
+        //     // if(info.equips&&info.equips.length>0){
+        //     //     let equips:ShopItemVO[]=[]
+        //     //     for(let item of info.equips){
+        //     //         console.log("")
+                    
+        //     //         if(item.desc&&item.desc!=""&&item.desc!="null"){
+        //     //             // console.log(item.desc)
+        //     //             for(let i=0;i<length;i++){
+        //     //                 console.log(item.desc.charAt(i))
+        //     //             }
+        //     //             // item.desc=item.desc.replace(/\(\(\[/g,"[").replace(/\,\]\)\)/g,"]").replace(/\(\[/g,"{").replace(/\,\]\)/g,"}")
+        //     //             // console.log(item.desc)
+        //     //             item.desc=JSON.parse(item.desc)
+        //     //         }
+        //     //         if(item.other_info&&item.other_info!=""&&item.other_info!="null")item.other_info=JSON.parse(item.other_info)
+        //     //         equips.push(item)
+        //     //         console.log(item)
+        //     //     }
+                
+        //     // }
+        //     // console.log(info)
+        // },msg=>{
+            
+        // })
+        console.log(NJson.decode('(["aaa":1,"b":"aac","test":([1,2,3]),"eeb":(["ee1":1])])')[0])
     }
 
     private async loadResource() {
