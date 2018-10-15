@@ -20,6 +20,7 @@ interface ShopItemVO{
 	create_time:string,
 	damage:number,
 	defense:number,
+	desc0:string,
 	desc:Object,
 	eid:string,
 	equip_count:number,

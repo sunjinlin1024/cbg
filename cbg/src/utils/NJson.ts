@@ -1,6 +1,6 @@
 module NJson{
     function assert(v,msg){
-        if(!v){
+        if(v==null||v==undefined){
             console.error(msg)
         }
     }
@@ -30,11 +30,13 @@ module NJson{
         if(substr1=="("){
             let substr2=s.charAt(startPos+1)
             if(substr2=="["){
-                if(checkIsMap(s,startPos+2)){
+                // if(checkIsMap(s,startPos+2)){
                     return decode_scanObject(s,startPos) 
-                }else{
-                    return decode_scanArray(s,startPos)
-                }
+                // }else{
+                    
+                // }
+            }else if(substr2=="{"){
+                return decode_scanArray(s,startPos)
             }
         }else if("+-0123456789.e".indexOf(substr1)>=0){
             return decode_scanNumber(s,startPos)
@@ -112,14 +114,14 @@ module NJson{
 
     function decode_scanArray(s:string,startPos:number){
         let array =[]	//The return value
-        assert(s.substr(startPos,2)=="([",'decode_scanArray called but array does not start at position ' + startPos + ' in string:\n'+s )
+        assert(s.substr(startPos,2)=="({",'decode_scanArray called but array does not start at position ' + startPos + ' in string:\n'+s )
         startPos = startPos + 2
         //Infinite loop for array elements
         while(true){
             startPos = decode_scanWhitespace(s,startPos)
             assert(startPos<s.length,'JSON String }ed unexpectedly scanning array.')
             let curChar = s.charAt(startPos)
-            if(curChar==']'&&s.charAt(startPos+1)==')'){
+            if(curChar=='}'&&s.charAt(startPos+1)==')'){
                 return [array, startPos+2]
             }
             if(curChar==','){
@@ -187,7 +189,7 @@ module NJson{
         }while(!bEnded)
         // let stringValue = 'return ' + s.substr( startPos, endPos-1)
         // let stringEval = base.loadstring(stringValue)
-        let stringValue=s.substr( startPos+1, endPos-startPos-1)
+        let stringValue=s.substr( startPos+1, endPos-startPos-2)
         assert(stringValue, 'Failed to load string [ ' + stringValue + '] in JSON4Lua.decode_scanString at position ' + startPos + ' : ' + endPos)
         return [stringValue, endPos]
     }
