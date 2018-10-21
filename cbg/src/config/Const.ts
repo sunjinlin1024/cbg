@@ -65,8 +65,8 @@ module Const{
         EQUIP_ERSHI=62,//耳饰
         EQUIP_PEISHI=64,//佩饰
         EQUIP_PET=29,//召唤兽装备
-        EQUIP_CAILIAO=29,//材料
-        EQUIP_SHOUJUE=27,//魔兽要诀
-        EQUIP_NEIDAN=43,//召唤兽内丹
+        ITEM_CAILIAO=29,//材料
+        ITEM_SHOUJUE=27,//魔兽要诀
+        ITEM_NEIDAN=43,//召唤兽内丹
     }
 }
