@@ -123,6 +123,10 @@ class Main extends egret.DisplayObjectContainer {
             
         })
         // console.log(NJson.decode('(["aaa":1,"b":"aac","test":([1,2,3]),"eeb":(["ee1":1])])')[0])
+
+
+        // console.log(config.containInKind(Const.Kind.EQUIP_SHANZI,Const.Kind.ITEM))
+        // console.log(config.containInKind(Const.Kind.EQUIP_SHANZI,Const.Kind.PET))
     }
 
     private async loadResource() {
