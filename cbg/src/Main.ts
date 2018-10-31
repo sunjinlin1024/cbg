@@ -107,10 +107,10 @@ class Main extends egret.DisplayObjectContainer {
                 for(let item of info.equips){
                     if(item.desc&&item.desc!=""&&item.desc!="null"){
                         // let desc=item.desc.replace(/\,\]\)/g,"])").replace(/\,\}\)/g,"})")
-                        let desc=item.desc.replace(/\(\[/g,"{").replace(/\(\{/g,"[").replace(/\,\]\)/g,"}").replace(/\,\}\)/g,"]")
-                        // if(desc.ind)
-                        // item.desc=NJson.decode(desc)[0]
-                        item.desc=JSON.parse(desc)
+                        let desc=item.desc.replace(/\(\[/g,"{").replace(/\(\{/g,"[").replace(/\,\]\)/g,"}").replace(/\,\}\)/g,"]").replace(/\]\)/g,"}").replace(/\}\)/g,"]")
+                        let descObj=NJson.decode(desc)[0]
+                        item.desc=descObj
+                        // item.desc=JSON.parse(desc)
                         // item.desc=JSON.parse(item.desc.replace(/\(\[/g,"{").replace(/\]\)/g,"}").replace(/\(\{/g,"[").replace(/\}\)/g,"]"))
                     }
                     

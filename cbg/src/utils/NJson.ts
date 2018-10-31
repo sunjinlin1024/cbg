@@ -27,17 +27,10 @@ module NJson{
         assert(startPos<s.length, 'Unterminated JSON encoded object found at position in [' + s + ']')
         console.log(s.substr(startPos,40))
         let substr1=s.charAt(startPos)
-        if(substr1=="("){
-            let substr2=s.charAt(startPos+1)
-            if(substr2=="["){
-                // if(checkIsMap(s,startPos+2)){
-                    return decode_scanObject(s,startPos) 
-                // }else{
-                    
-                // }
-            }else if(substr2=="{"){
-                return decode_scanArray(s,startPos)
-            }
+        if(substr1=="{"){
+            return decode_scanObject(s,startPos) 
+        }else if(substr1=="["){
+            return decode_scanArray(s,startPos)
         }else if("+-0123456789.e".indexOf(substr1)>=0){
             return decode_scanNumber(s,startPos)
         }else if(substr1=='\"' || substr1=='\''){
@@ -80,29 +73,29 @@ module NJson{
         let obj = {}
         let key:string
         let value:any
-        assert(s.substr(startPos,2)=="([","decode_scanObject called but object does not start at position " + startPos + " in string:\n" + s)
-        startPos = startPos + 2
+        assert(s.charAt(startPos)=="{","decode_scanObject called but object does not start at position " + startPos + " in string:\n" + s)
+        startPos = startPos + 1
         while(true){
             startPos = decode_scanWhitespace(s,startPos)
-            assert(startPos<s.length-1, 'JSON string }ed unexpectedly while scanning object.')
+            assert(startPos<s.length-1, 'JSON string end unexpectedly while scanning object.')
             let curChar = s.charAt(startPos)
-            if(curChar==']'&&s.charAt(startPos+1)==")"){
-                return [obj,startPos+2]
+            if(curChar=='}'){
+                return [obj,startPos+1]
             }
             if(curChar==','){
                 startPos = decode_scanWhitespace(s,startPos+1)
             }
-            assert(startPos<s.length, 'JSON string }ed unexpectedly scanning object.')
+            assert(startPos<s.length, 'JSON string end unexpectedly scanning object.')
             //Scan the key
             let result=decode(s,startPos)
             key=result[0]
             startPos = result[1]
-            assert(startPos<s.length, 'JSON string }ed unexpectedly searching for value of key ' + key)
+            assert(startPos<s.length, 'JSON string end unexpectedly searching for value of key ' + key)
             startPos = decode_scanWhitespace(s,startPos)
-            assert(startPos<s.length, 'JSON string }ed unexpectedly searching for value of key ' + key)
+            assert(startPos<s.length, 'JSON string end unexpectedly searching for value of key ' + key)
             assert(s.charAt(startPos)==':','JSON object key-value assignment mal-formed at ' + startPos)
             startPos = decode_scanWhitespace(s,startPos+1)
-            assert(startPos<s.length, 'JSON string }ed unexpectedly searching for value of key ' + key)
+            assert(startPos<s.length, 'JSON string end unexpectedly searching for value of key ' + key)
             result=decode(s,startPos)
             value = result[0]
             startPos = result[1]
@@ -114,20 +107,20 @@ module NJson{
 
     function decode_scanArray(s:string,startPos:number){
         let array =[]	//The return value
-        assert(s.substr(startPos,2)=="({",'decode_scanArray called but array does not start at position ' + startPos + ' in string:\n'+s )
-        startPos = startPos + 2
+        assert(s.charAt(startPos)=="[",'decode_scanArray called but array does not start at position ' + startPos + ' in string:\n'+s )
+        startPos = startPos + 1
         //Infinite loop for array elements
         while(true){
             startPos = decode_scanWhitespace(s,startPos)
-            assert(startPos<s.length,'JSON String }ed unexpectedly scanning array.')
+            assert(startPos<s.length,'JSON String end unexpectedly scanning array.')
             let curChar = s.charAt(startPos)
-            if(curChar=='}'&&s.charAt(startPos+1)==')'){
-                return [array, startPos+2]
+            if(curChar==']'){
+                return [array, startPos+1]
             }
             if(curChar==','){
                 startPos = decode_scanWhitespace(s,startPos+1)
             }
-            assert(startPos<s.length, 'JSON String }ed unexpectedly scanning array.')
+            assert(startPos<s.length, 'JSON String end unexpectedly scanning array.')
             let result=decode(s,startPos)
             startPos = result[1]
             array.push(result[0])
