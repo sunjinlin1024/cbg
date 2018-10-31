@@ -78,6 +78,7 @@ class Main extends egret.DisplayObjectContainer {
         const userInfo = await platform.getUserInfo();
         // console.log(userInfo);
 
+        var model=new CBGModel()
         let url="https://recommd.xyq.cbg.163.com/cgi-bin/recommend.py"
         let param={
             // "callback":"Request.JSONP.request_map.request_0",
@@ -103,20 +104,21 @@ class Main extends egret.DisplayObjectContainer {
 
             let info=JSON.parse(data)
             if(info.equips&&info.equips.length>0){
-                let equips:ShopItemVO[]=[]
                 for(let item of info.equips){
                     if(item.desc&&item.desc!=""&&item.desc!="null"){
-                        let desc=item.desc.replace(/\,\]\)/g,"])").replace(/\,\}\)/g,"})")
+                        // let desc=item.desc.replace(/\,\]\)/g,"])").replace(/\,\}\)/g,"})")
+                        let desc=item.desc.replace(/\(\[/g,"{").replace(/\(\{/g,"[").replace(/\,\]\)/g,"}").replace(/\,\}\)/g,"]")
                         // if(desc.ind)
-                        item.desc=NJson.decode(desc)[0]
+                        // item.desc=NJson.decode(desc)[0]
+                        item.desc=JSON.parse(desc)
                         // item.desc=JSON.parse(item.desc.replace(/\(\[/g,"{").replace(/\]\)/g,"}").replace(/\(\{/g,"[").replace(/\}\)/g,"]"))
                     }
                     
                     if(item.other_info&&item.other_info!=""&&item.other_info!="null")item.other_info=JSON.parse(item.other_info)
-                    equips.push(item)
-                    console.log(item)
+                    // equips.push(item)
+                    // console.log(item)
                 }
-                
+                model.append(info.equips)
             }
             // console.log(info)
         },msg=>{

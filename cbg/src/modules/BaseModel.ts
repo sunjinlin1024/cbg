@@ -1,16 +1,28 @@
-class BaseModel implements IModel{
 
+class BaseModel implements IModel{
+    
     
     public get(key:string):any{
-        return null
+        return this[key]
     }
 
     public getNum(key:string):number{
-        return 0
+        if(!this[key]){
+            return 0
+        }
+        return Number(this[key])
     }
 
     public getStr(key:string):string{
-        return ""
+        if(!this[key])return ""
+        return this[key]
+    }
+
+    public initByData(data:any){
+        if(!data)return
+        for(let key in data){
+            this[key]=data[key]
+        }
     }
     
 }
