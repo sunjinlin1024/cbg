@@ -1,0 +1,3 @@
+class RoleModel extends BaseItemModel{
+    
+}

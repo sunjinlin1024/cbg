@@ -3739,57 +3739,54 @@ var egret;
         /**
          * @private
          */
-        var WebFps = (function (_super) {
-            __extends(WebFps, _super);
+        var WebFps = (function () {
             function WebFps(stage, showFPS, showLog, logFilter, styles) {
-                var _this = _super.call(this) || this;
-                _this.showPanle = true;
-                _this.fpsHeight = 0;
-                _this.WIDTH = 101;
-                _this.HEIGHT = 20;
-                _this.bgCanvasColor = "#18304b";
-                _this.fpsFrontColor = "#18fefe";
-                _this.WIDTH_COST = 50;
-                _this.cost1Color = "#18fefe";
+                this.showPanle = true;
+                this.fpsHeight = 0;
+                this.WIDTH = 101;
+                this.HEIGHT = 20;
+                this.bgCanvasColor = "#18304b";
+                this.fpsFrontColor = "#18fefe";
+                this.WIDTH_COST = 50;
+                this.cost1Color = "#18fefe";
                 // private cost2Color = "#ffff00";
-                _this.cost3Color = "#ff0000";
-                _this.arrFps = [];
-                _this.arrCost = [];
-                _this.arrLog = [];
+                this.cost3Color = "#ff0000";
+                this.arrFps = [];
+                this.arrCost = [];
+                this.arrLog = [];
                 if (showFPS || showLog) {
                     if (egret.Capabilities.renderMode == 'canvas') {
-                        _this.renderMode = "Canvas";
+                        this.renderMode = "Canvas";
                     }
                     else {
-                        _this.renderMode = "WebGL";
+                        this.renderMode = "WebGL";
                     }
-                    _this.panelX = styles["x"] === undefined ? 0 : parseInt(styles['x']);
-                    _this.panelY = styles["y"] === undefined ? 0 : parseInt(styles['y']);
-                    _this.fontColor = styles["textColor"] === undefined ? '#ffffff' : styles['textColor'].replace("0x", "#");
-                    _this.fontSize = styles["size"] === undefined ? 12 : parseInt(styles['size']);
+                    this.panelX = styles["x"] === undefined ? 0 : parseInt(styles['x']);
+                    this.panelY = styles["y"] === undefined ? 0 : parseInt(styles['y']);
+                    this.fontColor = styles["textColor"] === undefined ? '#ffffff' : styles['textColor'].replace("0x", "#");
+                    this.fontSize = styles["size"] === undefined ? 12 : parseInt(styles['size']);
                     if (egret.Capabilities.isMobile) {
-                        _this.fontSize -= 2;
+                        this.fontSize -= 2;
                     }
                     var all = document.createElement('div');
                     all.style.position = 'absolute';
                     all.style.background = "rgba(0,0,0," + styles['bgAlpha'] + ")";
-                    all.style.left = _this.panelX + 'px';
-                    all.style.top = _this.panelY + 'px';
+                    all.style.left = this.panelX + 'px';
+                    all.style.top = this.panelY + 'px';
                     all.style.pointerEvents = 'none';
                     document.body.appendChild(all);
                     var container = document.createElement('div');
-                    container.style.color = _this.fontColor;
-                    container.style.fontSize = _this.fontSize + 'px';
-                    container.style.lineHeight = _this.fontSize + 'px';
+                    container.style.color = this.fontColor;
+                    container.style.fontSize = this.fontSize + 'px';
+                    container.style.lineHeight = this.fontSize + 'px';
                     container.style.margin = '4px 4px 4px 4px';
-                    _this.container = container;
+                    this.container = container;
                     all.appendChild(container);
                     if (showFPS)
-                        _this.addFps();
+                        this.addFps();
                     if (showLog)
-                        _this.addLog();
+                        this.addLog();
                 }
-                return _this;
             }
             WebFps.prototype.addFps = function () {
                 var div = document.createElement('div');
@@ -3947,9 +3944,9 @@ var egret;
                 }
             };
             return WebFps;
-        }(egret.DisplayObject));
+        }());
         web.WebFps = WebFps;
-        __reflect(WebFps.prototype, "egret.web.WebFps", ["egret.FPSDisplay", "egret.DisplayObject"]);
+        __reflect(WebFps.prototype, "egret.web.WebFps", ["egret.FPSDisplay"]);
         egret.FPSDisplay = WebFps;
     })(web = egret.web || (egret.web = {}));
 })(egret || (egret = {}));
@@ -4394,6 +4391,21 @@ var egret;
         function getPixels(x, y, width, height) {
             if (width === void 0) { width = 1; }
             if (height === void 0) { height = 1; }
+            //webgl环境下不需要转换成canvas获取像素信息
+            if (egret.Capabilities.renderMode == "webgl") {
+                var renderTexture = void 0;
+                //webgl下非RenderTexture纹理先画到RenderTexture
+                if (!this.$renderBuffer) {
+                    renderTexture = new egret.RenderTexture();
+                    renderTexture.drawToTexture(new egret.Bitmap(this));
+                }
+                else {
+                    renderTexture = this;
+                }
+                //从RenderTexture中读取像素数据
+                var pixels = renderTexture.$renderBuffer.getPixels(x, y, width, height);
+                return pixels;
+            }
             try {
                 var surface = convertImageToCanvas(this);
                 var result = sharedContext.getImageData(x, y, width, height).data;

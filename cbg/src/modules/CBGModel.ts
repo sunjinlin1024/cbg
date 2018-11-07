@@ -11,6 +11,7 @@ class CBGModel extends BaseModel{
 			item=new BaseItemModel()
 			item.initByData(data)
 			this._shopList[item.equipid]=item
+			
 		}
 	}
 }
