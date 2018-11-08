@@ -19,9 +19,9 @@ typeDic={
 
 def formatValue(v,t):
     if t=="int":
-        return int(math.floor(int(v)))
-    elif t=="float":
-        return float(v)
+        return int(math.floor(int(v))) or 0
+    elif t=="float" or t=="number":
+        return float(v) or 0
     else:
         return '"'+v+'"'
 
