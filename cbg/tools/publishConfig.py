@@ -11,6 +11,7 @@ import math
 
 
 typeDic={
+    "number":"number",
     "int":"number",
     "float":"number",
     "string":"string",
