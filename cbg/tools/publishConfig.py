@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 import sys
 reload(sys)
 sys.setdefaultencoding('UTF-8')
@@ -19,11 +20,18 @@ typeDic={
 
 def formatValue(v,t):
     if t=="int":
+        # print v,type(v),str(v)
+        if (not v) or v!=v:
+            return 0
         return int(math.floor(int(v))) or 0
     elif t=="float" or t=="number":
+        if (not v) or v!=v:
+            return 0
         return float(v) or 0
     else:
-        return '"'+v+'"'
+        if (not v) or v!=v:
+            return ""
+        return '"'+str(v)+'"'
 
 def genXlsx2Ts(source_dir,out_file):
     print "gen xlsx to ts",os.getcwd(),source_dir,out_file

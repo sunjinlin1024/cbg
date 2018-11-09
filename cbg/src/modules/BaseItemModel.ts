@@ -87,7 +87,7 @@ class BaseItemModel extends BaseModel{
 	public xiang_qian_level:number
 	public zongshang:number
 
-    public getEvaluator():BaseEvaluator{
+    public getEvaluator():evaluator.BaseEvaluator{
         return null
     }
 
