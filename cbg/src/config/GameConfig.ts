@@ -84,12 +84,16 @@ module config{
         return kindTree
     }
 
-    export function containInKind(type:number,kind:Const.Kind){
-        let curType=type
-        while(curType!=kind){
+    export function containInKind(kindId:number,parentKind:Const.Kind){
+        let curType=kindId
+        while(curType!=parentKind){
             curType=kindTree[curType]
             if(!curType)return false
         }
-        return curType==kind
+        return curType==parentKind
+    }
+
+    export function CoinToRMB(coin:number,serverId:number){
+        return Math.floor(coin/config.area[serverId].coin_rate)
     }
 }

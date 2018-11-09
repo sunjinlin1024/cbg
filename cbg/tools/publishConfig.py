@@ -47,7 +47,7 @@ def genXlsx2Ts(source_dir,out_file):
                 fullPath=os.path.join(source_dir,tmpfile)
                 print "  ",fullPath
                 dframe=pd.read_excel(fullPath)
-                f.write('\texport interface _%s{'%name)
+                f.write('\tinterface _%s{'%name)
                 colNum=dframe.columns.size
                 for col in range(0,len(dframe.columns)):
                     key=dframe.columns[col]

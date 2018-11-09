@@ -25,7 +25,7 @@ module NJson{
 
         startPos = decode_scanWhitespace(s,startPos)
         assert(startPos<s.length, 'Unterminated JSON encoded object found at position in [' + s + ']')
-        console.log(s.substr(startPos,40))
+        // console.log(s.substr(startPos,40))
         let substr1=s.charAt(startPos)
         if(substr1=="{"){
             return decode_scanObject(s,startPos) 

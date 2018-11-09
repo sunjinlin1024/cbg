@@ -133,6 +133,7 @@ module Const{
 	export const KEY_MINJIE:string="minjie"
 	export const KEY_MOFA:string="mofa"
 	export const KEY_OTHER_INFO:string="other_info"
+	export const KEY_OTHER_INFO0:string="other_info0"
 	export const KEY_PRICE:string="price"
 	export const KEY_PRICE_INT:string="price_int"
 	export const KEY_QIXUE:string="qixue"
@@ -304,4 +305,12 @@ module Const{
 	export const OTHER_USERNUM:string="usernum"
 	export const OTHER_XIANYU:string="xianyu"
 	export const OTHER_XIULIAN:string="xiulian"
+
+	export const COMMON_KEY_CHUBEI_RATE=100001
+	export const COMMON_KEY_BB_XIU_EXP_TO_COIN=100002
+	export const COMMON_KEY_SKILL_SCHOOL_MAX=200001
+
+
+	export const SKILL_TYPE_SCHOOL=1
+	export const SKILL_TYPE_BANGPAI=2
 }

@@ -20,8 +20,8 @@ class BaseItemModel extends BaseModel{
 	public create_time:string
 	public damage:number
 	public defense:number
-	public desc0:string
-	public desc:Object
+	public desc:string
+	public desc0:Object
 	public eid:string
 	public equip_count:number
 	public equip_face_img:string
@@ -60,7 +60,8 @@ class BaseItemModel extends BaseModel{
 	public mingzhong:number
 	public minjie:number
 	public mofa:number
-	public other_info:Object
+	public other_info:string
+	public other_info0:Object
 	public price:string
 	public price_int:number
 	public qixue:number
@@ -87,12 +88,35 @@ class BaseItemModel extends BaseModel{
 	public xiang_qian_level:number
 	public zongshang:number
 
-    public getEvaluator():evaluator.BaseEvaluator{
+
+	public initByData(data:any){
+		super.initByData(data)
+		if(this.other_info&&this.other_info!=""){
+			this.other_info0=JSON.parse(this.other_info)
+		}else{
+			this.other_info0={}
+		}
+	}
+
+    protected getEvaluator():evaluator.BaseEvaluator{
         return null
     }
 
 
     public get evaluateValue():number{
-        return this.getEvaluator().evaluate(this)
+		let evaluator=this.getEvaluator()
+		if(evaluator){
+			return evaluator.evaluate(this)
+		}
+        return 0
     }
+}
+
+module modelFactory{
+	export function createModelByKindid(kindid:number):BaseItemModel{
+		if(config.containInKind(kindid,Const.Kind.ROLE)){
+			return new RoleModel()
+		}
+		return new BaseItemModel()
+	}
 }
