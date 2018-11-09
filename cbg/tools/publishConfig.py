@@ -30,7 +30,7 @@ def formatValue(v,t):
         return float(v) or 0,False
     else:
         if (not v) or str(v)=="" or str(v)=="nan":
-            return "",True
+            return '""',True
         return '"'+str(v)+'"',False
 
 def genXlsx2Ts(source_dir,out_file):
