@@ -21,15 +21,15 @@ typeDic={
 def formatValue(v,t):
     if t=="int":
         # print v,type(v),str(v)
-        if (not v) or v!=v:
+        if (not v) or str(v)=="" or str(v)=="nan":
             return 0
         return int(math.floor(int(v))) or 0
     elif t=="float" or t=="number":
-        if (not v) or v!=v:
+        if (not v) or str(v)=="" or str(v)=="nan":
             return 0
         return float(v) or 0
     else:
-        if (not v) or v!=v:
+        if (not v) or str(v)=="" or str(v)=="nan":
             return ""
         return '"'+str(v)+'"'
 
