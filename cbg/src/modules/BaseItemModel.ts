@@ -1,3 +1,4 @@
+///<reference path="../config/Const.ts" />
 class BaseItemModel extends BaseModel{
     public addon_effect_chance:number
 	public addon_fali:number
