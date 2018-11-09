@@ -22,16 +22,16 @@ def formatValue(v,t):
     if t=="int":
         # print v,type(v),str(v)
         if (not v) or str(v)=="" or str(v)=="nan":
-            return 0
-        return int(math.floor(int(v))) or 0
+            return 0,True
+        return int(math.floor(int(v))) or 0,False
     elif t=="float" or t=="number":
         if (not v) or str(v)=="" or str(v)=="nan":
-            return 0
-        return float(v) or 0
+            return 0,True
+        return float(v) or 0,False
     else:
         if (not v) or str(v)=="" or str(v)=="nan":
-            return ""
-        return '"'+str(v)+'"'
+            return "",True
+        return '"'+str(v)+'"',False
 
 def genXlsx2Ts(source_dir,out_file):
     print "gen xlsx to ts",os.getcwd(),source_dir,out_file
@@ -56,11 +56,18 @@ def genXlsx2Ts(source_dir,out_file):
                 f.write('}\n\texport let %s:{[key:%s]:_%s}={}\n'%(name,keyType,name))
                 rowNum=dframe.iloc[:,0].size
                 for i in range(2,rowNum):
-                    val=formatValue(dframe.values[i][0],dframe.values[0][0])
+                    rowEmpty=True
+                    val,_=formatValue(dframe.values[i][0],dframe.values[0][0])
                     f.write('\t%s[%s]={'%(name,val))
                     for j in range(0,colNum):
-                        f.write('"%s":%s,'%(dframe.columns[j],formatValue(dframe.values[i][j],dframe.values[0][j])))
+                        colV,colEmpty=formatValue(dframe.values[i][j],dframe.values[0][j])
+                        f.write('"%s":%s,'%(dframe.columns[j],colV))
+                        if not colEmpty:
+                            rowEmpty=False
                     f.write('}\n')
+                    if rowEmpty:
+                        print "[WARN]rowEmpty %s<%s %s"%(i,rowNum,fullPath)
+                        break
                 f.write("\n")
                     
     f.write("}")               
