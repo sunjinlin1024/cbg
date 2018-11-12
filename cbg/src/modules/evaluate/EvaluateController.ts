@@ -17,7 +17,7 @@ class EvaluateController extends BaseController{
         let param=HttpUtil.getServerRoleParam(Const.Server.SU_DI_CHUN_XIAO,pageIndex)
         HttpUtil.http(url,param,"GET",null,data=>{
             let info=JSON.parse(data)
-            thisObj._maxPage=info.pager.total_pages
+            thisObj._maxPage=Math.min(10,info.pager.total_pages)
             if(info.equips&&info.equips.length>0){
                 game.cbgModel.append(info.equips)
             }

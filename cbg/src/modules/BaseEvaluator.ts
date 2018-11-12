@@ -15,6 +15,10 @@ module evaluator{
             if(target.desc0.iExptSki2>0)num+=config.xiulian_role[target.desc0.iExptSki2].coin2All
             if(target.desc0.iExptSki4>0)num+=config.xiulian_role[target.desc0.iExptSki4].coin2All
 
+            if(target.desc0.i3FlyLv>0||target.desc0.iZhuanZhi>0){//飞升未降修要扣除降修价值
+
+            }
+
             //宠物修炼,按经验*经验比，暂定150:700000
             // let bbxs=[Const.KEY_BB_EXPT_FANGYU,Const.KEY_BB_EXPT_KANGFA,Const.KEY_BB_EXPT_GONGJI,Const.KEY_BB_EXPT_FASHU]
             // for(let key of bbxs){
@@ -50,9 +54,13 @@ module evaluator{
             }
             //经脉
 
-            
-
-            return num*config.common[Const.COMMON_KEY_CHUBEI_RATE].val
+            //储备
+            num+=target.desc0.iLearnCash
+            //以上折算为储备价值
+            num=num*config.common[Const.COMMON_KEY_CHUBEI_RATE].val
+            //金币
+            num+=target.desc0.iCash//+target.desc0.iSaving//金币和存银
+            return num
         }
     }
 
