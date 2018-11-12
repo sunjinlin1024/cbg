@@ -34,6 +34,8 @@ interface Player{
     name:string;
 }
 
+
+
 class Main extends egret.DisplayObjectContainer {
 
 
@@ -77,49 +79,7 @@ class Main extends egret.DisplayObjectContainer {
         await platform.login();
         const userInfo = await platform.getUserInfo();
         // console.log(userInfo);
-
-        var model=new CBGModel()
-        let url="https://recommd.xyq.cbg.163.com/cgi-bin/recommend.py"
-        let param={
-            // "callback":"Request.JSONP.request_map.request_0",
-            "_":Math.random(),
-            "act":"recommd_by_role",
-            "server_id":137,
-            "areaid":55,
-            "server_name":"%E8%8B%8F%E5%A0%A4%E6%98%A5%E6%99%93",
-            "page":1,
-            "query_order":"collect_num%20DESC",
-            "view_loc":"equip_list",
-            "count":15      
-        }
-        let header={
-            // "Access-Control-Allow-Origin":"*",
-            // "Content-Type":"application/x-www-form-urlencoded;charset=UTF-8",
-            // "Accept": "*/*",
-            // "Accept-Encoding": "gzip, deflate, br",
-            // "Accept-Language": "zh-CN,zh;q=0.9"
-        }
-        HttpUtil.http(url,param,"GET",header,data=>{
-            // console.log(data)
-
-            let info=JSON.parse(data)
-            if(info.equips&&info.equips.length>0){
-                for(let item of info.equips){
-                    
-                    // equips.push(item)
-                    // console.log(item)
-                }
-                model.append(info.equips)
-            }
-            // console.log(info)
-        },msg=>{
-            
-        })
-        // console.log(NJson.decode('(["aaa":1,"b":"aac","test":([1,2,3]),"eeb":(["ee1":1])])')[0])
-
-
-        // console.log(config.containInKind(Const.Kind.EQUIP_SHANZI,Const.Kind.ITEM))
-        // console.log(config.containInKind(Const.Kind.EQUIP_SHANZI,Const.Kind.PET))
+        game.init(this)
     }
 
     private async loadResource() {

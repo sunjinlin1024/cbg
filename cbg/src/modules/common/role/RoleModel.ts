@@ -1,4 +1,7 @@
+
 class RoleModel extends BaseItemModel{
+    private _otherInfo:IOtherInfo
+
     public getEvaluator():evaluator.BaseEvaluator{
         return evaluator._roleEvaluator
     }
@@ -9,7 +12,9 @@ class RoleModel extends BaseItemModel{
             let desc=data.desc.replace(/\(\[/g,"{").replace(/\(\{/g,"[").replace(/\,\]\)/g,"}").replace(/\,\}\)/g,"]").replace(/\]\)/g,"}").replace(/\}\)/g,"]")
             this.desc0=NJson.decode(desc)[0]
         }
-                    
-        // if(item.other_info&&item.other_info!=""&&item.other_info!="null")item.other_info=JSON.parse(item.other_info)
     }
+
+    public get name():string{
+		return this.desc0.cName
+	}
 }

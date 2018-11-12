@@ -21,7 +21,7 @@ class ModuleManager extends egret.EventDispatcher {
         return module;
     }
 
-    public showModule(name:string,param:any){
+    public showModule(name:string,param?:any){
         this._modules[name].show(param);
     }
 

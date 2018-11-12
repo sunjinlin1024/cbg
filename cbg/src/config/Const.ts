@@ -1,4 +1,11 @@
 module Const{
+	export const MODULE_EVALUATE:string="evaluate"
+
+
+	export enum Server{
+		SU_DI_CHUN_XIAO=137
+	}
+
     export enum Kind{
 		ALL=0,//全部
         COIN=23,//梦幻币

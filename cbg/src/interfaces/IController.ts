@@ -1,5 +1,5 @@
 declare interface IController{
     getView():IView;
-    show():boolean;
+    show(param?:any):boolean;
     hide();
 }

@@ -1,20 +1,25 @@
 class BaseController extends egret.EventDispatcher implements IController{
     protected _view:BaseView;
+    
 
     public constructor(){
         super();
         this.registHandlers()
     }
 
+    // protected registTimer(callback:Function,interval:number,repeateCount:number=0){
+    //     game.timerManager.registTimer(()=>{},interval,repeateCount)
+    // }
+
     public getView():IView{
         return this._view;
     }
 
-    public show():boolean{
+    public show(param?:any):boolean{
         if(!this._view){
             this._view=this.createView()
         }
-        this._view.show()
+        if(this._view)this._view.show()
         return true;
     }
 

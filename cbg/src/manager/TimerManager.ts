@@ -8,11 +8,11 @@ interface TimerObject {
 }
 
 class TimerManager extends egret.EventDispatcher {
-    public static instance:TimerManager=new TimerManager();
     private _id:number=0;
 
     private _timers:TimerObject[];
     private _interval:number;
+    private _curTime=egret.getTimer()
 
     public constructor(){
         super()
@@ -37,10 +37,13 @@ class TimerManager extends egret.EventDispatcher {
         }
     }
 
-    private onTimer(dt:number){
+    private onTimer(){
+        let curTime=egret.getTimer()
+        let dt=(curTime-this._curTime)*0.001
+        this._curTime=curTime
         var count=this._timers.length
         var obj
-        for(var i=count;i>=0;i--){
+        for(var i=count-1;i>=0;i--){
             obj=this._timers[i];
             obj.time+=dt;
             if(obj.time>=obj.interval)
