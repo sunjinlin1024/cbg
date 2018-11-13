@@ -1,0 +1,2918 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>梦幻西游藏宝阁</title>
+
+<script>
+(function() {
+  var proto = /^http:/.test(location.href) ? 'http:' : 'https:';
+  if ('https://xyq.cbg.163.com'.indexOf(proto) < 0) { 
+    var href = location.href;
+    var url = href.replace(/^http:/, 'https:');
+    if (proto == 'https:') {
+      url = href.replace(/^https:/, 'http:');
+    }
+    window.location = url;
+  }
+})();
+</script>
+
+<script type="text/javascript">
+!function(t,n,r){function e(t){return t>Math.random()}function o(t,n){return t.indexOf(n)>=0}function a(t,n,r){t.attachEvent?t.attachEvent("on"+n,r):t.addEventListener(n,r,!1)}function i(t,n){var r=[];if(n){for(var e in n)n.hasOwnProperty(e)&&r.push(e+"="+N(n[e]));t+=(o(t,"?")?"&":"?")+r.join("&")}return t}function u(t,n,r){var e,o=new Image,a=!0,i=function(){clearTimeout(e),o.onload=o.onerror=l,n&&n(a);try{o=l,delete o}catch(t){}},u=function(){a=!1,i()};e=r&&setTimeout(u,r),o.onload=i,o.onerror=u,o.src=t}function c(t,n){t.product=w.domain.split(".")[0];var e=w.referrer;g||(g=function(t){var n=w.cookie.match("(^|;)\\s*"+t+"\\s*=\\s*([^;]+)");return n?n.pop():""}("fingerprint")),t.useragent=navigator.userAgent,e&&(t.from=e),g&&(t.fingerprint=g),u(i(r,t),n)}function f(){return E&&E.now?Math.round(E.now()):(new Date).getTime()}function s(t,n,r){var e=r?v:d,o=n-t;return o<0?(e=p,o=0):o>18e5&&(e=h,o=0),{status:e,duration:o}}function m(t,n){var r=b,e=n;if(y=!1,E){var o=E.timing||{};o.navigationStart&&(r=o.navigationStart),o.loadEventEnd&&(e=o.loadEventEnd),!t&&E.now&&(r=0,e=parseInt(E.now()))}var a=s(r,e,t),i={log:"page_load",status:a.status,time:a.duration};a.status!=v&&(i.time_start=r,i.time_end=e),c(i),setTimeout(function(){},100)}var g,l=null,v=1,d=-1,p=-2,h=-3,w=t.document,N=t.encodeURIComponent,E=t.performance;if(e(.01)){var _,b=f(),y=!0;a(t,"beforeunload",function(){y&&(clearTimeout(_),m(!1,f()))}),a(t,"load",function(){if(y){var t=f();_=setTimeout(function(){m(!0,t)},100)}})}e(.01)&&setTimeout(function(){var t=f();u(i(n+"/images/empty.gif",{v:t}),function(r){var e=s(t,f(),r);c({log:"cdn_ping",status:e.status,domain:n,time:e.duration})},3e4)},3e3),function(){var r=!1,e=!0,a={},i=function(t){var n=t.stack.replace(/\n/gi,"").split(/\bat\b/).slice(0,9).join("@").replace(/\?[^:]+/gi,""),r=t.toString();return o(n,r)||(n=r+"@"+n),n},u=function(t){f(function(t){try{if(t.stack){var n=t.stack.match("https?://[^)^\n]+"),r=(n=n?n[0]:"").match(":(\\d+):(\\d+)");r||(r=[0,0,0]);var e=i(t),o=n.replace(r[0],"");return t.fnName&&(o+=":"+t.fnName),{msg:t.message,info:e,rowNum:r[1],colNum:r[2],target:o}}return t.name&&t.message&&t.description?{target:t.fnName,msg:t.message,info:"name:"+t.name+",desc:"+t.description+",number:"+t.number}:t}catch(a){return{msg:"__parse_error__",info:(a.message||a.toString())+"-"+t.toString()}}}(t))},f=function(t){if(!function(t){if(!t)return!0;if(!e){var n=t.msg;if(o(n,"ReferenceError")||o(n,"\u672A\u5B9A\u4E49"))return!0}return r||function(t){var n=t.target+t.msg;return!!a[n]||(a[n]=!0,!1)}(t)}(t)){var n={log:"js_error",filename:t.target,msg:t.msg,info:t.info};t.rowNum&&(n.linenumber=t.rowNum+":"+t.colNum),c(n)}},s=t.onerror;t.onerror=function(n,r,e,o,a){var u=n;a&&a.stack&&(u=i(a)),function(t,n){return Object.prototype.toString.call(t)==="[object "+(n||"Object")+"]"}(u,"Event")&&(u+=u.type?"--"+u.type+"--"+(u.target?u.target.tagName+"::"+u.target.src:""):""),f({msg:n,info:u,target:r,rowNum:e,colNum:o}),s&&s.apply(t,arguments)},t.addEventListener?t.addEventListener("error",function(t,e){var a=t.target,i=(a.tagName||"").toUpperCase();if(o(["IMG","SCRIPT","LINK"],i)&&null===a.getAttribute("no-tracer")&&"prefetch"!==a.getAttribute("rel")){if(o(e="LINK"==i?a.href:a.src,"/1.gif?"))return;o(e,n)&&"SCRIPT"==i&&(r=!0),c({log:"js_error",filename:e,msg:"LOAD_FAILED"})}},!0):e=!1;var m,g={watch:function(n,r){return function(){try{return n.apply(this,r||arguments)}catch(o){if(o.fnName=/^function\s+[^\(]*/.exec(n.toString())[0],u(o),!m){var e=t.onerror;t.onerror=function(){},m=setTimeout(function(){t.onerror=e,m=null},50)}throw o}}},reportError:u,send:f};t.CBG_JS_REPORT=g}()}(window,"https://cbg-xyq.res.netease.com","//xyq-tracer.cbg.163.com/1.gif");
+</script><link href="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/css/global.css?v=0111" rel="stylesheet" type="text/css" media="all" />
+<link href="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/css/pages.css?v=0620" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/mootools-core-1.3.2.js"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/mootools-jsonp.js"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/autocomplete.js"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/util.js"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/sprite.js"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/js/sprite-hotq.js?rc0dac82ce20a6f28c91a2"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/js/test_server_list.js"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/parse_role.js"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/recommd.js"></script>
+<script type="text/javascript">
+var CgiRootUrl = 'https://xyq.cbg.163.com/cgi-bin';
+var HttpsCgiRootUrl = 'https://xyq.cbg.163.com/cgi-bin';
+var HomePage = 'https://xyq.cbg.163.com';
+var ResUrl = 'https://cbg-xyq.res.netease.com';
+var IsLogin = 0;
+var WalletData = window.safe_json_decode && safe_json_decode('{"is_locked": false, "checking_balance": 0, "balance": 0, "free_balance": 0}');
+var ServerTime = '2018-11-13 10:50:07';
+var Recommd = {
+	url: "https://recommd.xyq.cbg.163.com/cgi-bin/recommend.py"
+};
+var Tracker = {
+	url: "https://xyq-tracer.cbg.163.com"
+};
+var SafeCode = "";
+
+var StaticFileConfig = {
+	"is_using" : false,
+	"res_root" : "http://xyq.cbg.163.com/static_file",
+	"max_page" : 1
+};
+
+var ServerInfo = {
+	"area_id" : "55",
+	"area_name" : "浙江2区",
+	"server_id" : "137",
+	"server_sn" : "487",
+	"server_name" : "苏堤春晓"
+};
+window.addEvent("domready", function(){
+	fix_anonymous_menu_link();
+});
+</script>
+</head>
+
+<body>
+<!--[if lt IE 8]>
+  <link href="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/css/ie7.css" rel="stylesheet" />
+  <script src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/ie7.js"></script>
+<![endif]--><div id="recent_list_templ">
+<!--
+<% for(var i=0; i<this.order.length; i++){ %>
+	<% 
+		var equipid = this.order[i];
+		var equip = this.equips[equipid];
+		if(!equip){ continue; }
+		var icon_url = "";
+		if(equip["storage_type"] == StorageStype["role"]){
+			var role_info = js_eval(lpc_2_js(equip["equip_desc"]));
+			var iconid = get_role_iconid(role_info["iIcon"]);
+			icon_url = ResUrl + "/images/role_icon/small/" + iconid + ".gif";
+		} else {
+			icon_url = ResUrl + "/images/small/" + equip["equip_face_img"];
+		}
+	%>
+	<li>
+		<a href="<%= equip.equip_detail_url %>" target="_blank">
+			<img src="<%= icon_url %>" width="50" height="50" data_view_loc="recent_view"
+			data_equip_level="<%= equip.equip_level %>"
+			data_serverid="<%= equip.serverid %>" data_serversn="<%= equip.game_serverid %>"
+			data_equip_name="<%= htmlEncode(equip.equip_name) %>"
+			data_equip_type_desc="<%= htmlEncode(equip.equip_type_desc) %>"
+			data_storage_type="<%=equip.storage_type %>"
+			data_equip_img="<%=equip.equip_face_img %>"
+			data_equip_type="<%=equip.equip_type %>"
+			data_appointed_roleid="<%=equip.appointed_roleid || "" %>"
+			data_price="<%=equip.price %>"
+			data_seller_roleid="<%=equip.seller_roleid%>"
+			data_selling_time="<%=equip.selling_time %>"
+			data_create_time="<%=equip.create_time %>"
+			data_kindid="<%=equip.kindid %>"
+			data_status="<%=equip.status %>"
+			data_ordersn="<%=equip.game_ordersn %>"
+			data_storage_type="<%= equip.storage_type %>"
+			/>
+		</a>
+		<h3><a href="<%= equip.equip_detail_url %>"><%= equip["equip_name"]%></a></h3>
+		<p class="cBlue"><%= get_color_price(parseFloat(equip["price"])) %></p>
+	</li>
+<% } %>
+-->
+</div>
+<div id="recent_empty_templ">
+<!--
+	<li>没有记录</li>
+-->
+</div>
+<div id="recent_load_templ">
+<!--
+	<p style="padding:20px;"><img src="<%= ResUrl %>/images/loading.gif" /></p>
+-->
+</div>
+<script type="text/javascript">
+	var sprite_url = 'http://cbg.163.com/sprite.html';
+	var server_name = Cookie.read('cur_servername') || '';
+	var roleid = Cookie.read('login_user_roleid') || '';
+	roleid = (roleid == null) ? '' : roleid;
+	var level = Cookie.read('login_user_level');
+	level = (level == null) ? '' : level;
+	sprite_url += '?server_name='+encodeURIComponent(server_name)+'&roleid='+roleid+'&level='+level;
+</script>
+<div class="right_float_pannel" id="right_float_pannel">
+	<ul class="right_float_menu">
+		<li id="sprite_btn"><a id="sprite_link" class="sprite" href="http://cbg.163.com/sprite.html" target="_blank" tid="web_other_2_3">在线精灵</a></li>
+		<li style="display:none;"><a id="goto_online_customer_service" class="customer_service" href="javascript:;" data-href="<!--customer_service_url-->" tid="web_other_2_6">在线客服</a></li>
+		<li id="latest_view_btn"><a class="latest_view" href='#' onclick="return false;" tid="web_other_2_2">最近浏览</a></li>
+		<li><a class="feedback" href="https://xyq.cbg.163.com/cgi-bin/suggest.py" target="_blank" tid="web_other_2_4">意见反馈</a></li>
+		<li>
+			<a class="download_app"  href="/app/?from=cbgtoplink" target="_blank" >扫码下载
+				<span class="download_pic"></span>
+			</a>
+		</li>
+	</ul>
+	<ul class="recentList" id="recent_list_panel"></ul>
+<!-- 新精灵问答 -->
+<div id="spriteQA">
+  <a href="javascript:;" class="qa-close" hidefocus="true">&times;</a>
+  <!-- tab切换 -->
+  <div class="qa-tabs">
+    <a href="javascript:;" class="tab on" hidefocus="true">热门问题</a>
+    <a href="javascript:;" class="tab" hidefocus="true">精灵问答</a>
+    <a id="js_more_sprite_link" href="" target="_blank" style="margin-left: 15px;" hidefocus="true">更多详情&raquo;</a>
+  </div><!-- ./qa-tabs -->
+  
+  <div class="qa-main js-content">   
+    <!-- 热门问题 -->
+    <div class="hot-questions">
+      
+    </div><!-- ./hot-questions -->
+    <div class="hide" id="sprite-hot-question-template">
+      <!--
+      <% if (!this.banner.src && this.list.length <= 0) { %>
+        <div style="padding: 5px;">出现了点小问题，在正努力修复中</div>
+      <% } else { %>
+      
+        <% var banner = this.banner; %>
+        <% if (banner && banner.src) { %>
+          <% var imageText = "<img src=\""+ banner.src +"\" class=\"banner-image\" />"; %>
+          <% 
+            if (banner.text) {
+              imageText = "<a class=\"banner\" href=\"javascript:ask(&quot;"+ banner.text + "&quot;)\">" + imageText + "</a>";
+            } else if (banner.href) {
+              imageText = "<a class=\"banner\" href=\""+ banner.href + "\" target=\"_blank\">" + imageText + "</a>";
+            } else {
+              imageText = "<span class=\"banner\">" + imageText + "</span>";
+            }
+          %>
+          <%= imageText %>
+        <% } %>
+        <% if (this.list) { %>
+        <div class="hot-content" style="padding: 10px 0;">
+          <% for (var i = 0, max = this.list.length; i < max; i++) { %>
+            <% var group = this.list[i]; %>
+            <dl class="quikList">
+              <dt><%= group.title %></dt>
+              <dd class="clearfix">
+                <% var questions = group.questions; %>
+                <% for (var j = 0, jmax = questions.length; j < jmax; j++) { %>
+                  <%
+                    var text = questions[j];
+                    if (text.length > 10) { 
+                      text = text.substring(0, 10) + "..." 
+                    }
+                  %>
+                  <a href="javascript:;"><%= text %></a>
+                <% } %>
+              </dd>
+            </dl>
+          <% } %>
+        </div>
+        <% } %>
+        
+      <% } %>
+      -->
+    </div>
+  </div>
+  
+  <div class="qa-main js-content" style="display: none;">
+    <!-- 精灵问答 -->
+    <div class="qa-sprite">
+      <div class="content"></div>
+      
+      <div class="spritemm" id="evaluate_panel" style="display: none;">
+        <div id="ask_eval_mm" class="js_init">
+          <p>小精灵的回答是否解决了您的问题：</p>
+          <a href="javascript:;" class="qa-btn js_resolve">解决</a><a href="javascript:;" class="qa-btn js_reject">未解决</a>
+        </div>
+        <div id="eval_good_mm" class="js_good" style="display: none; text-align: center; padding-top: 16px;">
+          谢谢您的评价！
+        </div>
+        <div id="eval_bad_mm" class="js_bad" style="display: none; line-height: 1.5; position: relative; top: -4px;">
+          小精灵再努力研究一下！<br />
+          您还可以通过“<a href="//xyq.gm.163.com" target="_blank">客服专区</a>”尝试解决您的问题，谢谢！
+        </div>
+      </div>
+    </div><!-- ./qa-sprite -->
+  </div>
+  
+  <div class="qa-question">
+    <input id="type_box" type="text" class="input default" value="请输入你想查询的问题" />
+    <a href="javascript:ask();" class="askBtn" hidefocus="true">提交</a>
+  </div>
+</div>
+<!-- end 新精灵问答 -->
+</div>
+
+<div class="newsTip hasLayout" id="newsTip" style="display:none;z-index:15px;">
+	<p id="new_function_desc">&nbsp;<br/>&nbsp;<br/>&nbsp;</p>
+	<a id="new_function_link" href="#" class="btn1" target="_blank">点击了解&raquo;</a>
+	<a href="javascript:close_new_function_pop(0)" class="close">关闭</a>
+</div>
+
+<script type="text/javascript">
+	window.addEvent('domready', function(){
+		if(new_function_desc.trim() == '')
+			return;
+		var tt;
+		if(Browser.ie6){
+			window.addEvent("scroll", function(){
+				if(tt){clearTimeout(tt);}
+				tt = setTimeout(function(){
+					$('newsTip').setStyle("top", (window.getScroll().y+window.getSize().y - 150) + "px");
+				}, 100);
+			});
+		}
+		if(!Cookie.read('new_function_pop')){
+			$('newsTip').setStyle('display', 'block');
+		}
+		$('new_function_desc').set('html', new_function_desc);
+		$('new_function_link').addEvent('click', function(){
+			Cookie.write('new_function_pop', 1, {'duration':5});
+			window.open(new_function_url);
+			$('newsTip').setStyle('display', 'none');
+			return false;
+		});
+	});
+	function close_new_function_pop(){
+		Cookie.write('new_function_pop', 1, {'duration':2});
+		$('newsTip').setStyle('display', 'none');
+	}
+</script>
+<div class="areaTop"></div>
+<div class="header area hasLayout clearfix">
+	<h1 class="logo"><a href="https://xyq.cbg.163.com" title="梦幻西游藏宝阁首页">梦幻西游藏宝阁</a></h1>
+
+	<div class="headerInfo">
+		<div class="userInfo cWhite">
+			<p>您好，<span class="cYellow">梦幻玩家</span></p>
+			<p>浙江2区 -&gt; 苏堤春晓</p>
+			<img class="avatar" src="https://cbg-xyq.res.netease.com/images/no_login_user.gif" width="44" height="44" alt="头像" />
+		</div>
+		<p class="navLinks aWhite">
+      <a href="https://xyq.cbg.163.com">首页</a><span class="separator"></span><a id="to_login_link" href="#">登录</a><span class="separator"></span><a target="_blank" href="https://xyq.cbg.163.com/help/index.html">帮助</a><span class="separator"></span><a target="_blank" href="//xyq.gm.163.com/">客服</a><span class="separator"></span><a href="/app/?from=cbgtoplink" class="mobileLink" target="_blank" tid="web_other_1_1">藏宝阁APP<span class="download_app"></span></a>
+		</p>
+	</div>
+</div>
+<div class="areaBtm"></div>
+
+<!-- 浮动层开始，请作为body的顶级子集 -->
+<div class="soldDetail" id="TipsBox"></div>
+
+<div id="common_tips_template">
+<!--
+	<img class="bigPic" width="120" height="120" alt="大图" src="<%= this.icon_url %>" />
+	<div class="parame" style="font-size:14px;">
+		<p class="cYellow"><%= this.name %></p>
+		<p><%= this.type_desc %></p>
+		<p><%= this.desc %></p>
+	</div>
+-->
+</div>
+
+<div id="role_tips_template">
+<!--
+	<%
+		var role = this.role;
+	%>
+	
+	<div class="col1">
+		<div class="thum">
+			<img src="<%= role.icon %>" width="120" height="150" alt="大图" />
+		</div>
+		<div class="info">
+			<table width="96%" class="tb02" cellspacing="0" cellpadding="0">
+				<tr>
+					<th>昵称：</th>
+					<td><%= htmlEncode(role.nickname) %></td>
+					<th>门贡：</th>
+					<td><%= role.school_offer %></td>
+				</tr>
+				<tr>
+					<th>ID：</th>
+					<td><%= role.roleid %></td>
+					<th>帮贡：</th>
+					<td><%= role.org_offer %></td>
+				</tr>
+				<tr>
+					<th>门派：</th>
+					<td><%=get_school_name(role.school) %></td>
+					<th>等级：</th>
+					<td><%= role.level %></td>
+				</tr>
+				<tr>
+					<th>类型：</th>
+					<td><%= get_role_kind_name(role.race) %></td>
+					<th>善恶：</th>
+					<td><%= role.badness %></td>
+				</tr>
+				<tr>
+					<th>仙玉：</th>
+					<td colspan=3><%= role.xian_yu %></td>
+				</tr>
+
+				<tr>
+					<th>金钱：</th>
+					<td colspan=3><%= role.cash %></td>					
+				</tr>
+				
+				<tr>
+					<th>经验：</th>
+					<td colspan=3><%= role.upexp %></td>
+				</tr>
+			</table>
+		</div>
+		<div class="blank24 hasLayout"></div>
+		<table width="100%" class="tb02" cellspacing="0" cellpadding="0">
+			<tr>
+				<td>
+          <span class="th">冥想：</span><%= role.skill_ming_xiang %>
+        </td>
+				<td>
+          <span class="th">裁缝：</span><%= role.skill_caifeng %>
+        </td>
+				<td>
+          <span class="th">中药：</span><%= role.skill_zhongyao %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="th">打造：</span><%= role.skill_dazao %>
+        </td>
+        <td>
+          <span class="th">灵石：</span><%= role.skill_lingshi %>
+        </td>
+        <td>
+          <span class="th">熔炼：</span><%= role.skill_ronglian %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="th">强身：</span><%= role.skill_qiang_shen %>
+        </td>
+        <td>
+          <span class="th">追捕：</span><%= role.skill_zhuibu %>
+        </td>
+        <td>
+          <span class="th">健身：</span><%= role.skill_jianshen %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="th">烹饪：</span><%= role.skill_pengren %>
+        </td>
+        <td>
+          <span class="th">暗器：</span><%= role.skill_anqi %>
+        </td>
+        <td>
+          <span class="th">巧匠：</span><%= role.skill_qiaojiang %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="th">养生：</span><%= role.skill_yangsheng %>
+        </td>
+        <td>
+          <span class="th">逃离：</span><%= role.skill_taoli %>
+        </td>
+        <td>
+          <span class="th">炼金：</span><%= role.skill_lianjin %>
+        </td>
+			</tr>
+		</table>
+
+
+	</div>
+	
+	<% var school = this.school_skill; %>
+	
+	<div class="col2">
+    <% if (this.role_xiulian || this.pet_ctrl_skill) { %>
+    <div class="xiulian">
+      <table class="tb02" width="50%" cellspacing="0" cellpadding="0" style="float:left">
+        <% var role_xiu_lian = this.role_xiulian; %>
+        <% for (var i=0; i < role_xiu_lian.length; i++){ %>
+            <% var item = role_xiu_lian[i]; %>
+            <tr>
+              <th width="70px"><%= item.name %>：</th>
+              <td><%= item.info %></td>
+            </tr>
+        <% } %>	
+      </table>
+
+      <table class="tb02" width="50%" cellspacing="0" cellpadding="0" style="float:left;">
+        <% if(this.yu_shou_shu != undefined){ %>
+        <tr>
+          <th width="80px">育兽术：</th>
+          <td><%= this.yu_shou_shu %></td>
+        </tr>
+        <% } %>
+        <% var pet_ctrl_xiu_lian = this.pet_ctrl_skill; %>
+        <% for (var i=0; i < pet_ctrl_xiu_lian.length; i++){ %>
+            <% var item = pet_ctrl_xiu_lian[i]; %>
+            <tr>
+              <th width="80px"><%= item.name %>：</th>
+              <td><%= item.grade %></td>
+            </tr>
+        <% } %>
+      </table>
+      <div class="clear"></div>
+    </div>
+    <% } %>
+    
+		<div class="skill">
+			<ul>
+				<li style="left:80px; top:15px;">
+					<img src="<%= school.school_skill2_icon %>">
+					<p><%= school.school_skill2_grade %></p>
+					<h5><%= school.school_skill2_name %></h5>
+				</li>
+				<li style="left:20px; top:65px;">
+					<img src="<%= school.school_skill3_icon %>">
+					<p><%= school.school_skill3_grade %></p>
+					<h5><%= school.school_skill3_name %></h5>
+				</li>
+				<li style="left:140px; top:65px;">
+					<img src="<%= school.school_skill4_icon %>">
+					<p><%= school.school_skill4_grade %></p>
+					<h5><%= school.school_skill4_name %></h5>
+				</li>
+				<li style="left:20px; top:155px;">
+					<img src="<%= school.school_skill5_icon %>">
+					<p><%= school.school_skill5_grade %></p>
+					<h5><%= school.school_skill5_name %></h5>
+				</li>
+				<li style="left:140px; top:155px;">
+					<img src="<%= school.school_skill6_icon %>">
+					<p><%= school.school_skill6_grade %></p>
+					<h5><%= school.school_skill6_name %></h5>
+				</li>
+				<li style="left:80px; top:109px;">
+					<img src="<%= school.school_skill1_icon %>">
+					<p><%= school.school_skill1_grade %></p>
+					<h5><%= school.school_skill1_name %></h5>
+				</li>
+				<li style="left:80px; top:210px;">
+					<img src="<%= school.school_skill7_icon %>">
+					<p><%= school.school_skill7_grade %></p>
+					<h5><%= school.school_skill7_name %></h5>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+--></div>
+
+<div id="role_tips_old_template">
+  <!--
+    <img class="bigPic" width="120" height="150" alt="大图" src="<%= this.icon_url %>" />
+    <div class="parame" style="font-size:14px;">
+      <p class="cYellow"><%= this.name %></p>
+      <p><%= this.type_desc %></p>
+      <p><%= this.desc %></p>
+    </div>
+  -->
+</div>
+
+<script id="pet_tips_template" type="text/html">
+	<%
+    var pet = this.pet_attrs;
+	%>
+  <div class="solidPetTip">
+    <div class="col1">
+      <div class="thum">
+        <img src="<%= this.icon_src %>" width="120" height="120" alt="大图" />
+        <p class="f14px cWhite">名字：<span class="cYellow"><%= pet.pet_name %></span> 等级：<%= pet.pet_grade %></p>
+      </div>
+      <table width="100%" class="p_table tb02" cellspacing="0" cellpadding="0">
+        <tr>
+          <th width="28%">气　　血：</th>
+          <td width="28%"><%= pet.blood %>/<%= pet.max_blood %></td>
+          <th width="28%">体　　质：</th>
+          <td width="16%"><%= pet.soma %></td>
+        </tr>
+        <tr>
+        <th>魔　　法：</th>
+        <td><%= pet.magic %>/<%= pet.max_magic %></td>
+        <th>法　　力：</th>
+        <td><%= pet.magic_powner %></td>
+        </tr>
+        <tr>
+        <th>攻　　击：</th>
+        <td><%= pet.attack %></td>
+        <th>力　　量：</th>
+        <td><%= pet.strength %></td>
+        </tr>
+        <tr>
+        <th>防　　御：</th>
+        <td><%= pet.defence %></td>
+        <th>耐　　力：</th>
+        <td><%= pet.endurance %></td>
+        </tr>
+        <tr>
+        <th>速　　度：</th>
+        <td><%= pet.speed %></td>
+        <th>敏　　捷：</th>
+        <td><%= pet.smartness %></td>
+        </tr>
+        <tr>
+        <th>灵　　力：</th>
+        <td><%= pet.wakan %></td>
+        <th>潜　　能：</th>
+        <td><%= pet.potential %></td>
+        </tr>
+      </table>
+      <div class="blank12"></div>
+      <table width="100%" class="p_table tb02 petZiZhiTb" cellpadding="0" cellspacing="0">
+        <tr>
+          <th width="28%">攻击资质：</th>
+          <td width="28%">
+            <%= pet.attack_aptitude %>
+            <% if (pet.attack_ext) { %> <span class="added_attr">+<%= pet.attack_ext %></span> <% } %>
+          </td>
+          <th width="28%">寿　　命：</th>
+          <td width="16%"><%= pet.lifetime %></td>
+        </tr>
+        <tr>
+          <th>防御资质：</th>
+          <td>
+            <%= pet.defence_aptitude %>
+            <% if (pet.defence_ext) { %> <span class="added_attr">+<%= pet.defence_ext %></span> <% } %>
+          </td>
+          <th>成　　长：</th>
+          <td><%= pet.growth %></td>
+          
+        </tr>
+        <tr>
+          <th>体力资质：</th>
+          <td>
+            <%= pet.physical_aptitude %>
+            <% if (pet.physical_ext) { %> <span class="added_attr">+<%= pet.physical_ext %></span> <% } %>
+          </td>
+          <th>五　　行：</th>
+          <td><%= PET_WUXING_INFO[pet.five_aptitude+""] %></td>
+        </tr>
+        <tr>
+          <th>法力资质：</th>
+          <td>
+            <%= pet.magic_aptitude %>
+            <% if (pet.magic_ext) { %> <span class="added_attr">+<%= pet.magic_ext %></span> <% } %>
+          </td>
+          <% if (pet.color) { %>
+            <th>变异类型：</th>
+            <td colspan="3">
+              <%= pet.color %>
+            </td>
+          <% } else { %>
+            <th>是否宝宝：</th>
+            <td colspan="3">
+<% if (pet.is_baobao == "否"){ %>
+	<% var color = "#FF0000"; %>
+<% } else { %>
+	<% var color = "#00FF00"; %>				
+<% } %>			
+<span style="color:<%= color %>"> <%= pet.is_baobao %> </span>            </td>
+          <% } %>
+        </tr>
+        <tr>
+          <th>速度资质：</th>
+          <td>
+            <%= pet.speed_aptitude %>
+            <% if (pet.speed_ext) { %> <span class="added_attr">+<%= pet.speed_ext %></span> <% } %>
+          </td>
+          <th>灵 性 值：</th>
+          <td>
+            <%= pet.lx %>
+          </td>
+        </tr>
+        <tr>
+          <th>躲闪资质：</th>
+          <td colspan="3">
+            <%= pet.avoid_aptitude %>
+            <% if (pet.avoid_ext) { %> <span class="added_attr">+<%= pet.avoid_ext %></span> <% } %>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col2">
+      <div class="tabCont">
+        <div class="p_info">
+          <h4>技能</h4>
+          <div id="pet_tip_skill_grid" class="textCenter"></div>
+          <p class="cYellow textCenter" id="pet_tip_notice_msg" style="display:none;margin-top:5px;">更多技能查看详细页面&raquo;</p>
+        </div>
+        
+        <% if ("neidan" in pet) { %>
+          <div class="p_info">
+            <h4>内丹</h4>
+<% if (pet.neidan.length == 0) { %>
+	<p class="textCenter">无</p>
+<% } else { %>
+	<table width="100%" cellspacing="3" cellpadding="3">
+		<% for (var i=0; i < pet.neidan.length; i++){ %>
+			<% var item = pet.neidan[i]; %>
+		<tr>
+			<td><img src="<%= item.icon %>" /></td>
+			<th><%= item.name %></th>
+			<td><%= item.level %>层</td>
+		</tr>
+		<% } %>
+	</table>
+<% } %>          </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</script>
+<script id="recommands_list_template" type="html/text">
+<!--
+<%
+  var title = this.title || "根据您浏览习惯为您推荐";
+  var isSimilarRecomment = this.isSimilarRecommend;  
+%>
+<div class="hd clearfix">
+    <% if(isSimilarRecomment) { %>
+      <a href="###" class="change" style="display: none;" hidefocus="true" tid="web_buy_13">换一批</a>
+    <% } else { %>
+      <a href="###" class="change" hidefocus="true" tid="web_buy_13">换一批</a>
+    <% } %>
+    <span class="text"><%= title %></span>
+</div>
+
+<% 
+  var equips = this.equips || [];
+  var num_per_page = this.per_page || 6;
+  var view_loc = this.view_loc || "";
+  var max = Math.ceil(equips.length / num_per_page);
+%>
+<% for (var start = 1; start <= max; start++) { %>
+  <ul class="guessList" data_index="<%= start %>" <%if (start != 1) { %>style="display: none;"<%}%> >
+  <%
+    var _equips = equips.slice((start - 1) * num_per_page, start * num_per_page);
+    for (var i = 0; i < _equips.length; i++) {
+      var equip = _equips[i];
+      var url = get_equip_ico_url(equip);
+      var detail_url = get_equip_detail_url(equip, this.equip_refer);
+      var isRole = window.StorageStype && StorageStype.role == equip.storage_type;
+      var equipName = equip.equip_name;
+      if (isRole) {
+        try {
+          var desc = js_eval(lpc_2_js(equip.desc));
+          equipName = get_school_name(desc.iSchool);
+        } catch (e) { }
+      }
+  %>
+      <li class="guessItem guessItemSell">
+      <div class="guessItemCont">
+        <div class="guessItemPic">
+          <a href="<%=detail_url %>" target="_blank">
+            <img src="<%=url %>" width="50" height="50" alt="物品" data_equipid='<%=equip.game_ordersn %>' data_equip_name='<%=equip.equip_name %>' data_equip_type_desc='<%=equip.equip_type_desc %>' data_storage_type='<%=equip.storage_type %>' data_equip_img="<%=equip.equip_face_img %>" data_equip_type="<%=equip.equip_type %>" data_appointed_roleid='<%=equip.appointed_roleid %>' data_price='<%=equip.price %>' data_selling_time='<%=equip.selling_time %>' data_create_time='<%=equip.create_time %>' data_kindid='<%=equip.kindid %>' data_status='<%=equip.status %>' data_ordersn='<%=equip.game_ordersn %>' data_serversn='<%=equip.server_sn %>' data_owner_roleid='<%=equip.seller_roleid %>' data_recommd_tag='<%=equip.tag %>' data_highlights='<%=JSON.encode(equip.highlights) %>' data_equip_level="<%= equip.equip_level %>" <%if(view_loc){ %> data_view_loc="<%=view_loc%>" <%}%> >
+          </a>
+          <b class="label"></b>
+        </div>
+        <% if(isSimilarRecomment) { %>
+          <p class="guessItemText">
+            <span class="item name"><%=equipName %></span>
+            <span class="item price"><%=get_color_price(parseFloat(equip.price)) %></span>
+          </p>
+          <p class="guessItemText">
+            <span class="item info"><%=gen_highlight_html(equip.highlights, "|") %></span>
+          </p>
+          <p class="guessItemText">
+            <span class="item server"><%=equip.area_name %>-<%=equip.server_name %></span>
+          </p>
+        <% } else { %>
+          <p class="guessItemText">
+            <span class="item price"><%=get_color_price(parseFloat(equip.price)) %></span>
+            <span class="item name"><%=equip.equip_name %></span>
+            <span class="item info"><%=gen_highlight_html(equip.highlights, "|") %></span>
+          </p>
+        <% } %>
+      </div>
+      <textarea id="equip_desc_<%=equip.game_ordersn %>" style="display:none">
+        <%= equip.desc || JSON.decode(equip.other_info).desc %>
+      </textarea>
+      </li>
+  <% } %>
+  </ul>
+<% } %>
+
+<% if (this.more_url) { %>
+  <% 
+    var moreText = this.more_url_text || "查看更多";
+    var moreURL = this.more_url || "/";
+  %>
+  <a class="moreBtn" href="<%= moreURL %>" target="_blank"><%= moreText %></a>
+<% } %>
+-->
+</script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/xyq_equip_desc_parser.js"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/pet.js"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/xyq_setting.js"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/role_info_setting.js"></script>
+
+<script>
+function get_window_height()
+{
+	return Window.getHeight() + Document.getScrollTop();
+}
+
+function show_money_tips_box(el)
+{
+	var equip_desc =  parse_desc_info($("equip_desc_" + el.getAttribute("data_equipid")).value.trim());
+	var data = {
+		"name": el.getAttribute("data_equip_name"),
+		"type_desc": parse_style_info(el.getAttribute("data_equip_type_desc"), '#n'),
+		"desc": parse_style_info(equip_desc),
+		"icon_url": ResUrl + "/images/big/" + el.getAttribute("data_equip_img")
+	};
+	render_to_replace("TipsBox", "common_tips_template", data);
+	adjust_tips_position(el);
+}
+
+function show_equip_tips_box(el)
+{
+	var equip_desc =  parse_desc_info($("equip_desc_" + el.getAttribute("data_equipid")).value.trim());
+  
+	var data = {
+		"name": el.getAttribute("data_equip_name"),
+		"type_desc": parse_style_info(el.getAttribute("data_equip_type_desc"), '#n'),
+		"desc": parse_style_info(equip_desc),
+		"icon_url": ResUrl + "/images/big/" + el.getAttribute("data_equip_img")
+	};
+	render_to_replace("TipsBox", "common_tips_template", data);
+	adjust_tips_position(el);
+}
+
+function show_pet_tips_box(el)
+{
+	var pet_desc = parse_desc_info($("equip_desc_" + el.getAttribute("data_equipid")).value);
+	var pet_attrs = get_pet_attrs_info(pet_desc, true);
+	var icon_src = ResUrl + "/images/big/" + el.getAttribute("data_equip_img");
+	$('TipsBox').innerHTML = render('pet_tips_template', {"pet_attrs": pet_attrs, "icon_src": icon_src});
+	//make_grid("pet_tip_skill_grid", 3);
+	//make_skill(pet_attrs.all_skill, pet_attrs.sp_skill, 'https://cbg-xyq.res.netease.com/images/skill/', 3, "pet_tip_notice_msg");
+	var conf = {"pet_skill_url": "https://cbg-xyq.res.netease.com/images/skill/", 
+		"notice_node_name": "pet_tip_notice_msg",
+		"skill_panel_name": "pet_tip_skill_grid",
+		"table_class": "tb03"
+		};
+	show_pet_skill_in_grade(pet_attrs.all_skill, pet_attrs.sp_skill, 3, 4, conf);
+	adjust_tips_position(el);	
+}
+
+function show_role_tips_box(el) {
+	var equipid = el.getAttribute("data_equipid");
+	var other_info = parse_role_info($("equip_desc_" + equipid).value.trim());
+
+  if (other_info['iMaxExpt1'] != undefined || other_info['all_skills'] != undefined) {
+    return show_role_tips_box_common(el, other_info);
+  }
+  
+}
+
+function show_role_tips_box_common(el, other_info) {
+  function make_img_name(img_name) {
+    var img_id = parseInt(img_name)
+    var addon = "";
+    if (img_id < 10){
+      addon = "000";
+    } else if (img_id >= 10 && img_id < 100){
+      addon = "00";
+    } else if (img_id >= 100 && img_id < 1000){
+      addon = "0";
+    } 
+    return addon + img_name;
+  }
+
+  function get_skill_icon(skillid) {
+    var img_name = make_img_name(skillid) + ".gif";
+    return ResUrl + "/images/role_skills/" + img_name;
+  }
+    
+  function get_real_upexp(role_info){
+    var exp_num = role_info["iUpExp"];
+    if (role_info["ExpJw"] == undefined || role_info["ExpJwBase"]==undefined){
+      return exp_num;
+    }
+    exp_num += role_info["ExpJw"] * role_info["ExpJwBase"];
+    return exp_num;
+  }
+
+  function parse_role_tip_skill(role_info){
+    var life_skill    = [];
+    var ju_qing_skill = [];
+    var school_skill  = {};
+    var other_skill = {}
+    var conf = Config.skill;
+    var raw_skill_info = role_info["all_skills"];
+    //yu_shou_shu = role_info["all_skills"]["221"];
+    for (skill in raw_skill_info){
+      var info = {"skill_id":skill, "skill_grade":raw_skill_info[skill], "skill_pos":0};
+      info["skill_icon"] = get_skill_icon(skill);
+
+      // 生活技能
+      if (conf["life_skill"][skill]){
+        info["skill_name"] = conf["life_skill"][skill];
+        life_skill.push(info);
+        other_skill[skill] = info
+
+      // 门派技能
+      } else if(conf["school_skill"][skill]){
+        info["skill_name"] = conf["school_skill"][skill]["name"];
+        info["skill_pos"]  = conf["school_skill"][skill]["pos"]
+        school_skill[info['skill_pos']] = info;
+
+      // 剧情技能
+      } else if(conf["ju_qing_skill"][skill]){
+        info["skill_name"] = conf["ju_qing_skill"][skill];
+        ju_qing_skill.push(info);
+        other_skill[skill] = info
+      }
+    }
+
+    return {
+      "school_skill"  : school_skill,
+      "other_skill": other_skill
+    };
+  }
+  
+  var Config = new RoleNameConf();
+  
+  function _show_role_tips_box_common(el, other_info){
+    var skills = parse_role_tip_skill(other_info);
+    var school_skills = skills['school_skill'];
+    var other_skills = skills['other_skill'];
+    var school_skill_info = {};
+    var other_skill_info = {}
+    for (var i=1; i < 8; i++){
+      var s = school_skills[i];
+      if(s){
+        school_skill_info["school_skill" + i + "_icon"]  = s.skill_icon;
+        school_skill_info["school_skill" + i + "_grade"] = s.skill_grade;
+        school_skill_info["school_skill" + i + "_name"]  = s.skill_name;
+      } else {
+        school_skill_info["school_skill" + i + "_icon"]  = EmptySkillImg;
+        school_skill_info["school_skill" + i + "_grade"] = "";
+        school_skill_info["school_skill" + i + "_name"]  = "";
+      }
+    }
+
+    var role = {
+      "nickname": other_info['cName'],
+      'roleid': other_info['usernum'],
+      'school_offer': other_info['iSchOffer'],
+      'org_offer': other_info['iOrgOffer'],
+      'school': other_info['iSchool'],
+      'level': other_info['iGrade'],
+      'race': get_role_iconid(other_info['iIcon']),
+      'badness': other_info['iGoodness'] || other_info['iBadness'],
+      'cash': (other_info['iCash']) || 0 + (other_info['iSaving'] || 0),
+      'upexp': get_real_upexp(other_info),
+      'icon': ResUrl + '/images/bigface/' + get_role_iconid(other_info["iIcon"]) + ".gif",
+      'xian_yu': other_info['xianyu'] || 0
+    };
+
+    var key_maps = {
+      201: "skill_qiang_shen",
+      202: "skill_ming_xiang",
+      203: "skill_anqi",
+      204: "skill_dazao",
+      205: "skill_caifeng",
+      206: "skill_zhongyao",
+      207: "skill_lianjin",
+      208: "skill_pengren",
+      209: "skill_zhuibu",
+      210: "skill_taoli",
+      211: "skill_yangsheng",
+      212: "skill_jianshen",
+      216: "skill_qiaojiang",
+      217: "skill_ronglian",
+      218: "skill_lingshi",
+      230: "skill_qiang_zhuang",
+      231: "skill_cuiling",
+      237: "skill_shensu",
+      151: "skill_gudong",
+      152: "skill_jianzhu",
+      153: "skill_danyuan",
+      154: "skill_bianhua",
+      155: "skill_huoyan",
+      156: "skill_tiaoxi",
+      157: "skill_dazao",
+      158: "skill_qimen",
+      159: "skill_miaoshou",
+      160: "skill_xianling",
+      161: "skill_baoshi",
+      170: "skill_hanmo",
+      197: "skill_danqing"
+    };
+    
+    for (var p in key_maps) {
+      var s = other_skills[p];
+      var k = key_maps[p];
+      role[k] = s ? s.skill_grade: 0;
+    }
+    
+    var ctx = {
+      "role": role,
+      "school_skill": school_skill_info
+    };
+    
+    // 从 parse_role_xiulian 和 parse_pet_ctrl_skill 中，获取相关属性
+    if (window.RoleInfoParser) {
+      var proto = RoleInfoParser.prototype;
+      var data = Object.merge({}, proto, {
+        result: {},
+        raw_info: other_info
+      });
+      // 角色修炼信息 和 宠物控制技能
+      proto.parse_role_xiulian.call(data);
+      proto.parse_pet_ctrl_skill.call(data);
+      
+      Object.append(ctx, data.result || {});
+    }
+    
+    render_to_replace("TipsBox", "role_tips_template", ctx);
+    adjust_tips_position(el, $("TipsBox"));
+  }
+
+  window.show_role_tips_box_common = _show_role_tips_box_common;
+  return _show_role_tips_box_common(el, other_info);
+};
+
+
+function show_tips_box()
+{
+	var el = $(this);
+	var storage_type = el.getAttribute("data_storage_type");
+  
+  var $box = $("TipsBox");
+  $box.set('class', $box.get('class').replace(/tip\-for\-\w+/g, ''));
+  
+	if (storage_type == StorageStype["money"]){
+    $box.addClass('tip-for-money');
+		show_money_tips_box(el);
+	} else if (storage_type == StorageStype["equip"]){
+    $box.addClass('tip-for-equip');
+		show_equip_tips_box(el);
+	} else if (storage_type == StorageStype["pet"]){
+    $box.addClass('tip-for-pet');
+		show_pet_tips_box(el);
+	} else if (storage_type == StorageStype["role"]){
+    $box.addClass('tip-for-role');
+		show_role_tips_box(el);
+	}
+}
+
+function hidden_tips_box()
+{
+	$("TipsBox").setStyle("display", "none");
+}
+
+function reg_tips_event()
+{
+	var el_list = $$("#soldList .soldImg img");
+	for (var i=0; i < el_list.length; i++){
+		var el = el_list[i];
+		el.addEvent("mouseover", show_tips_box);
+		el.addEvent("mouseout", hidden_tips_box);
+	}
+}
+
+function get_role_icon(raw_info){
+    var role_info = js_eval( lpc_2_js(raw_info) );
+	return get_role_iconid(role_info["iIcon"]);
+}
+
+function set_equip_extra_info(equipid, storage_type, equip_face_img)
+{
+	if (storage_type != StorageStype["role"]){
+		$("equip_img_" + equipid).src = ResUrl + "/images/small/" + equip_face_img; 
+		return;
+	}
+	var icon = get_role_icon($("equip_desc_" + equipid).value.trim());
+	$("equip_img_" + equipid).src =  ResUrl + "/images/role_icon/small/" + icon + ".gif";
+
+}
+
+function set_img_icon(){
+	var el_list = $$("#soldList .soldImg img");
+	for (var i=0; i<el_list.length; i++){
+		var el = el_list[i];
+		var equipid = el.getAttribute("data_equipid");
+		var storage_type = parseInt(el.getAttribute("data_storage_type"));
+		var equip_face_img = el.getAttribute("data_equip_img");
+		if(storage_type != StorageStype["role"]){
+			var icon_url = ResUrl + "/images/small/" + equip_face_img;
+		} else {
+			var icon = get_role_icon($("equip_desc_"+equipid).value.trim());
+			var icon_url = ResUrl + "/images/role_icon/small/" + icon + ".gif";
+		}
+		el.src = icon_url;
+	}
+}
+
+</script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/selling_info.js?v=0117"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/fingerprint2.min.js"></script>
+
+<div id="templ_selling_info" style="display:none">
+<!--
+<%
+	var equip = this.equip;
+	var highlight = gen_highlight_html(equip.highlights, "|");
+%>
+<% if (highlight.length > 0){ %>
+	<li><strong>亮点：</strong><%= highlight %></li>
+<% } %>
+<li><strong>编号：</strong><%= equip.equipid %></li>
+
+<% if(equip.is_pass_fair_show && equip.owner_roleid && equip.owner_nickname){ %>
+<li> <strong>卖家：</strong><%= equip.owner_nickname %><img id="seller_online_icon" style="display:none;margin-top:-2px;" alt="您现在可在游戏内联系卖家（可能有短时间误差）" title="您现在可在游戏内联系卖家（可能有短时间误差）" /></li>
+<li> <strong>卖家ID：</strong><%= fix_roleid(equip.owner_roleid) %> <span id="btn_view_seller_more_equips" style="display:none"><a style="font-size:12px" href="https://xyq.cbg.163.com/cgi-bin/equipquery.py?act=get_all_seller_equips&equipid=<%= equip.equipid %>&view_loc=seller_others">查看该卖家的其他商品</a></span></li>
+<% } %>
+
+
+<% if(equip.is_selling){ %>
+		<li><strong>是否上架：</strong>已上架</li>
+		<li>
+			<strong>价格：</strong>
+			<% if (equip.valid_bargain_resp) { %>
+				<span class="price fB" style="text-decoration:line-through;text-decoration-color:red"><%= get_color_price(equip.price, false) %></span>
+				<span class="cRed fB">￥<%= (equip.valid_bargain_resp.resp_price/100).toFixed(2) %>（元）</span>
+				<% if (equip.valid_bargain_resp.status == 1) { %>
+					<span style="display:inline-block;padding:0 4px 0 10px;line-height:2;font-size:12px;color:white;border-radius:4px;background:#50b033;">卖家接受您的还价！</span>
+				<% } else { %>
+					<span style="display:inline-block;padding:0 4px 0 10px;line-height:2;font-size:12px;color:white;border-radius:4px;background:#ea581d;">卖家给您的独享价！</span>
+				<% } %>
+			<% } else { %>
+				<span class="price fB"><%= get_color_price(equip.price, true) %></span>
+			<% } %>
+			<span class="cPink fB" id="equip_price_addon_info"></span>
+		</li>
+		
+		<% if(equip.appointed_roleid){ %>
+		<li><strong>指定买家 ID：</strong><span class="cDRed fB"> <%= equip.appointed_roleid %></span></li>
+		<% } %>
+		
+		<% if (equip.storage_type == StorageStype.money || window.hide_bargin_act){ %>
+		<% } else { %>
+			<% if (equip.can_bargin) { %>
+					<li><strong>是否接受还价：</strong><input class="btn1" type="button" id="bargain_button" value="还价" /> </li>
+			<% } else { %>
+				<li><strong>是否接受还价：</strong>拒绝&nbsp;</li>
+			<% } %>
+		<% } %>
+
+	<% if(equip.is_pass_fair_show) { %>
+		<li><strong>出售剩余时间：</strong><%= equip.expire_time_desc %></li>
+	<% } else { %>
+		<li><strong>公示剩余时间：</strong><%= equip.fair_show_end_time_left %></li>
+		<li><strong>公示结束时间：</strong><%= equip.fair_show_end_time %></li>
+		<li class="cRed">公示期商品可在公示期结束前一天取出哦。</li>
+
+	<% } %>
+				
+<% } %>
+-->
+</div>
+
+<div class="pageCover" id="pageCoverCollect" style="display:none"></div>
+<div class="popupDialog" id="popupWinCollect" style="position: absolute; width: 490px; display: none;">
+  <div class="dialogWrap">
+    <div class="blockTitle">提醒<a href="javascript:;" class="dialogClose" onclick="hide_collect_panel();alert('当商品降价≥5%或50元时，你会在站内信和游戏系统消息中收到通知');" hidefocus="true"></a></div>
+		<div class="dialogCont f14px" style="padding: 20px 15px;">
+      <div class="textCenter" style="padding: 5px 0 20px 0; border-bottom: 1px solid #bdbfdb;">
+        <table style="text-align: left; margin: 0 auto;">
+          <tr>
+            <td rowspan="3" width="40px" style="padding-right: 10px;"><img src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/images/collect_suc.png"</td>
+          </tr>
+          <tr>
+            <td class="textLeft f14px fB">收藏成功</td>
+          </tr>
+          <tr>
+            <td class="textLeft f12px"><a href="https://xyq.cbg.163.com/cgi-bin/userinfo.py?act=collect_list" target="_blank" tid="web_share_1_1">查看我的收藏</a></td>
+          </tr>
+        </table>
+      </div>
+			<div style="padding: 20px 0;">
+				<div>
+          当价格 ≤ <input id="remindful_price" type="text" class="txt1 f12px" size="6" value=""/> 元，您会在站内信和游戏系统消息中收到降价通知
+        </div>
+        <div class="f12px cDGray" style="padding-top: 15px;">
+          （若不设置提醒价格，则您会在商品价格降价 ≥ 5%或50元时收到通知）
+        </div>
+			</div>
+			<p class="textCenter"><input type="button" class="btn1 f14px" value="确定" onclick="add_collect_remind_price()" style="width: 60px;" /></p>
+			<!--	以上是收藏弹窗的内容 -->
+		</div>
+  </div>
+</div>
+
+<div class="pageCover" id="pageCover" style="display:none"></div>
+
+
+
+<input type="hidden" value="1000000.0" id="max_price" />
+
+<script>
+var trace_log_name = ["in_equip_detail_page", "recommd_in_equip_detail_page"];
+var equip_refer_loc = "equip_list";
+var equip = {
+	"eid" : "201810110000113-137-RYYYID5EKFAU",
+	"serversn" : "487",
+	"equipid" : "4422375",
+	"equip_type" : "3745",
+	"status" : "2",
+	"kindid" : "35",
+    "equip_name": "31604343",
+	"owner_nickname" : "princeton",
+	"owner_roleid" : "31604343",
+	"price" : 903.00,
+	"equip_level" : 109,
+	"appointed_roleid" : "",
+	"expire_time_desc" : "13天18时",
+	"create_time" : "2018-10-11 00:11:01",
+	"selling_time" : "2018-11-13 05:03:06",
+	"request_time": "2018-10-11 00:11:01",
+	"fair_show_end_time_left" : "少于1分钟",
+	"fair_show_end_time" : "2018-10-11 00:11:01",
+	"is_selling":1,
+	"is_pass_fair_show":1,
+	"game_ordersn" : "487_1539187861_488735167",
+	"is_seller_online" : 0,
+	"storage_type" : 4,
+	"equip_count" : 1,
+	"server_id" : 137,
+	"highlights" : [],
+	"can_bargin" : 0,
+	"valid_bargain_resp" : safe_json_decode('null'),
+	"equip_detail_type": "<!--equip_detail_type-->",
+	"if_seller_have_more_equips" : "0"
+};
+
+window.addEvent('domready', function(){
+	init_fingerprint();
+});
+
+</script>
+<div id="role_basic_templ" style="display:none">
+<!--
+<% var basic_info = this.basic_info; %>
+<div class="cols" style="width:320px;">
+<div class="subTab">
+	<h4 class="subTabLeft role_basic_attr_tab" onclick="toggle_display(0);">人物状态</h4>
+	<h4 class="subTabRight role_basic_attr_tab off" onclick="toggle_display(1);">输出/抗性</h4>
+</div>
+<table class="tb02 role_basic_attr_table" width="100%" cellspacing="0" cellpadding="0">
+	<colgroup><col width="160"><col width="160"></colgroup>
+	<tr>
+		<td><strong>级别：</strong><%= basic_info.role_level %></td>
+		<td><strong>名称：</strong><%= htmlEncode(basic_info.nickname) %></td>
+	</tr>
+	<tr>
+		<td><strong>角色：</strong><%= basic_info.role_kind_name %></td>
+		<td><strong>人气：</strong><%= basic_info.pride %></td>
+	</tr>
+	<tr>
+		<td><strong>帮派：</strong><%= basic_info.org %></td>
+		<td><strong>帮贡：</strong><%= basic_info.org_offer %></td>
+	</tr>
+	<tr>
+		<td><strong>门派：</strong><%= basic_info.school %></td>
+		<td><strong>门贡：</strong><%= basic_info.school_offer %></td>
+	</tr>
+	<tr>
+		<td><strong>气血：</strong><%= basic_info.hp_max %></td>
+		<td><strong>体质：</strong><%= basic_info.cor_all %></td>
+	</tr>
+	<tr>
+		<td><strong>魔法：</strong><%= basic_info.mp_max %></td>
+		<td><strong>魔力：</strong><%= basic_info.mag_all %></td>
+	</tr>
+	<tr>
+		<td><strong>命中：</strong><%= basic_info.att_all %></td>
+		<td><strong>力量：</strong><%= basic_info.str_all %></td>
+	</tr>
+	<tr>
+		<td><strong>伤害：</strong><%= basic_info.damage_all %></td>
+		<td><strong>耐力：</strong><%= basic_info.res_all %></td>
+	</tr>
+	<tr>
+		<td><strong>防御：</strong><%= basic_info.def_all %></td>
+		<td><strong>敏捷：</strong><%= basic_info.spe_all %></td>
+	</tr>
+	<tr>
+		<td><strong>速度：</strong><%= basic_info.dex_all %></td>
+		<td><strong>潜力：</strong><%= basic_info.point %></td>
+	</tr>
+	<tr>
+		<% if (basic_info.fa_shang != undefined){ %>
+			<td><strong>法伤：</strong><%= basic_info.fa_shang %></td>
+		<% } else { %>
+			<td><strong>躲避：</strong><%= basic_info.dod_all %></td>
+		<% } %>
+		<td><strong>靓号特效：</strong><%= basic_info.is_niceid %></td>		
+	</tr>
+	<tr>
+		<% if (basic_info.fa_fang != undefined){ %>
+			<td><strong>法防：</strong><%= basic_info.fa_fang %></td>		
+		<% } else { %>
+			<td><strong>灵力：</strong><%= basic_info.mag_def_all %></td>
+		<% } %>
+		<td><strong>成就点数：</strong><%= basic_info.chengjiu %></td>
+	</tr>
+
+	<tr>
+		<td><strong>获得经验：</strong><%= basic_info.upexp %></td>
+		<td><strong>已用潜能果数量：</strong><%= basic_info.qian_neng_guo %></td>
+	</tr>
+	<tr>
+		<td>
+			<% if(basic_info.qian_yuan_dan.new_value === undefined) { %>
+				<strong>已兑换乾元丹数量：</strong><%= basic_info.qian_yuan_dan.old_value %>
+			<% } else { %>
+				<strong>新版乾元丹数量：</strong><%= basic_info.qian_yuan_dan.new_value %>
+			<% } %>
+		</td>
+		<td><strong>总经验：</strong><%= basic_info.sum_exp %></td>
+	</tr>
+	<tr>
+		<td><strong>月饼粽子食用量：</strong><%= basic_info.add_point %></td>
+		<td><strong>原始种族：</strong><%= basic_info.ori_race %>
+	</tr>
+	<tr>
+		<td><strong>已获得机缘属性：</strong><%= basic_info.ji_yuan %></td>
+		<td><strong>飞升/渡劫/化圣：</strong><%= basic_info.fly_status %>		
+	</tr>
+	<tr>
+		<td><strong>历史门派：</strong><%= basic_info.changesch %></td>
+		<td><strong>属性保存方案：</strong><%= basic_info.propkept %></td>
+	</tr>
+</table>
+<table class="tb02 role_basic_attr_table" width="100%" cellspacing="0" cellpadding="0" style="display:none;">
+	<% if(!basic_info.other_attr){ %>
+		<colgroup><col width="320"></colgroup>
+		<tr>
+			<td><br/>重新寄售后才能显示</td>
+		</tr>
+	<% }else{ %>
+		<colgroup><col width="160"><col width="160"></colgroup>
+		<tr>
+			<td colspan="2"><strong style="font-size:16px;color:white;">输出</strong></td>
+		</tr>
+		<tr>
+			<td><strong>灵力：</strong></td>
+			<td><%= basic_info.other_attr["14"] %></td>
+		</tr>
+		<tr>
+			<td><strong>物理暴击等级：</strong></td>
+			<td><%= basic_info.other_attr["6"] %>(<%= (basic_info.other_attr["6"] * 10 / Math.max(30, basic_info.role_level)).toFixed(2) %>%)</td>
+		</tr>
+		<tr>
+			<td><strong>穿刺等级：</strong></td>
+			<td><%= basic_info.other_attr["8"] %>(<%= (basic_info.other_attr["8"] * 3 / Math.max(30, basic_info.role_level)).toFixed(2) %>%)</td>
+		</tr>
+		<tr>
+			<td><strong>狂暴等级：</strong></td>
+			<td><%= basic_info.other_attr["5"] %>(<%= (basic_info.other_attr["5"] * 3 / Math.max(30, basic_info.role_level)).toFixed(2) %>%)</td>
+		</tr>
+		<tr>
+			<td><strong>法术暴击等级：</strong></td>
+			<td><%= basic_info.other_attr["7"] %>(<%= (basic_info.other_attr["7"] * 10 / Math.max(30, basic_info.role_level)).toFixed(2) %>%)</td>
+		</tr>
+		<tr>
+			<td><strong>法术伤害结果：</strong></td>
+			<td><%= basic_info.other_attr["12"] %></td>
+		</tr>
+		<tr>
+			<td><strong>封印命中等级：</strong></td>
+			<td><%= basic_info.other_attr["1"] %>(<%= (basic_info.other_attr["1"] * 10 / Math.max(30, basic_info.role_level + 25)).toFixed(2) %>%)</td>
+		</tr>
+		<tr>
+			<td><strong>治疗能力：</strong></td>
+			<td><%= basic_info.other_attr["3"] %></td>
+		</tr>
+
+		<tr>
+			<td colspan="2"><strong style="font-size:16px;color:white;">抗性</strong></td>
+		</tr>
+		<tr>
+			<td><strong>抗物理暴击等级：</strong></td>
+			<td><%= basic_info.other_attr["9"] %>(<%= (basic_info.other_attr["9"] * 10 / Math.max(30, basic_info.role_level)).toFixed(2) %>%)</td>
+		</tr>
+		<tr>
+			<td><strong>格挡值：</strong></td>
+			<td><%= basic_info.other_attr["11"] %></td>
+		</tr>
+		<tr>
+			<td><strong>抗法术暴击等级：</strong></td>
+			<td><%= basic_info.other_attr["10"] %>(<%= (basic_info.other_attr["10"] * 10 / Math.max(30, basic_info.role_level)).toFixed(2) %>%)</td>
+		</tr>
+		<tr>
+			<td><strong>抵抗封印等级：</strong></td>
+			<td><%= basic_info.other_attr["2"] %>(<%= (basic_info.other_attr["2"] * 10 / Math.max(30, basic_info.role_level + 25)).toFixed(2) %>%)</td>
+		</tr>
+		<tr>
+			<td><strong>气血回复效果：</strong></td>
+			<td><%= basic_info.other_attr["4"] %></td>
+		</tr>
+		<tr>
+			<td><strong>躲避：</strong></td>
+			<td><%= basic_info.other_attr["13"] %></td>
+		</tr>
+	<% } %>
+</table>
+</div>
+
+<div class="cols" style="width:320px;">
+<h4>角色修炼及宠修</h4>
+<table class="tb02" width="49%" cellspacing="0" cellpadding="0" style="float:left">
+
+	<% var role_xiu_lian = this.role_xiulian; %>
+	<% for (var i=0; i < role_xiu_lian.length; i++){ %>
+			<% var item = role_xiu_lian[i]; %>
+			<tr>
+				<th width="100"><%= item.name %>：</th>
+				<td><%= item.info %></td>
+			</tr>
+	<% } %>	
+</table>
+
+<table class="tb02" width="49%" cellspacing="0" cellpadding="0" style="float:right;">
+	<% if(this.yu_shou_shu != undefined){ %>
+	<tr>
+		<th width="100">育兽术：</th>
+		<td><%= this.yu_shou_shu %></td>
+	</tr>
+	<% } %>
+	<% var pet_ctrl_xiu_lian = this.pet_ctrl_skill; %>
+	<% for (var i=0; i < pet_ctrl_xiu_lian.length; i++){ %>
+			<% var item = pet_ctrl_xiu_lian[i]; %>
+			<tr>
+				<th width="100"><%= item.name %>：</th>
+				<td><%= item.grade %></td>
+			</tr>
+	<% } %>
+</table>
+
+<div class="blank9" style="clear:both"></div>
+<h4>房屋信息</h4>
+<table width="92%" class="tb02" cellspacing="0" cellpadding="0">
+	<tr>
+		<th width="60">婚否：</th>
+		<td><%= basic_info.is_married %></td>
+		<th>同袍：</th>
+		<td><%= basic_info.is_tongpao %></td>
+	</tr>
+	<tr>
+		<th>房屋：</th>
+		<td><%= basic_info.fangwu_info %></td>
+		<th>牧场：</th>
+		<td><%= basic_info.muchang_info %></td>
+	</tr>
+	<tr>
+		<th>庭院：</th>
+		<td><%= basic_info.tingyuan_info %></td>
+		<th>&nbsp;</th>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<th>社区：</th>
+		<td colspan=3><%= basic_info.community_info %></td>
+	</tr>
+</table>
+<div class="blank9"></div>
+<h4>积分 其他</h4>
+<table width="92%" class="tb02" cellspacing="0" cellpadding="0">
+	<tr>
+		<th width="80">比武积分：</th>
+		<td><%= basic_info.hero_score %></td>
+		<th width="80">剑会积分：</th>
+		<td><%= basic_info.sword_score %></td>
+	</tr>
+	<tr>
+		<th width="80">三界功绩：</th>
+		<td><%= basic_info.sanjie_score %></td>
+		<th>&nbsp;</th>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+</div>
+-->
+</div>
+
+<div id="skill_list_templ" style="display:none">
+<!--
+	<% 
+		var num_per_line  = 7;
+		var skills = this.skills;      
+		var skill_len = skills.length;
+		var loop_times = parseInt(skill_len/num_per_line) + (skill_len % num_per_line ? 1:0); 
+	%>
+  
+  <% if (skill_len > 0) { %>
+     <table cellspacing="0" cellpadding="0" class="skillTb">
+      <% for(var i=0; i < loop_times; i++) { %>
+         <% var items = skills.slice(i * num_per_line, (i+1) * num_per_line); %>
+         <tr>
+          <% for(var j=0; j < items.length; j++){ %>
+            <% var item = items[j]; %>
+            <td>
+              <img src="<%= item.skill_icon %>" width="40" height="40" /><p><%= item.skill_grade %></p><h5><%= item.skill_name %></h5>
+            </td>
+          <% } %>
+        </tr>
+      <% } %>
+      </table>
+  <% } else { %>
+    <div class="textCenter" style="padding-bottom:30px;">
+      无
+		</div>
+  <% } %>
+-->
+</div>
+<div id="role_skill_templ" style="display:none">
+<!--
+<% 
+	var school_skill  = this.school_skill;
+	var life_skill    = this.life_skill;
+	var ju_qing_skill = this.ju_qing_skill;
+	var shuliandu = this.shuliandu; 
+%>
+
+<div class="cols" style="width:200px;">
+	<h4>师门技能</h4>
+	<div class="skill">
+		<% if (school_skill.length > 7){ %>
+			<p class="textCenter cDYellow">师门技能信息有误</p>
+		<% } else if (school_skill.length == 0) { %>
+			<p class="textCenter cDYellow">师门技能都是0</p>
+		<% } else { %> 
+		<ul>
+			<li style="left:60px; top:0;"><img src="<%= this.school_skill2_icon %>"  /><p><%= this.school_skill2_grade %></p>
+			<h5><%= this.school_skill2_name %></h5>
+			</li>
+			<li style="left:0; top:50px;"><img src="<%= this.school_skill3_icon %>" /><p><%= this.school_skill3_grade %></p><h5><%= this.school_skill3_name %></h5></li>
+			<li style="left:120px; top:50px;"><img src="<%= this.school_skill4_icon %>"  /><p><%= this.school_skill4_grade %></p><h5><%= this.school_skill4_name %></h5></li>
+			<li style="left:0; top:140px;"><img src="<%= this.school_skill5_icon %>"  /><p><%= this.school_skill5_grade %></p><h5><%= this.school_skill5_name %></h5></li>
+			<li style="left:120px; top:140px;"><img src="<%= this.school_skill6_icon %>"  /><p><%= this.school_skill6_grade %></p><h5><%= this.school_skill6_name %></h5></li>
+			<li style="left:60px; top:94px;"><img src="<%= this.school_skill1_icon %>"  /><p><%= this.school_skill1_grade %></p><h5><%= this.school_skill1_name %></h5></li>
+			<li style="left:60px; top:200px;"><img src="<%= this.school_skill7_icon %>"  /><p><%= this.school_skill7_grade %></p><h5><%= this.school_skill7_name %></h5></li>
+		</ul>
+		<% } %>
+	</div>
+</div>
+
+<div class="cols" style="width:442px; margin-left:18px;">
+<h4>生活技能</h4>
+<div class="blank12"></div>
+<%= render("skill_list_templ", {"skills":life_skill}) %>			
+				
+<div class="blank9"></div>
+<h4>剧情技能</h4>
+<div class="blank12"></div>
+<%= render("skill_list_templ", {"skills":ju_qing_skill}) %>
+
+<p class="textRight cDYellow">剩余技能点：<%= this.left_skill_point %></p>								
+<div class="blank9"></div>
+<h4>熟练度</h4>
+<table width="92%" class="tb02" cellspacing="0" cellpadding="0">
+	<tr>
+		<th width="100">打造熟练度：</th>
+		<td><%= shuliandu.smith_skill %></td>
+		<th width="100">裁缝熟练度：</th>
+		<td><%= shuliandu.sew_skill %></td>
+	</tr>
+</table>
+</div>
+-->
+</div>
+
+<div id="role_equips_templ" style="display:none">
+<!--
+<%
+	var role_info = this.basic_info;
+%>
+<div class="cols" style="width:350px;">
+<h4>道具</h4>
+
+<table width="80%" style="margin:0 auto;" cellspacing="3" cellpadding="3" id="RoleUsingEquips">
+	<tr>
+		<td colspan="3">
+			<table cellspacing="0" cellpadding="0" class="tb03 size50">
+				<tr>
+					<td><img id="role_using_equip_187" width="50" height="50" /></td>
+					<td><img id="role_using_equip_188" width="50" height="50" /></td>
+					<td><img id="role_using_equip_190" width="50" height="50" /></td>
+					<td><img id="role_using_equip_189" width="50" height="50" /></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<table cellspacing="0" cellpadding="0" class="tb03 size50">
+				<tr>
+					<td><img id="role_using_equip_1" width="50" height="50" /></td>
+				</tr>
+				<tr>
+					<td><img id="role_using_equip_6" width="50" height="50" /></td>
+				</tr>
+				<tr>
+					<td><img id="role_using_equip_5" width="50" height="50" /></td>
+				</tr>
+			</table>
+		</td>
+		<td>
+			<table class="tb02" cellspacing="0" cellpadding="0">
+				<tr>
+					<th>现金：</th>
+					<td><%= role_info.cash %></td>
+				</tr>
+				<tr>
+					<th>存银：</th>
+					<td><%= role_info.saving %></td>
+				</tr>
+				<tr>
+					<th>储备：</th>
+					<td><%= role_info.learn_cash %></td>
+				</tr>
+				<tr>
+					<th>善恶：</th>
+					<td><%= role_info.badness %></td>
+				</tr>
+				<tr>
+					<th>仙玉：</th>
+					<td><%= role_info.xianyu %></td>
+				</tr>
+
+				<tr>
+					<th>精力：</th>
+					<td><%= role_info.energy %></td>
+				</tr>
+
+			</table>	
+
+		</td>
+		<td>
+			<table cellspacing="0" cellpadding="0" class="tb03 size50">
+				<tr>
+					<td><img id="role_using_equip_4" width="50" height="50" /></td>
+				</tr>
+				<tr>
+					<td><img id="role_using_equip_2" width="50" height="50" /></td>
+				</tr>
+				<tr>
+					<td><img id="role_using_equip_3" width="50" height="50" /></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+
+<div class="blank9"></div>
+<table cellspacing="0" cellpadding="0" class="tb03 size50" id="RoleStoreEquips">
+					
+<% 
+	var store_equips = this.not_using_equips; 
+	var num_per_line = 5 ; 
+	var equips_num   = store_equips.length; 
+	var min_row_num  = 4; 
+	var empty_img = this.empty_td_img; 
+	var loop_times = parseInt(equips_num/num_per_line) + (equips_num % num_per_line?1:0); 
+	loop_times = loop_times < 4?4:loop_times;
+%>
+
+<% for(var i=0; i < loop_times; i++) { %>
+	<% var items = store_equips.slice(i * num_per_line, (i+1) * num_per_line); %>
+	<tr>
+	
+		<% for(var j=0; j < items.length; j++){ %>
+			<% var cur_id = "store_equip_tips" + (i * num_per_line + j + 1); %>
+			<% var equip = items[j]; %>		
+			<td><img id="<%=cur_id %>" src="<%= equip.small_icon %>" data_equip_name="<%= equip.name %>" data_equip_type="<%= equip.type %>" data_equip_desc="<%= equip.desc %>" data_equip_type_desc="<%= equip.static_desc %>"  width="50" height="50" /></td>
+		<% } %>
+	
+		<% if (items.length < num_per_line){ %>
+			<% for (var m=0; m < (num_per_line - items.length); m++){ %>
+				<td></td>
+			<% } %>
+		<% } %>
+	
+	</tr>
+	
+<% } %>
+</table>		
+</div>
+<div class="cols" style="width:300px; margin-left:24px;">
+<h4>已装备法宝</h4>
+<div class="blank9"></div>
+<table cellspacing="0" cellpadding="0" class="tb03 size50" id="RoleUsingFabao">
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>		
+<div class="blank12"></div>
+<% 
+	var store_fabao_list = this.nousing_fabao.slice(); 
+	var empty_fabao_img  = this.empty_td_img; 
+
+	var num_per_line = 5; 
+	var fabao_num    = store_fabao_list.length;
+%>
+<h4>未装备的前40个法宝</h4>
+<div class="blank9"></div>
+<div id="fabao_table_wrapper" style="height:205px;width:274px;overflow:auto;overflow-x:hidden;margin:0 auto;">
+	<table width="256" style="table-layout:fixed;" cellspacing="0" cellpadding="0" class="tb03 size50" id="RoleStoreFabao">
+	<% 
+		var loop_times = parseInt(fabao_num/num_per_line) + (fabao_num % num_per_line?1:0); 
+		loop_times = loop_times < 4?4:loop_times;
+
+		for(var i=0; i < loop_times; i++) { 
+			var items = store_fabao_list.slice(i * num_per_line, (i+1) * num_per_line); 
+	%>
+		
+		<tr>
+			<% 
+			for(var j=0; j < items.length; j++){
+				var cur_id = "store_fabao_tips" + (i * num_per_line + j + 1);
+				var fabao = items[j]; 
+			%>
+			<td style="background:#c0b9dd;" data_equip_name="<%= fabao.name %>" data_equip_type="<%= fabao.type %>" data_equip_desc="<%= fabao.desc %>" data_equip_type_desc="<%= fabao.static_desc %>">
+				<img style="max-width:50px;max-height:50px;" src="<%= fabao.icon %>" align="middle"/>
+			</td>
+			<% } %>
+			
+			<% if (items.length < num_per_line){ %>
+				<% for (var m=0; m < (num_per_line - items.length); m++){ %>
+					<td style="background:#c0b9dd;"></td>
+				<% } %>
+			<% } %>	
+		</tr>
+		<% } %>
+	</table>
+</div>
+
+<div class="blank9"></div>
+<table class="tb02" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<th width=100>行囊扩展：</th>
+		<td><%= role_info.package_num %></td>
+	</tr>	
+</table>
+
+<div class="blank12"></div>
+<% 
+    var shenqi = this.shenqi;
+%>
+
+<h4>神器</h4>
+<div class="blank9"></div>
+<div>
+	<table style="table-layout:fixed;" cellspacing="0" cellpadding="0" class="tb03 size50" id="RoleStoreShenqi">
+
+		
+		<tr>
+            <% if(shenqi) {  %> 
+			<td onclick="showShenQiModal();" class="shenqi_td" style="background:#c0b9dd;" data_equip_name="<%= shenqi.name %>" data_equip_type="<%= shenqi.type %>" data_equip_desc="<%= shenqi.desc %>" data_equip_type_desc="<%= shenqi.static_desc %>">
+				<img style="max-width:50px;max-height:50px;" src="<%= shenqi.icon %>" align="middle"/>
+			</td>
+            <% } else { %>
+            <td style="background: rgb(192, 185, 221);"></td>
+            <% }%>
+            <td style="background: rgb(192, 185, 221);"></td>
+            <td style="background: rgb(192, 185, 221);"></td>
+            <td style="background: rgb(192, 185, 221);"></td>
+            
+		</tr>
+		
+	</table>
+</div>
+
+<% if(shenqi) {  %> 
+ 
+<div class="shenqi-modal" id="shenqiModal" >
+    <h4 class="modal-head">神器属性 <span class="modal-close-btn" onclick="hideShenQiModal();"></span></h4>
+    <div class="shenqi-modal-content">
+        <div class="shenqi-list">
+            <% 
+                var components = this.shenqi_components;
+                for(var i = 0; i < components.length; i++) {
+              
+                
+            %>
+            <div class="shenqi-itme">
+                <div class="shenqi-item-left">
+                    <img src="<%= components[i].buweiPic %>" />
+                </div>
+                <div class="col-r">
+                    <ul class="shenqi-item-center">
+                        <% 
+                            var wuxing = components[i].wuxing;
+                            for(var k = 0; k < wuxing.length; k++) {
+                                if(wuxing[k].status !== 1) {
+                        %>
+                                <li>
+                                    <div class="img-wrap">
+                                        <img src="<%= wuxing[k].lingxiPic %>" />
+                                    </div>
+                                </li>
+                            <%  } else { %>
+                        
+                                <li>
+                                    <div class="img-wrap">
+                                        <img src="<%= wuxing[k].lingxiPic %>" />
+                                        <% if(wuxing[k].wuxing_affix_text) { %>
+                                        <span class="cizhui"><%= wuxing[k].wuxing_affix_text %></span>
+                                        <% } %>
+                                    </div>
+                                    <p><%= wuxing[k].wuxingText %></p>
+                                </li>
+                            <%
+                               }
+                            %>
+                        
+                        <%
+                           }
+                        %>
+                    </ul>
+                    <ul class="shenqi-item-right">
+                        <% 
+                            var wuxing = components[i].wuxing;
+                            for(var k = 0; k < wuxing.length; k++) {
+                            
+                        %>
+                        <li>
+                            <%= wuxing[k].attr %>
+                        </li>
+                        <%
+                            }
+                        %>
+                    </ul>
+                </div>
+            </div>
+            <%  
+              } 
+            %>
+        </div>
+    </div>
+</div>
+<div class="mask" id="shenqiMask" ></div>
+<%
+    }
+%>
+
+</div>
+-->
+</div>
+
+<script id="child_detail_templ"  type="text/html">
+	
+	<% 
+		var pet = this.pet;
+		var jinjie_info = dict_get(pet, "jinjie", {});
+		var texing = dict_get(jinjie_info, "core", {});
+	%>
+	<h4>详细信息</h4>
+	<div class="blank9"></div>
+	<table class="tb02" width="100%" cellspacing="0" cellpadding="0">
+		<tr>
+			<td width="152"><strong>类型：</strong><%= pet.kind %></td>
+			<td width="150"><strong>气血：</strong><%= pet.blood_max %></td>
+			<td width="150"><strong>根骨：</strong><%= pet.gg %></td>
+		</tr>
+		<tr>
+			<td><strong>等级：</strong><%= pet.pet_grade %></td>
+			<td><strong>魔法：</strong><%= pet.magic_max %></td>
+			<td><strong>智力：</strong><%= pet.zl %></td>
+		</tr>
+		<tr>
+			<td><strong>悟性：</strong><%= pet.child_sixwx %></td>
+			<td><strong>攻击：</strong><%= pet.attack %></td>
+			<td><strong>武力：</strong><%= pet.wl %></td>
+		</tr>
+		<tr>
+			<td><strong>门派：</strong><%= pet.school %></td>
+			<td><strong>防御：</strong><%= pet.defence %></td>
+			<td><strong>定力：</strong><%= pet.dl %></td>
+		</tr>
+		<tr>
+			<td><strong>五行：</strong><%= pet.wu_xing %></td>
+			<td><strong>速度：</strong><%= pet.speed %></td>
+			<td><strong>念力：</strong><%= pet.nl %></td>
+		</tr>
+		<tr>
+			<td><strong>结局：</strong><%= pet.ending %></td>
+			<td><strong>法伤：</strong><%= pet.iMagDam_all %></td>
+			<td><strong>灵敏：</strong><%= pet.lm %></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><strong>法防：</strong><%= pet.ling_li %></td>
+			<td></td>
+		</tr>
+	</table>
+	<div class="blank9"></div>
+	<div class="hasLayout">
+		<div class="cols" style="width:210px;margin:0;">
+			<h4>技能</h4>
+			<div class="blank9"></div>
+			<%
+				var all_skill_list = pet.skill_list;
+				var num_per_line = 4;
+				var skill_num    = all_skill_list.length;
+				var loop_times   = parseInt(skill_num/num_per_line) + (skill_num % num_per_line?1:0);
+				loop_times = loop_times < 3 ? 3:loop_times;
+				if (pet["genius"]){
+					if (skill_num == (num_per_line * loop_times)){
+						loop_times = loop_times + 1;
+					}
+				}
+			%>	
+			<table cellspacing="0" cellpadding="0" class="tb03">
+				<% for(var i=0; i < loop_times; i++) { %> 
+					<% var items = all_skill_list.slice(i * num_per_line, (i+1) * num_per_line); %>
+					<tr>
+						<% for(var j=0; j < items.length; j++){ %>
+							<% var skill = items[j]; %>
+							<td><img src="<%= skill.icon %>" width="40" height="40" /></td>
+						<% } %>
+						<% if (items.length < num_per_line){ %>
+							<% var left_num = num_per_line - items.length; %>
+							<% for (var m=0; m < left_num; m++){ %>
+								<% if (m == (left_num -1) && (i==(loop_times-1)) && pet["genius"]){ %>
+									<td><img class="on" src="<%= pet.genius_skill.icon %>" /></td>
+								<% } else { %>
+									<td></td>
+								<% } %>
+							<% } %>
+						<% } %>					
+					</tr>
+			  <% } %>
+			</table>
+		</div>
+	</div>
+</script>
+
+<script id="pet_detail_templ" type="text/html">
+<% 
+	var pet = this.pet;
+	var empty_img = this.empty_img;
+	var jinjie_info = dict_get(pet, "jinjie", {}); 
+	var texing = dict_get(jinjie_info, "core", {});
+%>
+
+<h4>详细信息</h4>
+<div class="blank9"></div>
+<table class="tb02 petZiZhiTb" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td><strong>类型：</strong><%= pet.kind %></td>
+		<td><strong>等级：</strong><%= pet.pet_grade %></td>
+
+		<% if(pet.color){ %>
+			<td><strong>变异类型：</strong><%= pet.color %></td>
+		<% } else { %>
+			<td><strong>是否宝宝：</strong>
+<% if (pet.is_baobao == "否"){ %>
+	<% var color = "#FF0000"; %>
+<% } else { %>
+	<% var color = "#00FF00"; %>				
+<% } %>			
+<span style="color:<%= color %>"> <%= pet.is_baobao %> </span>			</td>
+		<% } %>
+	</tr>
+	<tr>
+		<td><strong>气血：</strong><%= pet.blood_max %></td>
+		<td><strong>体质：</strong><%= pet.ti_zhi %></td>
+		<td>
+      <strong>攻击资质：</strong>
+      <%= pet.gong_ji_zz %>
+      <% if (pet.gong_ji_ext) { %>
+        <span class="added_attr">+<%= pet.gong_ji_ext %></span>
+      <% } %>
+    </td>
+	</tr>
+	<tr>
+		<td><strong>魔法：</strong><%= pet.magic_max %></td>
+		<td><strong>法力：</strong><%= pet.fa_li %></td>
+		<td>
+      <strong>防御资质：</strong>
+      <%= pet.fang_yu_zz %>
+      <% if (pet.fang_yu_ext) { %>
+        <span class="added_attr">+<%= pet.fang_yu_ext %></span>
+      <% } %>
+    </td>
+	</tr>
+	<tr>
+		<td><strong>攻击：</strong><%= pet.attack %></td>
+		<td><strong>力量：</strong><%= pet.li_liang %></td>
+		<td>
+      <strong>体力资质：</strong>
+      <%= pet.ti_li_zz %>
+      <% if (pet.ti_li_ext) { %>
+        <span class="added_attr">+<%= pet.ti_li_ext %></span>
+      <% } %>
+    </td>
+	</tr>
+	<tr>
+		<td><strong>防御：</strong><%= pet.defence %></td>
+		<td><strong>耐力：</strong><%= pet.nai_li %></td>
+		<td>
+      <strong>法力资质：</strong>
+      <%= pet.fa_li_zz %>
+      <% if (pet.fa_li_ext) { %>
+        <span class="added_attr">+<%= pet.fa_li_ext %></span>
+      <% } %>
+    </td>
+	</tr>
+	<tr>
+		<td><strong>速度：</strong><%= pet.speed %></td>
+		<td><strong>敏捷：</strong><%= pet.min_jie %></td>
+		<td>
+      <strong>速度资质：</strong>
+      <%= pet.su_du_zz %>
+      <% if (pet.su_du_ext) { %>
+        <span class="added_attr">+<%= pet.su_du_ext %></span>
+      <% } %>
+    </td>
+	</tr>
+	<tr>
+		<td><strong>灵力：</strong><%= pet.ling_li %></td>
+		<td><strong>潜能：</strong><%= pet.qian_neng %></td>
+		<td>
+      <strong>躲闪资质：</strong>
+      <%= pet.duo_shan_zz %>
+      <% if (pet.duo_shan_ext) { %>
+        <span class="added_attr">+<%= pet.duo_shan_ext %></span>
+      <% } %>
+    </td>
+	</tr>
+	<tr>
+		<td><strong>寿命：</strong><%= pet.lifetime %></td>
+		<td><strong>成长：</strong><%= pet.cheng_zhang %></td>
+		<td><strong>五行：</strong><%= pet.wu_xing %></td>
+	</tr>
+	<tr>
+		<td><strong>已用元宵：</strong><%= pet.used_yuanxiao %></td>
+		<td><strong>已用如意丹：</strong><%= pet.used_ruyidan %></td>
+		<td><strong>已用千金露：</strong><%= pet.used_qianjinlu %></td>
+	</tr>
+	<tr>
+		<td>
+			<% if(pet.is_child){ %>
+				<strong>悟性：</strong>
+				<% if(pet.child_sixwx != undefined){ %>
+					<%= pet.child_sixwx %>
+				<% }else{ %>
+					无
+				<% } %>
+			<% }else{ %>
+				<strong>已用炼兽珍经：</strong><%= pet.used_lianshou %>
+			<% } %>
+		</td>
+		<td>
+			<strong>已使用幻色丹：</strong><%= get_summon_color_desc(pet.summon_color) %>
+		</td>
+		<td><strong>灵性：</strong><%= dict_get(jinjie_info, "lx", 0) %></td>
+	</tr>
+	
+	<tr>
+		<td><strong>已用清灵仙露：</strong><%= dict_get(jinjie_info, "cnt", 0) %></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>						
+<div class="blank9"></div>					
+<%
+	var all_skill_list = pet.skill_list;
+	var num_per_line = 4; 
+	var skill_num    = all_skill_list.length;
+	var loop_times   = parseInt(skill_num/num_per_line) + (skill_num % num_per_line?1:0); 
+	loop_times = loop_times < 3 ? 3:loop_times;
+	if (pet["genius"]){
+			if (skill_num == (num_per_line * loop_times)){
+				loop_times = loop_times + 1;
+			}
+	}
+%>					
+<div class="hasLayout">
+<div class="cols" style="width:210px;margin:0;">
+<h4>技能</h4>
+<div class="blank9"></div>
+		<table cellspacing="0" cellpadding="0" class="tb03">
+			<% for(var i=0; i < loop_times; i++) { %> 
+					<% var items = all_skill_list.slice(i * num_per_line, (i+1) * num_per_line); %>
+					<tr>
+						<% for(var j=0; j < items.length; j++){ %>
+							<% var skill = items[j]; %>
+							<td><img src="<%= skill.icon %>" width="40" height="40" /></td>
+						<% } %>
+						
+					<% if (items.length < num_per_line){ %>
+						<% var left_num = num_per_line - items.length; %>
+						<% for (var m=0; m < left_num; m++){ %>
+							<% if (m == (left_num -1) && (i==(loop_times-1)) && pet["genius"]){ %>
+								<td><img class="on" src="<%= pet.genius_skill.icon %>" /></td>
+							<% } else { %>
+								<td></td>
+							<% } %>
+						<% } %>
+					<% } %>					
+					</tr>
+			<% } %>
+		</table>
+
+<div class="blank9"></div>
+  <% if(pet["core_close"] && texing["id"] != undefined) { %>
+    <h4>特性:<%= pet["core_close"] %></h4>
+  <% } else { %>
+    <h4>特性</h4>
+  <% } %>
+	<% if (texing["id"] != undefined){ %>
+		<div style="text-align:left"><span><%= texing["name"] %>：<%= parse_style_info(texing["effect"]) %></span></div>
+	<% } else { %>
+		<div style="text-align:center">无</div>
+	<% } %>
+		
+</div>
+<div class="cols" style="float:right;width:232px;margin:0;">
+<% if(!pet.is_child){ %>
+<div class="cols" style="width:160px;margin:0;">
+<% } %>
+<h4>装备</h4>
+<div class="blank6"></div>
+<%
+	var pet_equips = pet.equip_list;
+	var pet_equips_num = pet_equips.length;
+%>
+<table cellspacing="0" cellpadding="0" class="tb03 size50" id="RolePetEquips">
+	<tr>
+		<% for (var l=0; l < pet_equips.length; l++){ %>
+		<td>
+			<% var equip  = pet_equips[l];%>
+			<% if (equip){ %>
+			<img src="<%= equip.icon %>" data_equip_name="<%= equip.name %>" data_equip_type="<%= equip.type %>" data_equip_desc="<%= equip.desc %>" data_equip_type_desc="<%= equip.static_desc %>" lock_types="<%= equip.lock_type %>" />
+			<% } else { %>
+			&nbsp;
+			<% } %>
+		</td>
+		<% } %>
+	</tr>
+</table>
+<% if(!pet.is_child){ %>
+</div>
+<% } %>
+
+<% if(!pet.is_child){ %>
+<div class="cols" style="float:right;width:60px;margin:0;">
+<h4>饰品</h4>
+<div class="blank6"></div>
+<table cellspacing="0" cellpadding="0" class="tb03 size50" id="RolePetShipin">
+	<tr>
+		<td>
+		<% if(pet.shipin_list && pet.shipin_list[0]){ %>
+		<% var shipin = pet.shipin_list[0];%>
+			<img style="max-width:50px;max-height:50px;background:#fff;border-radius:5px;" src="<%= shipin.icon %>" data_equip_name="<%= shipin.name %>" data_equip_type="<%= shipin.type %>" data_equip_desc="<%= shipin.desc %>" data_equip_type_desc="" lock_types="<%= shipin.lock_type %>" />
+		<% } else { %>
+		&nbsp;
+		<% } %>
+		</td>
+	</tr>
+</table>
+</div>
+<% } %>
+
+	<div class="blank12" style="clear:both"></div>
+	<h4>内丹</h4>
+	<div class="blank9"></div>
+<% if (pet.neidan.length == 0) { %>
+	<p class="textCenter">无</p>
+<% } else { %>
+	<table width="100%" cellspacing="3" cellpadding="3">
+		<% for (var i=0; i < pet.neidan.length; i++){ %>
+			<% var item = pet.neidan[i]; %>
+		<tr>
+			<td><img src="<%= item.icon %>" /></td>
+			<th><%= item.name %></th>
+			<td><%= item.level %>层</td>
+		</tr>
+		<% } %>
+	</table>
+<% } %>	</div>
+</div>
+</script>
+
+
+<div id="role_pet_templ" style="display:none">
+<!--
+<div class="cols" style="width:190px;">
+<h4>召唤兽(<%= this.pet_info.length %>/<%= this.allow_pet_count %>)</h4>
+<div class="blank9"></div>
+<%
+	var pet_list = this.pet_info;
+	var pet_num  = pet_list.length;
+	var num_per_line = 3;
+	var loop_times = parseInt(pet_num/num_per_line) + (pet_num % num_per_line?1:0); 
+	loop_times = loop_times==0?1:loop_times;
+%>					
+<table cellspacing="0" cellpadding="0" class="tb03 size50" id="RolePets">
+  <% if (pet_num == 0) { %>
+    <tr><td class="noData">无</td></tr>
+  <% } else { %>
+    <%	for(var i=0; i < loop_times; i++) { %> 
+    <tr>
+        <%	var items = pet_list.slice(i * num_per_line, (i+1) * num_per_line); %> 
+        <% for (var j=0; j < items.length; j++) { %>
+          <% 
+            var pet = items[j]; 
+            var idx = i * num_per_line + j;
+          %>
+          <td style="width:54px; height:54px; cursor:pointer;">
+          <img src="<%= pet.icon %>"  data_idx="<%= idx %>" />
+        </td>
+        <% } %>
+        
+        <% if (items.length < num_per_line){ %>
+          <% for (var m=0; m < (num_per_line - items.length); m++){ %>
+            <td style="width:54px; height:54px; display: none;">&nbsp;</td>
+          <% } %>
+        <% } %>	
+    </tr>
+    <% } %>
+  <% } %>
+</table>								
+<div class="blank12"></div>
+
+<h4>孩子</h4>
+<div class="blank9"></div>
+<%
+	var child_list = this.child_info;
+	var child_num  = child_list.length;
+	var num_per_line = 2;
+	var loop_times = parseInt(child_num/num_per_line) + (child_num % num_per_line?1:0); 
+	loop_times = loop_times==0?1:loop_times;
+%>					
+<table cellspacing="0" cellpadding="0" class="tb03 size50" id="RoleChilds">
+  <% if (child_num == 0) { %>
+    <tr><td class="noData">无</td></tr>
+  <% } else { %>
+    <%	for(var i=0; i < loop_times; i++) { %> 
+      <tr>
+          <%	var items = child_list.slice(i * num_per_line, (i+1) * num_per_line); %> 
+          <% for (var j=0; j < items.length; j++) { %>
+            <% 
+              var child = items[j]; 
+              var idx = i * num_per_line + j;
+            %>
+            <td style="width:54px; height:54px; cursor:pointer;">
+              <img src="<%= child.icon %>"  data_idx="<%= idx %>" />
+            </td>
+          <% } %>
+          
+          <% if (items.length < num_per_line){ %>
+            <% for (var m=0; m < (num_per_line - items.length); m++){ %>
+              <td style="width:54px; height:54px; display: none;">&nbsp;</td>
+            <% } %>
+          <% } %>
+      </tr>
+      <% } %>
+  <% } %>
+</table>
+
+<div class="blank12"></div>
+<h4>特殊宠物</h4>
+<div class="blank9"></div>
+<%
+	var pets = this.special_pet_info;
+%>					
+<table cellspacing="0" cellpadding="0" class="tb02">
+<% if(pets == undefined){ %>
+	<tr>
+		<td colspan="3" class="noData">未知</td>
+	</tr>
+<%
+	}
+	else if(pets.length == 0){
+%>
+	<tr>
+		<td colspan="3" class="noData">无</td>
+	</tr>
+<%
+	}else{
+		for(var i=0; i<pets.length; i++){
+			var pet = pets[i];
+			var skills = pet.all_skills;
+%>
+			<tr>
+				<th><%=pet.cName %></th>
+				<td><%=skills[0].name %></td>
+				<td><%=skills[0].value %></td>
+			</tr>
+<%
+			for(var j=1; j<skills.length; j++){
+%>
+			<tr>
+				<td>&nbsp;</td>
+				<td><%=skills[j].name %></td>
+				<td><%=skills[j].value %></td>
+			</tr>
+<%
+			}
+		}
+	}
+%>
+</table>
+</div>
+<div class="cols" style="width:456px; margin-left:18px;" id="pet_detail_panel">
+  <% if(pet_list.length == 0 && child_list.length == 0){ %>
+    <h4>详细信息</h4>
+    <div class="blank9"></div>
+    <table class="tb02 petZiZhiTb" width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td class="noData" style="text-align: center;">无</td>
+      </tr>
+    </table>
+  <% } %>
+</div>
+-->
+</div>
+
+<div id="rider_detail_templ" style="display:none">
+<!--
+<% var rider = this.rider; %>
+<table class="tb02" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<th>类型：</th>
+		<td><%= rider.type_name %></td>
+		<th>主属性：</th>
+		<td><%= rider.mattrib %></td>
+		</tr>
+	<tr>
+		<th>等级：</th>
+		<td><%= rider.grade %></td>
+		<th>&nbsp;</th>
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<th>成长：</th>
+		<td><%= rider.exgrow %></td>
+		<th>&nbsp;</th>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+<div class="blank12"></div>
+<%
+	var skill_list = rider.all_skills;
+
+	var skill_num  = skill_list.length;
+	var num_per_line = 6;
+	var loop_times = parseInt(skill_num/num_per_line) + (skill_num % num_per_line?1:0); 
+	if (loop_times == 0){
+		loop_times = 1;
+	}
+%>
+<% if (skill_list.length > 0){ %>
+<table cellspacing="0" cellpadding="0" class="skillTb">
+<%	for(var i=0; i < loop_times; i++) { %> 
+	<%	var items = skill_list.slice(i * num_per_line, (i+1) * num_per_line); %> 
+	<tr>
+		<% for (var j=0; j < items.length; j++) { %>
+			<% var skill = items[j]; %>
+			<td><img src="<%= skill.icon %>" width="40" height="40" /><p><%= skill.grade %></p></td>
+		<% } %>
+		<% if (items.length < num_per_line){ %>
+				<% for (var m=0; m < (num_per_line - items.length); m++){ %>
+					<td></td>
+				<% } %>
+		<% } %>
+	</tr>
+<% } %>
+</table>
+<% } %>
+-->
+</div>
+
+<div id="xiangrui_detail_templ" style="display:none">
+<!--
+<% 
+var xiangrui = this.xiangrui; 
+var skill_list = xiangrui.all_skills;
+%>
+<table width="200" class="tb02" cellspacing="3" cellpadding="3">
+	<tr>
+		<th>类型：</td>
+		<td><%= xiangrui.name %></td>
+		<% if(skill_list.length > 0){ %>
+			<td>
+				<% for(var i=0; i < skill_list.length; i++) { %>
+						<% var skill = skill_list[i]; %>
+						<img src="<%= skill.icon %>" />
+				<% } %>
+			</td>
+		<% }else{ %>
+			<td></td>
+		<% } %>
+	</tr>
+</table>
+-->
+</div>
+
+<div id="role_riders_templ" style="display:none">
+<!--
+<div class="cols" style="width:320px;">
+<h4>坐骑</h4>
+<div class="blank9"></div>
+<%
+	var rider_list = this.rider_info;
+	var rider_num  = rider_list.length;
+	var num_per_line = 5;
+	var loop_times = parseInt(rider_num/num_per_line) + (rider_num % num_per_line?1:0); 
+%>
+<table cellspacing="0" cellpadding="0" class="tb03 size50" id="RoleRiders">
+<% if (rider_num <= 0) { %>
+  <tr><td class="noData">无</td></tr>
+<% } else { %>
+  <% for(var i=0; i < loop_times; i++) { %> 
+    <% var items = rider_list.slice(i * num_per_line, (i+1) * num_per_line); %> 
+    <tr>
+      <% for (var j=0; j < items.length; j++) { %>
+        <%
+          var rider = items[j];
+          var idx = i * num_per_line + j;  
+        %>
+        <td style="width:54px; height:54px; cursor:pointer;">
+          <img src="<%= rider.icon %>"  width="50" height="50" data_idx="<%= idx %>" />
+        </td>
+      <% } %>
+      <% if (items.length < num_per_line){ %>
+          <% for (var m=0; m < (num_per_line - items.length); m++){ %>
+            <td style="display: none;"></td>
+          <% } %>
+      <% } %>
+    </tr>
+  <% } %>
+<% } %>
+</table>
+<div class="blank12"></div>
+<div id="rider_detail_panel"></div>
+</div>
+
+<div class="cols" style="float:right;width:320px; margin-right:28px; margin-bottom:10px">
+<h4>限量祥瑞</h4>
+<div class="blank9"></div>
+<% var xiangrui_list = this.nosale_xiangrui; %>
+<% if(xiangrui_list == undefined){ %>
+  <p class="textCenter cDYellow">祥瑞信息未知</p>
+<% } else { %>
+	<table cellspacing="0" cellpadding="0" class="tb02" id="RoleXiangRui">
+    <% if (xiangrui_list.length <= 0) { %>
+      <tr><td class="noData">无</td></tr>
+    <% } else { %>
+      <% for (var i=0; i < xiangrui_list.length; i++){ %>
+        <% var xiangrui = xiangrui_list[i]; %>
+        <tr>
+          <th><%= xiangrui.name %></th>
+          <td>技能：
+            <% if (xiangrui.skill_name){ %>
+              <%= xiangrui.skill_name %>
+              
+              <% if (xiangrui.skill_level){ %>
+                &nbsp;<%= xiangrui.skill_level %>
+              <% } %>
+              
+            <% } else { %>
+              无
+            <% } %>			
+          </td>
+          
+        </tr>
+      <% } %>
+    <% } %>
+	</table>
+<% } %>
+</div>
+<div class="cols" style="float:right;clear:right;width:320px; margin-right:28px;">
+<h4>普通祥瑞</h4>
+<div class="blank9"></div>
+<% 
+	var xiangrui_list = this.xiangrui;
+	var nosale_list = this.nosale_xiangrui; 
+	var nosale_num = 0;
+	if(nosale_list){
+		nosale_num = nosale_list.length;
+	}
+
+	var total_num = this.basic_info.total_horse;
+
+	if(!total_num && xiangrui_list){
+		total_num = xiangrui_list.length;
+		if(total_num >= 10){
+			total_num = "大于等于10";
+		}
+	}
+	else{
+		total_num -= nosale_num;
+	}
+%>
+<% if(xiangrui_list == undefined){ %>
+  <p class="textCenter cDYellow">祥瑞信息未知</p>
+<% } else { %>
+	<table cellspacing="0" cellpadding="0" class="tb02" id="RoleXiangRui">
+    <% if (xiangrui_list.length <= 0) { %>
+      <tr><td class="noData">无</td></tr>
+    <% } else { %>
+      <tr>
+        <th>祥瑞总数</th>
+        <td><%= this.normal_xiangrui_num ? this.normal_xiangrui_num : total_num %></td>
+      </tr>
+      <% for (var i=0; i < xiangrui_list.length; i++){ %>
+        <% var xiangrui = xiangrui_list[i]; %>
+        <tr>
+          <th><%= xiangrui.name %></th>
+          <td>技能：
+            <% if (xiangrui.skill_name){ %>
+              <%= xiangrui.skill_name %>
+              <% if (xiangrui.skill_level){ %>
+                &nbsp;<%= xiangrui.skill_level %>
+              <% } %>
+              
+            <% } else { %>
+              无
+            <% } %>			
+          </td>
+        </tr>
+      <% } %>
+    <% } %>
+	</table>
+<% } %>
+</div>
+-->
+</div>
+
+<div id="role_clothes_templ" style="display:none">
+<!--
+<%
+	var basic_info = this.basic_info;
+%>
+<div class="cols" style="width:320px;">
+<h4>彩果染色</h4>
+<div class="blank9"></div>
+<% if (basic_info.body_caiguo != undefined && basic_info.box_caiguo!=undefined) { %>
+<table class="tb02" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<th width="55%">身上染色折算彩果数：</th>
+		<td><%= basic_info.body_caiguo %></td>
+	</tr>
+	<tr>
+		<th>衣柜已保存染色方案：</th>
+		<td><%= basic_info.box_caiguo %></td>
+	</tr>
+	<tr>
+		<td colspan="2" class="cGray" style="font-size:12px;padding-left:0px;padding-right:0px">
+			（衣柜保存的染色方案包括花豆染色方案和彩果染色方案）
+		</td>
+	</tr>
+	<tr>
+		<th>所有染色折算彩果数：</th>
+		<td><%=basic_info.total_caiguo %></td>
+	</tr>
+</table>
+
+<% } else if (basic_info.caiguo!=undefined){ %>
+	<p class="textCenter cDYellow">角色拥有折算彩果总量：<%= basic_info.caiguo %></p>
+	<div class="blank9"></div>
+<% } else { %>
+	<p class="textCenter cDYellow">彩果信息未知</p>
+<% } %>
+</div>
+							
+<div class="cols" style="width:320px; margin-left:18px;">
+<h4>锦衣道具栏</h4>
+<div class="blank9"></div>
+<% if (this.clothes == undefined){ %>
+	<p class="textCenter cDYellow">锦衣信息未知</p>
+<% } else { %>
+
+<%
+	var clothes_num  = this.clothes.length;
+	var num_per_line = 2;
+	var loop_times = parseInt(clothes_num/num_per_line) + (clothes_num % num_per_line?1:0);
+	var total_avatar = this.basic_info.total_avatar;
+	
+	if(!total_avatar){
+		total_avatar = clothes_num < 20 ? clothes_num: "大于等于20";
+	}
+%>
+<table cellspacing="0" cellpadding="0" class="tb02" id="RoleClothesi">
+  <% if (clothes_num <= 0) { %>
+    <tr><td class="noData">无</td></tr>
+  <% } else { %>
+    <th style="text-align:left">锦衣总数 : <span style="color:white"><%=total_avatar %></span></th>
+    <th>&nbsp;</th>
+    <%	for(var i=0; i < loop_times; i++) { %> 
+      <%	var items = this.clothes.slice(i * num_per_line, (i+1) * num_per_line);%> 
+      <tr>
+          <% for (var j=0; j < items.length; j++) { %>
+            <% var clothes = items[j]; %> 
+            <th style="text-align:left"><%= clothes.name %></th>
+          <% } %>
+          <% if (items.length < num_per_line){ %>
+            <% for (var m=0; m < (num_per_line - items.length); m++){ %>
+              <th></th>
+            <% } %>
+          <% } %>
+      </tr>
+    <% } %>	
+  <% } %>
+</table>
+<% } %>
+<div class="blank9"></div>
+</div>
+-->
+</div>
+<script type="text/javascript">
+var ServerCurrentTime = '2018-11-13 10:50:07';
+var EquipRequestTime = '2018-10-11 00:11:01';
+function toggle_display(index){
+	$$('.role_basic_attr_tab').removeClass('off');
+	$$('.role_basic_attr_tab')[1 - index].addClass('off');
+	$$('.role_basic_attr_table')[index].setStyle('display', 'block');
+	$$('.role_basic_attr_table')[1 - index].setStyle('display', 'none');
+}
+function showShenQiModal() {
+    $('shenqiMask').addClass('active');
+    $('shenqiModal').addClass('active');
+}
+function hideShenQiModal() {
+    $('shenqiMask').removeClass('active');
+    $('shenqiModal').removeClass('active');
+}
+
+</script>
+<textarea id="equip_desc_value" style="display:none">
+(["iMarry":0,"icolor_ex":0,"iRes_All":389,"iErrantry":0,"TA_iAllNewPoint":1,"iTotalMagDam_all":719,"iMaxExpt4":20,"rent":0,"iMagDef_All":620,"iBeastSki4":1,"ExpJw":0,"iLearnCash":458291,"changesch":({}),"iExptSki2":8,"iDex_All":308,"iSumAmount":8,"iBeastSki2":5,"shenqi":([]),"iSkiPoint":7,"normal_horse":1,"iCGBodyAmount":0,"iMp_Max":1237,"iSmithski":0,"farm_level":0,"iDod_All":402,"iMag_All":198,"iGoodness":1143,"HugeHorse":([239:(["cName":"凤舞灵蝶","order":1,"iType":11230,"iSkillLevel":1,"nosale":0,"iSkill":623,]),]),"iPride":800,"iAtt_All":594,"ExAvt":([1:(["order":6,"cName":"怀旧舞天姬炫卡","iType":19373,]),3:(["order":4,"cName":"玉露（下衣）","iType":12603,]),5:(["order":1,"cName":"腾蛇炫卡","iType":13111,]),4:(["order":5,"cName":"莲花足迹","iType":14505,]),6:(["order":3,"cName":"凤羽（发饰）","iType":13254,]),2:(["order":2,"cName":"玉露（上衣）","iType":12029,]),]),"iDamage_All":872,"iPcktPage":0,"iRace":3,"sum_exp":11,"iHp_Eff":3437,"iExptSki4":9,"HeroScore":5,"iMaxExpt3":20,"commu_gid":0,"idbid_desc":({}),"pet":({}),"cName":"princeton","igoodness_sav":2667,"rent_level":0,"datang_feat":5997,"sword_score":0,"iHp":3019,"shenqi_pos":({0,0,}),"cOrg":"","iMaxExpt1":20,"energy":0,"AllRider":([1:(["ExtraGrow":0,"iGrade":91,"iType":501,"mattrib":"体质","exgrow":10718,"all_skills":([]),]),]),"iSpe_All":200,"iCash":6108,"fabao":([1:(["cDesc":"0#Y灵气：#G200#Y 五行：#G木#Y#r修炼境界：第#G9#Y层 #cFF6F28不堕轮回#Y","iType":6004,]),11:(["cDesc":"0#Y灵气：#G50 #Y 五行：#G水#Y#r修炼境界：第#G0#Y层 #c7D7E82初具法力#Y","iType":6056,]),2:(["cDesc":"0#W【回合限制】6#r#Y#Y灵气：#G74 #Y 五行：#G土#Y#r修炼境界：第#G7#Y层 #cFFCF2D呼风唤雨#Y","iType":6029,]),]),"i3FlyLv":0,"iIcon":23,"iMaxExpt2":20,"iDesc":0,"iSchool":6,"iExptSki5":0,"ExpJwBase":1000000000,"iExptSki1":0,"iExptSki3":1,"iMarry2":0,"iBeastSki3":0,"all_skills":(["58":80,"169":1,"202":40,"173":1,"57":110,"60":111,"56":80,"59":112,"201":73,"198":1,"174":1,"62":70,"211":19,"160":5,"52016":1,"161":2,"197":1,"154":6,"196":1,"25802":1,"212":28,"208":29,"170":1,"61":90,"167":1,"52031":1,"179":1,"52032":1,]),"usernum":31604343,"iUpExp":107543765,"iSewski":0,"iCGBoxAmount":0,"iDef_All":1206,"AllSummon":({(["lastchecksubzz":2018,"SPD_MAX":1550,"tmp_lingxing":0,"life":3056,"HP_MAX":5500,"summon_core":([913:({5,0,([]),}),]),"core_close":0,"iBaobao":1,"iJjFeedCd":0,"csavezz":"1350|1000|1094|1093|3200|1514","growthMax":1050,"iDex_All":176,"summon_equip1":(["cDesc":"#r等级 95  #r伤害 +35 命中率 +16%#r耐久度 235  修理失败 1次#Y#r#c4DBAF4套装效果：附加状态#c4DBAF4惊心一剑#Y#Y#r#W制造者：ぃ莫言卡洛ザ#Y#r#r镶嵌效果 #r+30伤害 镶嵌等级：3","iType":9310,]),"sjg":0,"iDod_All":140,"yuanxiao":0,"iGenius":0,"iCor_all":281,"def":1000,"iStr_all":628,"spe":1094,"summon_equip3":(["cDesc":"#r等级 105  #r防御 +68 伤害 +44#r耐久度 549#Y#r#c4DBAF4套装效果：附加状态#c4DBAF4惊心一剑#Y#Y#r#W制造者：随心所欲＇リ#Y#r#r镶嵌效果 #r+60气血 镶嵌等级：2","iType":9111,]),"iHp":2346,"summon_equip4_type":3590,"iSpe_all":129,"iMp_max":797,"iHp_max":2346,"summon_color":1,"summon_equip2":(["cDesc":"#r等级 115  #r伤害 +32 速度 +29#r耐久度 536#r#G#G灵力 +6#Y#Y#r#c4DBAF4套装效果：附加状态#c4DBAF4惊心一剑#Y#Y#r#W制造者：ぃ莫言卡洛ザ#Y#r#r镶嵌效果 #r+6速度 镶嵌等级：1","iType":9212,]),"iType":102039,"DEF_MAX":1550,"qianjinlu":6,"grow":1131,"MP_MAX":3050,"iAtt_F":16,"mp":1514,"ruyidan":0,"jinjie":(["core":([]),"lx":0,"cnt":0,]),"summon_equip4_desc":"#Y#r玄天灵力 735","hp":3200,"iRealColor":3,"att_rate":16,"lianshou":0,"all_skills":(["325":1,"305":1,"316":1,"301":1,]),"MS_MAX":1800,"carrygradezz":0,"iDef_All":525,"iPoint":0,"iMagDef_all":569,"jj_extra_add":0,"dod":1093,"iMag_all":129,"iGrade":119,"iMp":797,"iAtt_all":1438,"left_qlxl":7,"att":1350,"ATK_MAX":1550,"iRes_all":129,]),(["lastchecksubzz":2018,"SPD_MAX":1550,"tmp_lingxing":0,"life":4267,"HP_MAX":5500,"summon_core":([929:({1,1,([]),}),907:({1,0,([]),}),916:({5,0,([]),}),]),"core_close":0,"iBaobao":0,"iJjFeedCd":0,"csavezz":"1081|1571|1435|1153|4309|2482","growthMax":1266,"iDex_All":429,"summon_equip1":(["cDesc":"#r等级 105  #r伤害 +48 命中率 +13%#r耐久度 531#Y#r#c4DBAF4套装效果：附加状态#c4DBAF4高级隐身#Y#Y#r#W制造者：足以致命メ#Y","iType":9311,]),"sjg":0,"iDod_All":314,"yuanxiao":0,"iGenius":328,"iCor_all":452,"def":1571,"iStr_all":129,"spe":1435,"summon_equip3":(["cDesc":"#r等级 105  #r防御 +68 伤害 +41 魔法 +105#r耐久度 567#Y#r#c4DBAF4套装效果：附加状态#c4DBAF4高级隐身#Y#Y#r#W制造者：粤海执法魔龙#Y","iType":9111,]),"iHp":4414,"summon_equip4_type":0,"iSpe_all":273,"iMp_max":1177,"iHp_max":4414,"summon_color":0,"summon_equip2":(["cDesc":"#r等级 105  #r伤害 +35 速度 +33#r耐久度 527#Y#r#c4DBAF4套装效果：附加状态#c4DBAF4高级隐身#Y#Y#r#W制造者：四季如画。#Y","iType":9211,]),"iType":102078,"DEF_MAX":1550,"qianjinlu":0,"grow":1246,"MP_MAX":3050,"iAtt_F":1,"mp":2482,"ruyidan":0,"jinjie":(["core":([]),"lx":0,"cnt":0,]),"summon_equip4_desc":"","hp":4309,"iRealColor":0,"att_rate":13,"lianshou":0,"all_skills":(["414":1,"552":1,"328":1,"422":1,"435":1,]),"MS_MAX":1800,"carrygradezz":0,"iDef_All":925,"iPoint":0,"iMagDef_all":475,"jj_extra_add":0,"dod":1153,"iMag_all":129,"iGrade":119,"iMp":1177,"iAtt_all":778,"left_qlxl":7,"att":1081,"ATK_MAX":1550,"iRes_all":257,]),(["lastchecksubzz":2018,"SPD_MAX":1550,"tmp_lingxing":93,"life":1177,"HP_MAX":5500,"summon_core":([903:({5,0,([]),}),913:({5,0,([]),}),901:({5,0,([]),}),]),"core_close":1,"iBaobao":1,"iJjFeedCd":0,"csavezz":"1422|1014|1248|1213|3605|2038","growthMax":1266,"iDex_All":229,"summon_equip1":(["cDesc":"#r等级 105  #r伤害 +38 命中率 +16%#r耐久度 309#Y#r#c4DBAF4套装效果：附加状态#c4DBAF4水漫金山#Y#Y#r#W制造者：名字37303386#Y#r#r镶嵌效果 #r+50伤害 镶嵌等级：5","iType":9311,]),"sjg":0,"iDod_All":154,"yuanxiao":0,"iGenius":0,"iCor_all":262,"def":1027,"iStr_all":826,"spe":1233,"summon_equip3":(["cDesc":"#r等级 95  #r防御 +89 伤害 +35#r耐久度 121#Y#r#c4DBAF4套装效果：附加状态#c4DBAF4水漫金山#Y#Y#r#W制造者：Gute°骚骚#Y#r#r镶嵌效果 #r+30气血 镶嵌等级：1","iType":9110,]),"iHp":2276,"summon_equip4_type":0,"iSpe_all":129,"iMp_max":961,"iHp_max":2411,"summon_color":1,"summon_equip2":(["cDesc":"#r等级 105  #r伤害 +37 速度 +36#r耐久度 324#Y#r#c4DBAF4套装效果：附加状态#c4DBAF4水漫金山#Y#Y#r#W制造者：名字37316604#Y#r#r镶嵌效果 #r+24速度 镶嵌等级：4","iType":9211,]),"iType":102207,"DEF_MAX":1550,"qianjinlu":0,"grow":1243,"MP_MAX":3050,"iAtt_F":2,"mp":2008,"ruyidan":0,"jinjie":(["core":(["name":"巧劲","fix_st":0,"effect":"#Y普通物理攻击伤害结果增加#G5#Y；受到的所有伤害增加#R10%#Y。（效果与敏捷、魔力较小值有关）","id":703,]),"lx":93,"new_type":1,"cnt":7,]),"summon_equip4_desc":"","hp":3605,"iRealColor":5,"att_rate":16,"lianshou":0,"all_skills":(["325":1,"510":1,"305":1,"316":1,"596":1,"304":1,"324":1,"301":1,]),"MS_MAX":1800,"carrygradezz":0,"iDef_All":583,"iPoint":0,"iMagDef_all":655,"jj_extra_add":0,"dod":1198,"iMag_all":130,"iGrade":119,"iMp":961,"iAtt_all":1852,"left_qlxl":0,"att":1407,"ATK_MAX":1550,"iRes_all":129,]),(["lastchecksubzz":2018,"SPD_MAX":1550,"tmp_lingxing":105,"life":1734,"HP_MAX":5500,"summon_core":([927:({5,0,([]),}),904:({5,0,([]),}),906:({5,0,([]),}),]),"core_close":1,"iBaobao":1,"iJjFeedCd":0,"csavezz":"1372|1359|1259|1090|3636|2610","growthMax":1266,"iDex_All":236,"summon_equip1":(["cDesc":"#r等级 95  #r命中率 +13%#r耐久度 89  修理失败 3次#r#G#G灵力 +6 #G耐力 +8#Y#Y#r#c4DBAF4套装效果：附加状态#c4DBAF4高级鬼魂术#Y#Y#r#W制造者：Dior＂羽．ぐ#Y#r#r镶嵌效果 #r+12灵力 镶嵌等级：3","iType":9310,]),"sjg":0,"iDod_All":170,"yuanxiao":0,"iGenius":427,"iCor_all":147,"def":1359,"iStr_all":166,"spe":1259,"summon_equip3":(["cDesc":"#r等级 115  #r防御 +79#r耐久度 42#r#G#G灵力 +9#Y #G力量 +18#Y#Y#r#c4DBAF4套装效果：附加状态#c4DBAF4高级鬼魂术#Y#Y#r#W制造者：聆听细雨#Y#r#r镶嵌效果 #r+90气血 镶嵌等级：3","iType":9112,]),"iHp":1714,"summon_equip4_type":0,"iSpe_all":156,"iMp_max":4130,"iHp_max":1714,"summon_color":1,"summon_equip2":(["cDesc":"#r等级 95  #r速度 +28#r耐久度 5#r#G#G灵力 +8#Y #G力量 +19#Y#Y#r#c4DBAF4套装效果：附加状态#c4DBAF4高级鬼魂术#Y#Y#r#W制造者：＇浅醉释冰．#Y#r#r镶嵌效果 #r+12速度 镶嵌等级：2","iType":9210,]),"iType":102207,"DEF_MAX":1550,"qianjinlu":0,"grow":1246,"MP_MAX":3050,"iAtt_F":4,"mp":2610,"ruyidan":0,"jinjie":(["core":(["name":"瞬法","fix_st":0,"effect":"#Y第二回合以后进场时，#G50%#Y概率对血量百分比最低的单位使用随机法术；气血上限降低#R10%#Y。（效果与魔力有关）","id":717,]),"lx":105,"new_type":1,"cnt":7,]),"summon_equip4_desc":"","hp":3636,"iRealColor":4,"att_rate":13,"lianshou":0,"all_skills":(["313":1,"576":1,"575":1,"424":1,"427":1,"510":1,]),"MS_MAX":1800,"carrygradezz":0,"iDef_All":680,"iPoint":0,"iMagDef_all":989,"jj_extra_add":0,"dod":1090,"iMag_all":939,"iGrade":119,"iMp":4130,"iAtt_all":781,"left_qlxl":0,"att":1372,"ATK_MAX":1550,"iRes_all":137,]),(["lastchecksubzz":2018,"iMp_max":72,"iHp_max":121,"summon_color":0,"iType":102151,"SPD_MAX":1550,"DEF_MAX":1550,"tmp_lingxing":0,"qianjinlu":0,"grow":1264,"MP_MAX":3050,"iAtt_F":16,"mp":2496,"HP_MAX":5500,"ruyidan":0,"life":6300,"core_close":0,"jinjie":(["core":([]),"lx":0,"cnt":0,]),"summon_core":([]),"summon_equip4_desc":"","hp":3708,"iBaobao":1,"iJjFeedCd":0,"iRealColor":0,"att_rate":0,"csavezz":"1299|1212|1287|1404|3708|2496","growthMax":1277,"lianshou":0,"all_skills":(["412":1,"429":1,]),"iDex_All":34,"MS_MAX":1800,"sjg":0,"carrygradezz":0,"iDef_All":20,"iDod_All":37,"iPoint":0,"yuanxiao":0,"iMagDef_all":29,"iGenius":0,"jj_extra_add":0,"iCor_all":16,"dod":1404,"iMag_all":19,"iGrade":0,"def":1212,"iMp":72,"iAtt_all":32,"left_qlxl":7,"spe":1287,"att":1299,"iStr_all":26,"ATK_MAX":1550,"iRes_all":12,"summon_equip4_type":0,"iHp":121,"iSpe_all":27,]),}),"iStr_All":120,"bid":0,"jiyuan":0,"total_avatar":6,"iPoint":0,"iCGTotalAmount":0,"AllEquip":([189:(["cDesc":"等级 100#r抵抗封印等级 +21#r耐久度 562#r#G气血回复效果 +15#r#G格挡值 +22#r#G格挡值 +23#r#W制造者：断红尘°强化打造#","iType":27203,]),26:(["cDesc":"#r等级 100  五行 水#r#r伤害 +342 命中 +388#r耐久度 670#r锻炼等级 4  镶嵌宝石 太阳石#r#G#G体质 +14#Y#Y#r#c4DBAF4特效：#c4DBAF4永不磨损#Y#r#G开运孔数：4孔/4孔#G#r符石: 魔法 +6#n#G#r符石: 法伤 +1#n#G#r符石: 耐力 +1#n#G#r符石: 敏捷 +1 魔法 +6#n#r#cEE82EE符石组合: 行云流水#r门派条件：普陀山 #r部位条件：无#r使用五行法术时增加人物等级*50％的伤害，仅对NPC使用时有效#Y#r#W制造者：强壮下半体；#Y  ","iType":2051,"iLock":1,]),187:(["cDesc":"等级 100#r伤害 +21#r耐久度 482#r#G治疗能力 +8#r#G治疗能力 +8#r#W制造者：梦静〓龙太子强化打造#","iType":27003,]),188:(["cDesc":"等级 100#r法术防御 +20#r耐久度 322#r精炼等级 1#r#G速度 +8 #cEE82EE[+3]#r#G治疗能力 +8 #cEE82EE[+3]#r#W制造者：沐澄·奕奕ル强化打造#","iType":27103,]),2:(["cDesc":"#r等级 100  五行 火#r#r防御 +236#r耐久度 159  修理失败 1次#r锻炼等级 5  镶嵌宝石 月亮石#Y#r#c4DBAF4特效：#c4DBAF4精致#Y#r#G开运孔数：4孔/4孔#G#r符石: 躲避 +3#n#G#r符石: 魔力 +1#n#G#r符石: 气血 +10#n#G#r符石: 敏捷 +1 法术防御 +2#n#r#cEE82EE符石组合: 行云流水#r门派条件：普陀山 #r部位条件：无#r使用五行法术时增加人物等级*50％的伤害，仅对NPC使用时有效#Y#r#W制造者：最后一个男人强化打造#Y  ","iType":2662,]),6:(["cDesc":"#r等级 100  五行 土#r#r伤害 +374 命中 +360#r耐久度 344#r锻炼等级 8  镶嵌宝石 太阳石#r#G#G敏捷 -7 #G体质 +27#Y#Y#r#c4DBAF4特技：#c4DBAF4玉清诀#Y#Y#r#G开运孔数：4孔/4孔#G#r符石: 速度 +1.5#n#G#r符石: 气血 +10#n#G#r星位：速度 +2.5#n#Y#r#W制造者：打酱油这难#Y#r#Y熔炼效果：#r#Y#r+2敏捷#Y  ","iType":1950,]),1:(["cDesc":"#r等级 100  五行 金#r#r防御 +103 魔法 +105#r耐久度 204#r锻炼等级 4  镶嵌宝石 月亮石#Y#r#G开运孔数：4孔/4孔#b#G#r符石: 灵力 +1.5#n#G#r符石: 魔力 +1#n#G#r符石: 防御 +3#n#r#cEE82EE符石组合: 行云流水#r门派条件：普陀山 #r部位条件：无#r使用五行法术时增加人物等级*33％的伤害，仅对NPC使用时有效#Y#r#W制造者：☆陈泊龙☆☆#Y  ","iType":2562,]),3:(["cDesc":"#r等级 100  五行 火#r#r防御 +57 敏捷 +36#r耐久度 125  修理失败 3次#r锻炼等级 4  镶嵌宝石 黑宝石#r#G#G速度 +32#Y#Y#r#G开运孔数：4孔/4孔#G#r符石: 速度 +1.5#n#G#r符石: 魔力 +1#n#G#r符石: 体质 +1#n#G#r符石: 敏捷 +1 魔法 +6#n#r#cEE82EE符石组合: 行云流水#r门派条件：普陀山 #r部位条件：无#r使用五行法术时增加人物等级*50％的伤害，仅对NPC使用时有效#Y#r#W制造者：倦夜龙翼∏#Y  ","iType":2752,"iLock":1,]),190:(["cDesc":"等级 100#r速度 +18#r耐久度 482#r#G气血回复效果 +11#r#G气血回复效果 +10#r#W制造者：JǚSt°画晚强化打造#","iType":27303,]),5:(["cDesc":"#r等级 70  #r防御 +39 气血 +288#r耐久度 66  修理失败 3次#r锻炼等级 5  镶嵌宝石 光芒石、 黑宝石#r#G#G速度 +16#Y#Y#r#c4DBAF4特效：#c4DBAF4愤怒#Y#r#G开运孔数：3孔/3孔#G#r符石: 魔力 +1#n#G#r符石: 耐力 +1#n#Y  ","iType":2912,]),4:(["cDesc":"#r等级 100  #r灵力 +137#r耐久度 110  修理失败 2次#r锻炼等级 1  镶嵌宝石 舍利子#Y#r#G开运孔数：4孔/4孔#G#r符石: 灵力 +1.5#n#G#r符石: 法伤 +1#n#G#r符石: 体质 +1#n#G#r符石: 敏捷 +1 法术防御 +2#n#r#cEE82EE符石组合: 行云流水#r门派条件：普陀山 #r部位条件：无#r使用五行法术时增加人物等级*50％的伤害，仅对NPC使用时有效#Y#r#W制造者：风华绝代の泪强化打造#Y  ","iType":2852,"iLock":1,]),]),"iCor_All":351,"more_attr":(["attrs":({(["idx":12,"lv":0,]),(["idx":3,"lv":27,]),(["idx":1,"lv":0,]),(["idx":2,"lv":21,]),(["idx":10,"lv":0,]),(["idx":6,"lv":0,]),(["idx":5,"lv":0,]),(["idx":8,"lv":0,]),(["idx":7,"lv":0,]),(["idx":9,"lv":0,]),(["idx":11,"lv":45,]),(["idx":4,"lv":36,]),(["idx":13,"lv":402,]),(["idx":14,"lv":620,]),}),]),"iOrgOffer":0,"AchPointTotal":885,"total_horse":1,"iBeastSki1":5,"iBadness":0,"iSaving":0,"ori_desc":2121,"commu_name":0,"xianyu":0,"iZhuanZhi":0,"iMp":1237,"iGrade":109,"addPoint":3,"iTotalMagDef_all":644,"outdoor_level":0,"ori_race":3,"propKept":([]),"iSumAmountEx":0,"TA_iAllPoint":0,"iSchOffer":483,"shenqi_yellow":"","iNutsNum":42,"iHp_Max":3437,])
+</textarea>
+
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/show_equip_detail.js?v=0613"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/role_info_setting.js?v=1024"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/parse_role.js"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/show_role_detail.js?v=20140520"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/js/server_list_data.js"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/cross_role_trade.js"></script>
+
+<script>
+var CurQueryTag = '';
+var LoginInfo = {
+	"login" : 0,
+	 "server_id" : "137"
+};
+
+function parse_time_info(time_str)
+{
+	return Date.parse(time_str.replace(/-/g, '/'));
+}
+function info_change_confirm(){
+
+	var latest_version_time = parse_time_info('2015-10-20 8:0:0');
+	var request_time = parse_time_info(equip['request_time']);
+	
+	if((latest_version_time - request_time) > 0){
+		var ret = confirm('由于版本更新所带来的门派，经脉，技能，符石及坐骑等调整，您购买的角色信息可能已经发生变化，是否确认购买？');
+		if(!ret){
+			return false;
+		}
+	}
+
+	return true;
+}
+
+var  ServerCrossRoleTradeOperator = new Class({
+
+  Extends: CrossRoleTradeOperator,
+  initialize: function() {
+    this.parent({
+      btnId: 'buy_btn',
+      buyText: '购买',
+      loginText: '登录购买'
+    });
+  },
+	set_button_txt : function(btn, btn_txt){
+		btn.set("html", btn_txt);			
+	}
+});
+
+    
+function init_page()
+{
+	$("top_buy_menu").addClass("on");	
+	$("common_query_a").addClass("on");	
+	$("search_browse_f").setStyle("display", 'none');	
+	$("role_search").setStyle("display", 'none');	
+	$("equip_search").setStyle("display", 'none');	
+	$("pet_search").setStyle("display", 'none');	
+
+	//fix_buy_btn();
+	var buy_operator = new ServerCrossRoleTradeOperator();
+	
+	fix_cannot_buy_info();
+	detect_price_change();
+	reg_bargin_btn_event();
+	add_events_for_collect();
+	display_seller_online_icon();
+	
+	show_buy_tips();
+	
+	//
+	var role_manager = new RoleInfoShow();
+	role_manager.show_basic();
+	add_latest_view(ServerInfo['server_id'], 4422375);
+}
+
+window.addEvent('domready', function() {
+   init_page();
+});	
+</script>
+
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/select_server_v1.js"></script>
+
+<div id="area_list_templ" style="display:none">
+<!--
+<table class="serverArea" cellspacing="4" cellpadding="4">
+	<% for (var i=0; i < AreaRowNum; i++){ %>
+	<tr>
+			<% for (var j=0; j < TableColNum; j++) { %>
+					<% var el_id = i * TableColNum + j + 1; %>
+					<td id="area_pos_<%= el_id%>">
+						<a href="#" id="area_pos_<%= el_id%>_a"></a>
+					</td>
+			<% } %>	
+	</tr>
+	<% } %>
+</table>
+-->
+</div>
+
+<div id="server_list_templ" style="display:none">
+<!--
+<%
+	var RowNum = 2;
+	var ColumnNum = 7; 
+%>
+<table class="serverArea serverName" cellspacing="4" cellpadding="4">
+	<% for (var i=0; i < ServerRowNum; i++){ %>
+	<tr>
+		<% for (var j=0; j < TableColNum; j++){ %>
+			<% var el_id = i * TableColNum + j + 1; %>
+			<td id="server_pos_<%= el_id%>">
+				<a href="#" id="server_pos_<%= el_id%>_a"></a>
+			</td>
+		<% } %>
+	</tr>
+	<% } %>
+</table>
+-->
+</div>
+
+<div class="soldDetail" id="RoleEquipTipsBox" style="width:198px;">
+</div>
+<div id="role_equip_tips_templ">
+<!--
+	<div class="parame" style="font-size:14px;margin-left:0px;">
+		<p class="cYellow fB"><%= this.name %></p>
+		<p><%= parse_style_info(this.type_desc) %></p>
+		<p><%= parse_style_info(this.desc) %></p>
+	</div>
+-->
+</div>
+
+<form name="equip_info" method="post" action="https://xyq.cbg.163.com/cgi-bin/usertrade.py" style="display:none;">
+    <input type="hidden" name="act" value="buy" />
+    <input type="hidden" name="reonsale_identify" id="reonsale_identify" value="fb4ec268ea675409d836b9acc325ae45" />
+    <input type="hidden" name="equipid" id="equipid" value="4422375" />
+    <input type="hidden" name="serverid" value="137" />
+	<input type="hidden" name="device_id" id="device_id" value="" />
+</form>
+
+
+<div class="areaTop"></div>
+<div class="area subArea">
+	<div class="areaHead">
+		<div class="nav">
+<ul>
+<li id="top_buy_menu"><h3><a id="top_buy_menu_a" href="https://xyq.cbg.163.com/cgi-bin/query.py?act=query" tid="web_buy_1">我是买家</a></h3></li>
+<li id="top_sell_menu"><h3><a id="top_sell_menu_a" href="https://xyq.cbg.163.com/cgi-bin/userinfo.py?act=my_equips" tid="web_sell_1">我是卖家</a></h3></li>
+<li id="top_mycbg_menu"><h3 style="width:98px;"><a id="top_mycbg_menu_a" href="https://xyq.cbg.163.com/cgi-bin/userinfo.py?act=order" tid="web_cbg_1">我的藏宝阁</a></h3></li>
+<li><h3><a target="_blank" href="https://epay.163.com/servlet/controller?operation=main" tid="web_pay_1">网易支付</a></h3></li>
+<li id="top_fairshow_menu"><h3><a id="top_fairshow_menu_a" href="https://xyq.cbg.163.com/cgi-bin/query.py?act=fair_show_query" tid="web_fair_1">公示期物品</a></h3></li>
+<script>window.fix_buy_menu_url && fix_buy_menu_url()</script>
+<li id="top_gift_menu"><h3><a href="https://xyq.cbg.163.com/cgi-bin/equipquery.py?act=gift&server_id=137" tid="web_mall_1">周边商城</a></h3></li>
+<li id="top_overall_menu"><h3  style="width:90px;"><a href="https://xyq.cbg.163.com/cgi-bin/xyq_overall_search.py?act=show_search_role_form" target="_blank" tid="web_overall_1">全服搜索</a></h3></li>
+</ul>
+<div class="cart" id="buy_cart_panel" style="display:none"><a href="https://xyq.cbg.163.com/cgi-bin/userinfo.py?act=order" tid="web_other_2_1">购物车</a><span class="cYellow" id="cart_order_num"></span></div>
+		</div>
+	</div>
+	
+	<div class="subNav" id="querySubNav">
+	<!-- 搜索框内容，如不需要可以删去 -->
+		<div class="search">
+			<form id="search_browse_f" name="search_browse_f" action="https://xyq.cbg.163.com/cgi-bin/query.py">
+				<input id="advance_search_box" autocomplete="off" name="search_text" type="text" class="txt1 txt2" onfocus="if(this.value=='输入物品名称进行搜索') {this.value=''}" onblur="if(this.value=='') this.value='输入物品名称进行搜索'" size="23" value="输入物品名称进行搜索" />&nbsp;
+				<input type="button" class="btn1" value="搜索" onclick="search_auto_complete(this.form, ename_data);"/>
+				<input type="text" name="equip_type" style="display:none;"/>
+				<input type="hidden" name="act" value="type_query" id="search_act"/>
+				<input type="hidden" name="server_id" id="server_id" value="137" />
+				<input type="hidden" name="areaid" id="areaid" value="55" />
+				<input type="hidden" name="page" id="search_page" />
+				<input type="hidden" name="server_name" value="苏堤春晓" />
+			</form>
+		</div>
+		<!-- 搜索框内容，如不需要可以删去 -->
+		<a id="common_query_a" href="https://xyq.cbg.163.com/cgi-bin/query.py?act=query" tid="web_buy_2">浏览商品</a>
+		<a id="role_search" href="#" onclick="search_by_kind(27,2);return false;" class="advance_search_link" tid="web_buy_3">角色搜索</a>
+		<a id="equip_search" href="#" onclick="search_by_kind(2,2);return false;" class="advance_search_link" tid="web_buy_4">道具搜索</a>
+		<a id="pet_search" href="#" onclick="search_by_kind(1,2);return false;" class="advance_search_link" tid="web_buy_5">召唤兽搜索</a>
+		<a id="pet_equip_search" href="#" onclick="search_by_kind(29,2);return false;" class="advance_search_link" tid="web_buy_6">召唤兽装备搜索</a>
+		<a id="lingshi_search" href="#" onclick="search_by_kind(60,2);return false;" class="advance_search_link" tid="web_buy_7">灵饰搜索</a>
+		<a id="sub_menu_appointed_to_me" href="https://xyq.cbg.163.com/cgi-bin/equipquery.py?act=appointed_to_me&server_id=137" class="advance_search_link" tid="web_buy_8">指定我</a>
+		<a id="cross_server_buy" href="https://xyq.cbg.163.com/cgi-bin/equipquery.py?act=show_overall_search_equip" class="advance_search_link" target="_blank" style="color:#FFFF00" tid="web_buy_9">跨服购买</a>
+		<a id="collect_rank" href="https://xyq.cbg.163.com/cgi-bin/equipquery.py?act=rank" tid="web_buy_10" data_trace_text="-">排行榜</a>
+		<script type="text/javascript">
+			window.fix_buy_menu_url && fix_buy_menu_url();
+		</script>
+	</div>
+	
+	<div class="content">
+		<div class="menu_3rd">
+			<a href="https://xyq.cbg.163.com/cgi-bin/query.py?act=query">我是买家</a>&nbsp;&gt;&nbsp;<a href="https://xyq.cbg.163.com/cgi-bin/query.py?act=query">浏览商品</a>&nbsp;&gt;&nbsp;商品详情
+		</div>
+		<div class="cols hasLayout">
+			<div class="divGride">
+				<div class="title">
+					<h3 class="fB f14px">物品详细信息</h3>
+				</div>
+				<div class="grideCont hasLayout">
+          <div class="goodsPic recommandOutWrap">
+            <img id="role_icon" width="120" height="150" alt="商品图片" />
+<div
+  id="bottomRecommands"
+  class="recommandWrp goodsInfo goodsRemmds"
+  data_title="相似物品推荐"
+  data_per="6"
+  data_new_req="1"
+  view_loc="reco_sim"
+  equip_refer="27"
+  data-isSimilarRecommend = true
+  
+>
+  <script>
+    (function() {
+      var params = {
+        count: 6, 
+        equips: JSON.encode([[equip.server_id, equip.game_ordersn]]),
+        storage_type: equip.storage_type
+      };
+      document.write('<textarea style="display: none" class="params">' + JSON.encode(params) + '</textarea>');
+      
+    })();
+  </script>
+</div>          </div>
+					<div class="infoList goodsInfo">
+						<div class="collect f12px">
+							<a href="#" id="btn_add_favorites" class="coll">收藏该物品</a>
+								(已有<span class="cDRed">4</span>人收藏)
+						</div>
+						<ul>
+							<li class="names"><strong>名称：</strong>31604343</li>
+							<script>document.write(create_selling_html());</script>
+						</ul>
+						<div class="tabs">
+							<ul>
+								<li id="role_basic">人物/修炼</li>
+								<li id="role_skill">技能</li>
+								<li id="role_equips">道具/法宝</li>
+								<li id="role_pets">召唤兽/孩子</li>
+								<li id="role_riders">坐骑</li>
+								<li id="role_clothes">锦衣</li>
+							</ul>
+						</div>
+						<!-- tabCont开始 -->
+						<div class="tabCont" id="role_info_box">
+						</div>
+					
+					</div>
+					<div class="operateBtn goodsInfo">
+						<p>
+							<div id="fairshow_buy_info" style="display:none;">
+								<div>预定商品需要支付价格+公示期预订信息费，该商品公示期结束后交易自动完成</div>
+								<div style="padding: 7px 0" class="cRed">
+									<input type="checkbox" id="agree_fair_show_pay" />
+									系统将收取 45.15 元预定费用,同意<a target="_blank" href="/help/help42.html">公示期预定</a>服务收费规则<br />
+								</div>
+							</div>
+							<span class="cRed" id="cannot_buy_info" style="display:none;">该物品，无法购买。</span>
+						<a href="#" class="btn1" id="buy_btn" data_buy_hook="info_change_confirm" data_role_count="0">购买</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:history.go(-1)" class="btn1">返回</a></p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<div class="areaBtm"></div>
+<!--页脚-->
+<div class="areaTop"></div>
+<div class="footer area">
+	<div class="download_app"></div>
+<style type="text/css">
+.cbg-copyright {width:840px;text-align:left;margin:0 auto;padding:15px 0 10px;font-size:12px;line-height:20px;}
+.cbg-copyright .nie-cn-logo {display:inline-block;vertical-align:middle;height:48px;min-width:300px;}
+.cbg-copyright .nie-cn-logo a {display:inline-block;vertical-align:top;margin-top:2px;}
+.cbg-copyright .nie-cn-logo a.a0 img {padding-right:0;}
+.cbg-copyright .nie-cn-logo img {padding-right:15px;padding-top:5px;border:0;vertical-align:middle;}
+.cbg-copyright .nie-cn-nav {display:inline-block;vertical-align:top;position:relative;z-index:1;}
+.cbg-copyright .nie-cn-nav i {font-style:normal;}
+.cbg-copyright .nie-cn-nav i.nie-cn-nav-i2 {height:28px;line-height:28px;text-align:left;}
+.cbg-copyright .nie-cn-nav a {text-decoration:none;}
+.cbg-copyright .nie-cn-nav a:hover {text-decoration:underline;}
+.cbg-copyright .nie-cn-nav .nie-cn-reportcenter {padding-left:18px;font-style:normal;}
+</style>
+<div class="cbg-copyright">
+  <div class="nie-cn-part1">
+    <span class="nie-cn-logo">
+    <a class="a0" href="http://www.163.com" target="_blank"><img src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/images/netease.2.png"></a><a class="a1" href="https://game.163.com" target="_blank"><img src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/images/nie.2.png"></a>
+    </span>
+    <span class="nie-cn-nav">
+      <i class="nie-cn-nav-i1">
+      <a href="http://gb.corp.163.com/gb/about/overview.html" target="_blank">公司简介</a> - <a href="http://help.163.com/" target="_blank">客户服务</a> - <a href="http://gb.corp.163.com/gb/legal.html" id="footerLinkLaw" target="_blank">相关法律</a> - <a href="https://game.163.com/about/" target="_blank">网易游戏</a> - <a href="https://game.163.com/contact/" target="_blank">联系我们</a> - <a href="https://game.163.com/contact/business.html" target="_blank">商务合作</a> - <a href="https://game.163.com/job/" target="_blank">加入我们</a>
+      </i>
+      <br>
+      <i class="nie-cn-nav-i2">
+      网易公司版权所有 &copy;1997-2018 <a class="nie-cn-reportcenter" href="http://www.cogcpa.org" target="_blank">中国网络游戏版权保护联盟举报中心</a>
+      </i>
+    </span>
+  </div>
+</div>
+<script>
+  ;(function() {
+    var isXyq = /xyq/g.test(window.location.host);
+    var $footerLinkLaw = document.getElementById('footerLinkLaw');
+    if (isXyq) {
+      $footerLinkLaw.innerHTML = '隐私政策';
+      $footerLinkLaw.setAttribute('href','https://xyq.cbg.163.com/privacy_policy.html');
+    }
+  })();
+</script>
+</div>
+<div class="areaBtm"></div>
+<div class="blank12"></div>
+
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/rc0dac82ce20a6f28c91a2/js/trace.js"></script>
+<script type="text/javascript" src="https://cbg-xyq.res.netease.com/cbg_tgxc/xyq_tgxc.js"></script>
+<script src="//analytics.163.com/ntes.js" type="text/javascript" no-tracer></script>
+<script type="text/javascript">
+var _ntes_nacc = "cbgxyq"; //站点ID。
+window.neteaseTracker && neteaseTracker();
+</script>
+
+</body>
+</html>
