@@ -5,8 +5,7 @@ class EvaluateController extends BaseController{
 
     public show(param?:any):boolean{
         let result=super.show()
-        // this.reqInfo()
-        // this.reqInfo(this._curPageIndex)
+        this.reqInfo(this._curPageIndex)
         return result
     }
 
@@ -15,7 +14,7 @@ class EvaluateController extends BaseController{
         
         let url="https://recommd.xyq.cbg.163.com/cgi-bin/recommend.py"
         let param=HttpUtil.getServerRoleParam(Const.Server.SU_DI_CHUN_XIAO,pageIndex)
-        HttpUtil.http(url,param,"GET",null,data=>{
+        HttpUtil.http(url,param,"GET",null,function(data:string){
             let info=JSON.parse(data)
             thisObj._maxPage=Math.min(5,info.pager.total_pages)
             if(info.equips&&info.equips.length>0){

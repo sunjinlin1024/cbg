@@ -53,13 +53,13 @@ module evaluator{
                 }
             }
             //经脉
-
+            if(target.desc0.TA_iAllNewPoint>0)num+=config.jingmai[target.desc0.TA_iAllNewPoint].coin_all
             //储备
             num+=target.desc0.iLearnCash
             //以上折算为储备价值
             num=num*config.common[Const.COMMON_KEY_CHUBEI_RATE].val
             //金币
-            num+=target.desc0.iCash//+target.desc0.iSaving//金币和存银
+            num+=target.desc0.iCash+target.desc0.iSaving//金币和存银
             return num
         }
     }

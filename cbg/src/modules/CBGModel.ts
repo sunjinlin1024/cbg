@@ -11,10 +11,10 @@ class CBGModel extends BaseModel{
 			let price=Math.floor(item.price_int*0.01)
 			let income=evaVal-price
 			let incomeRate=(evaVal-price)/price
-			if(income>=600||(income>300&&incomeRate>=0.2)){
-				console.log(stringUtil.expandStr(item.name,16)+"\tLv:"+item.level+"\t"+config.school[item.desc0.iSchool].name+"\t"+item.other_info0.summary)
-				console.log("\t评估值:"+stringUtil.expandStr(evaVal+"",7)+"\t- 售价:"+stringUtil.expandStr(price+"",7)
-					+"\t= 利润:"+stringUtil.expandStr(String(income),8)+"("+Math.floor(incomeRate*100)+"%)")
+			if(income>=500||(income>100&&incomeRate>=0.2)){
+				console.log("\n"+stringUtil.expandStr(item.name,17)+" Lv:"+item.level+"\t"+config.school[item.desc0.iSchool].name+"\t"+item.other_info0.summary)
+				console.log("\t评估值:"+stringUtil.expandStr(evaVal+"",7)+"- 售价:"+stringUtil.expandStr(price+"",7)
+					+"= 利润:"+stringUtil.expandStr(String(income),8)+"("+Math.floor(incomeRate*100)+"%)")
 			}
 			
 		}
