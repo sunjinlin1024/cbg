@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="CommonButtonSkin" currentState="up" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="up,down,disabled">
+	<w:Config id="16347dd9347"/>
+	<e:Image id="imgBG" horizontalCenter="0" verticalCenter="0" width.up="100%" height.up="100%" width.down="90%" height.down="90%" width="100%" height="100%" source.disabled="{bgGrayStr}" source="{bgImgName}" touchEnabled="true"/>
+	<e:Image id="iconDisplay" scaleY.down="0.9" scaleX.down="0.9"  source="" verticalCenter="{iconY}" horizontalCenter="{iconX}" touchEnabled="true"/>
+	<e:Label id="labelDisplay" text="" verticalCenter="{iconY}" horizontalCenter="{iconX}" scaleX.down="0.9" scaleY.down="0.9"/>
+</e:Skin>

@@ -64,6 +64,8 @@ module config{
 	export let common:{[key:number]:_common}={}
 	common[100001]={"id":100001,"name":"储备价值比","val":0.7,}
 	common[100002]={"id":100002,"name":"宝宝修炼经验金钱比","val":4700.0,}
+	common[100003]={"id":100003,"name":"仙玉折算点卡","val":0.5,}
+	common[100004]={"id":100004,"name":"精力折算点卡","val":0.05,}
 	common[200001]={"id":200001,"name":"门派技能等级上线","val":180.0,}
 
 	interface _equip{"id":number,"kind":number,"name":string,"level":number,"p1key":string,"p1min":number,"p1max":number,"p2key":string,"p2min":number,"p2max":number,"pvalmin":number,"pvalmax":number,"pvalfun":number,"pvalfunp1":number,"pvalfunp2":number,"pvalfunp3":number,}

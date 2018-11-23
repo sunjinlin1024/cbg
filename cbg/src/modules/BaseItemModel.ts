@@ -243,6 +243,10 @@ class BaseItemModel extends BaseModel{
 		return this.equip_name
 	}
 
+	public get typeName():string{
+		return ""
+	}
+
 	public initByData(data:any){
 		super.initByData(data)
 		if(this.other_info&&this.other_info!=""){
@@ -264,4 +268,8 @@ class BaseItemModel extends BaseModel{
 		}
         return 0
     }
+
+	public toString():string{
+		return ""
+	}
 }

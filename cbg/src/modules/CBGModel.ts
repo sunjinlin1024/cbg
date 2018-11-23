@@ -1,8 +1,10 @@
 class CBGModel extends BaseModel{
     private _shopList:{[key:number]:BaseItemModel}={}
+	private _valuableList:{[key:number]:number}={}
 	
 
 	public append(list){
+		let itemList:BaseItemModel[]=[]
 		let item:BaseItemModel
 		for(let data of list){
 			item=game.modelManager.createModelByKindid(data)
@@ -11,12 +13,15 @@ class CBGModel extends BaseModel{
 			let price=Math.floor(item.price_int*0.01)
 			let income=evaVal-price
 			let incomeRate=(evaVal-price)/price
-			if(income>=500||(income>100&&incomeRate>=0.2)){
-				console.log("\n"+stringUtil.expandStr(item.name,17)+" Lv:"+item.level+"\t"+config.school[item.desc0.iSchool].name+"\t"+item.other_info0.summary)
-				console.log("\t评估值:"+stringUtil.expandStr(evaVal+"",7)+"- 售价:"+stringUtil.expandStr(price+"",7)
-					+"= 利润:"+stringUtil.expandStr(String(income),8)+"("+Math.floor(incomeRate*100)+"%)")
+			if(income*incomeRate>300&&income>400&&incomeRate>0.4){
+				let incomeVal=income*incomeRate
+				if(!this._valuableList[item.equipid]||this._valuableList[item.equipid]!=incomeVal){
+					this._valuableList[item.equipid]=incomeVal
+					console.log("[利润:"+String(income)+"("+Math.floor(incomeRate*100)+"%)][价格:"+price+"]"+item.toString())
+				}
 			}
-			
+			itemList.push(item)
 		}
+		return itemList
 	}
 }

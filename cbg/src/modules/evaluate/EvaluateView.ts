@@ -1,0 +1,3 @@
+class EvaluateView extends BaseView{
+    
+}

@@ -15,20 +15,24 @@ module evaluator{
             if(target.desc0.iExptSki2>0)num+=config.xiulian_role[target.desc0.iExptSki2].coin2All
             if(target.desc0.iExptSki4>0)num+=config.xiulian_role[target.desc0.iExptSki4].coin2All
 
-            if(target.desc0.i3FlyLv>0||target.desc0.iZhuanZhi>0){//飞升未降修要扣除降修价值
-
+            if((target.desc0.i3FlyLv&&target.desc0.i3FlyLv>0)||target.desc0.iZhuanZhi>0){//飞升未降修要扣除降修价值
+                let bigMax=Math.max(target.desc0.iMaxExpt1,target.desc0.iMaxExpt3)//只计算主修
+                let subCoin=0
+                for(let i=25;i>20;i--){//提上限25需当前上限24当前修炼23
+                    if(bigMax==i){
+                        break
+                    }
+                    num-=config.xiulian_role[i-2].coin3
+                }
             }
 
-            //宠物修炼,按经验*经验比，暂定150:700000
-            // let bbxs=[Const.KEY_BB_EXPT_FANGYU,Const.KEY_BB_EXPT_KANGFA,Const.KEY_BB_EXPT_GONGJI,Const.KEY_BB_EXPT_FASHU]
-            // for(let key of bbxs){
-            //     if(target.getNum())
-            // }
+            //宠物修炼,按修炼果价值，经验:金币=150:700000
             let bbxExp2CoinRate=config.common[Const.COMMON_KEY_BB_XIU_EXP_TO_COIN].val
             if(target.desc0.iBeastSki1>0)num+=config.xiulian_pet[target.desc0.iBeastSki1].exp_all*bbxExp2CoinRate
             if(target.desc0.iBeastSki2>0)num+=config.xiulian_pet[target.desc0.iBeastSki2].exp_all*bbxExp2CoinRate
             if(target.desc0.iBeastSki3>0)num+=config.xiulian_pet[target.desc0.iBeastSki3].exp_all*bbxExp2CoinRate
             if(target.desc0.iBeastSki4>0)num+=config.xiulian_pet[target.desc0.iBeastSki4].exp_all*bbxExp2CoinRate
+
             //技能
             let skillId:number
             let level:number
@@ -55,11 +59,13 @@ module evaluator{
             //经脉
             if(target.desc0.TA_iAllNewPoint>0)num+=config.jingmai[target.desc0.TA_iAllNewPoint].coin_all
             //储备
-            num+=target.desc0.iLearnCash
-            //以上折算为储备价值
-            num=num*config.common[Const.COMMON_KEY_CHUBEI_RATE].val
+            if(target.desc0.iLearnCash>0)num+=target.desc0.iLearnCash
+            num=num*config.common[Const.COMMON_KEY_CHUBEI_RATE].val//以上折算为储备价值
+            //仙玉
+            if(target.desc0.xianyu!=0)num=num+target.desc0.xianyu*config.common[Const.COMMON_KEY_XIANYU_TO_DOT].val*config.server[target.serverid].coin_rate*0.1
             //金币
             num+=target.desc0.iCash+target.desc0.iSaving//金币和存银
+
             return num
         }
     }

@@ -28,7 +28,7 @@
 			"webRoot": "${workspaceRoot}",
 			"preLaunchTask":"build",
 			"userDataDir":"${tmpdir}",
-			"port":5246,
+			"port":15246,
 			"runtimeArgs": [
 				"--allow-file-access-from-files",
 				"--allow-file-access-frome-files",

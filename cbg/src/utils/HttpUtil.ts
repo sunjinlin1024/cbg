@@ -27,10 +27,10 @@ module HttpUtil {
                 fullUrl=fullUrl.substr(0,fullUrl.length-1)
             }
         }
-        if(DEBUG){
-            fullUrl="resource/cbg/role_list.txt"
-            header=null
-        }
+        // if(DEBUG){
+        //     fullUrl="resource/cbg/role_list.txt"
+        //     header=null
+        // }
         request.open(method,fullUrl,true)
         if(header){
             for(let key in header){
@@ -48,6 +48,10 @@ module HttpUtil {
             }
             request.send(formData)
         }
+    }
+
+    export function initRoleDetailUrl(serverid:number,eid:string):string{
+        return "https://xyq.cbg.163.com/equip?s="+serverid+"&eid="+eid+"&view_loc=equip_list"
     }
 
     export function getAllServerRoleParam(pageIndex:number,maxPrice:number=5000,pageCount=30){
