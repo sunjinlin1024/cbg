@@ -56,6 +56,9 @@ module evaluator{
                     }
                 }
             }
+            //熟练度
+            if(target.desc0.iSmithski>0)num+=target.desc0.iSmithski*config.common[Const.COMMON_KEY_SHULIAN_TO_COIN].val
+            if(target.desc0.iSewski>0)num+=target.desc0.iSewski*config.common[Const.COMMON_KEY_SHULIAN_TO_COIN].val
             //经脉
             if(target.desc0.TA_iAllNewPoint>0)num+=config.jingmai[target.desc0.TA_iAllNewPoint].coin_all
             //储备

@@ -17,7 +17,7 @@ class CBGModel extends BaseModel{
 				let incomeVal=income*incomeRate
 				if(!this._valuableList[item.equipid]||this._valuableList[item.equipid]!=incomeVal){
 					this._valuableList[item.equipid]=incomeVal
-					console.log("[利润:"+String(income)+"("+Math.floor(incomeRate*100)+"%)][价格:"+price+"]"+item.toString())
+					console.log("[利润:"+String(income)+"("+Math.floor(incomeRate*100)+"%)][价格:"+price+"]"+item.toString()+"["+HttpUtil.initRoleDetailUrl(item.server_id,item.eid)+"]")
 				}
 			}
 			itemList.push(item)
