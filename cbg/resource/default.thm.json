@@ -30,7 +30,8 @@
 		"resource/eui_skins/VScrollBarSkin.exml",
 		"resource/eui_skins/VSliderSkin.exml",
 		"resource/ui/common/CommonButtonSkin.exml",
-		"resource/ui/evaluate/EvaluateShopItemSkin.exml"
+		"resource/ui/evaluate/EvaluateShopItemSkin.exml",
+		"resource/ui/common/chart/ChartSkin.exml"
 	],
 	"path": "resource/default.thm.json"
 }

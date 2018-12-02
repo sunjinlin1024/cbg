@@ -54,3 +54,5 @@ declare class CommonButtonSkin extends eui.Skin{
 }
 declare class EvaluateShopItemSkin extends eui.Skin{
 }
+declare class ChartSkin extends eui.Skin{
+}

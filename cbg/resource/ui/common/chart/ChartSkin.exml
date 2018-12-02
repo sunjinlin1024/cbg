@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ChartSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="100%" height="100%" source="common_white_png" scale9Grid="1,1,2,2" horizontalCenter="0" verticalCenter="0"/>
+	<e:Group id="row_text" left="30" bottom="0" height="20" right="0">
+		<e:layout>
+			<e:HorizontalLayout horizontalAlign="left" verticalAlign="middle" paddingLeft="19" gap="0"/>
+		</e:layout>
+		<e:Label text="1" x="321" y="-202" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="40" textAlign="center"/>
+		<e:Label text="2" x="321" y="-202" textColor="0x000000" size="16" width="40" textAlign="center"/>
+		<e:Label text="3" x="331" y="-192" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="40" textAlign="center"/>
+		<e:Label text="4" x="341" y="-182" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="40" textAlign="center"/>
+		<e:Label text="5" x="351" y="-172" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="40" textAlign="center"/>
+		<e:Label text="6" x="361" y="-162" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="40" textAlign="center"/>
+		<e:Label text="7" x="371" y="-152" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="40" textAlign="center"/>
+		<e:Label text="8" x="381" y="-142" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="40" textAlign="center"/>
+		<e:Label text="9" x="391" y="-132" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="40" textAlign="center"/>
+		<e:Label text="10" x="401" y="-122" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="40" textAlign="center"/>
+	</e:Group>
+	<e:Group id="col_text" left="0" bottom="20" top="0" width="30">
+		<e:layout>
+		<e:VerticalLayout horizontalAlign="right" verticalAlign="bottom" paddingBottom="19" gap="0" paddingRight="3"/>
+		</e:layout>
+		<e:Label text="10" x="321" y="-202" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="100%" textAlign="right" height="40" verticalAlign="middle"/>
+		<e:Label text="9" x="321" y="-202" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="100%" textAlign="right" height="40" verticalAlign="middle"/>
+		<e:Label text="8" x="331" y="-192" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="100%" textAlign="right" height="40" verticalAlign="middle"/>
+		<e:Label text="7" x="341" y="-182" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="100%" textAlign="right" height="40" verticalAlign="middle"/>
+		<e:Label text="6" x="351" y="-172" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="100%" textAlign="right" height="40" verticalAlign="middle"/>
+		<e:Label text="5" x="361" y="-162" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="100%" textAlign="right" height="40" verticalAlign="middle"/>
+		<e:Label text="4" x="371" y="-152" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="100%" textAlign="right" height="40" verticalAlign="middle"/>
+		<e:Label text="3" x="381" y="-142" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="100%" textAlign="right" height="40" verticalAlign="middle"/>
+		<e:Label text="2" x="391" y="-132" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="100%" textAlign="right" height="40" verticalAlign="middle"/>
+		<e:Label text="1" x="401" y="-122" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="100%" textAlign="right" height="40" verticalAlign="middle"/>
+	</e:Group>
+	<e:Label text="0" scaleX="1" scaleY="1" textColor="0x000000" size="16" width="27" textAlign="right" height="20" verticalAlign="top" bottom="0" left="0"/>
+	<e:Image source="common_line_png" includeInLayout="true" width="1" scale9Grid="1,0,2,1" left="30" bottom="20" top="0"/>
+	<e:Image height="1" source="common_line_png" includeInLayout="true" scale9Grid="1,0,2,1" left="30" bottom="20" right="0"/>
+	<e:Group id="row_scale" height="10" bottom="20" left="30" right="0" touchEnabled="false" touchChildren="false">
+		<e:layout>
+			<e:HorizontalLayout horizontalAlign="left" verticalAlign="bottom" gap="39" paddingLeft="39"/>
+		</e:layout>
+		<e:Image width="1" height="100%" x="334" y="-15" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1"/>
+		<e:Image width="1" height="100%" x="334" y="-15" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1"/>
+		<e:Image width="1" height="100%" x="344" y="-5" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1"/>
+		<e:Image width="1" height="100%" x="354" y="5" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1"/>
+		<e:Image width="1" height="100%" x="364" y="15" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1"/>
+		<e:Image width="1" height="100%" x="374" y="25" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1"/>
+		<e:Image width="1" height="100%" x="384" y="35" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1"/>
+		<e:Image width="1" height="100%" x="394" y="45" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1"/>
+		<e:Image width="1" height="100%" x="404" y="55" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1"/>
+		<e:Image width="1" height="100%" x="414" y="65" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1"/>
+	</e:Group>
+	<e:Group id="col_scale" bottom="20" left="30" top="0" width="10" touchThrough="false" touchEnabled="false">
+		<e:layout>
+			<e:VerticalLayout gap="39" paddingBottom="39" verticalAlign="bottom" horizontalAlign="left"/>
+		</e:layout>
+		<e:Image width="100%" x="304" y="-101" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1" height="1"/>
+		<e:Image width="100%" x="304" y="-101" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1" height="1"/>
+		<e:Image width="100%" x="314" y="-91" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1" height="1"/>
+		<e:Image width="100%" x="324" y="-81" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1" height="1"/>
+		<e:Image width="100%" x="334" y="-71" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1" height="1"/>
+		<e:Image width="100%" x="344" y="-61" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1" height="1"/>
+		<e:Image width="100%" x="354" y="-51" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1" height="1"/>
+		<e:Image width="100%" x="364" y="-41" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1" height="1"/>
+		<e:Image width="100%" x="374" y="-31" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1" height="1"/>
+		<e:Image width="100%" x="384" y="-21" scaleX="1" scaleY="1" source="common_line_png" scale9Grid="1,0,2,1" height="1"/>
+	</e:Group>
+</e:Skin>

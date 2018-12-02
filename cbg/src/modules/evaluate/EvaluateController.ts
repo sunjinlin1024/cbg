@@ -16,6 +16,7 @@ class EvaluateController extends BaseController{
         let url="https://recommd.xyq.cbg.163.com/cgi-bin/recommend.py"
         // let param=HttpUtil.getServerRoleParam(Const.Server.SU_DI_CHUN_XIAO,pageIndex)
         let param=HttpUtil.getAllServerRoleParam(pageIndex)
+        // let param=HttpUtil.getPetParam(Const.Server.SU_DI_CHUN_XIAO,pageIndex)
         HttpUtil.http(url,param,"GET",null,function(data:string){
             let info=JSON.parse(data)
             thisObj._maxPage=info.pager.total_pages

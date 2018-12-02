@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,common_white_png,common_black_png,common_empty_png,common_line_png",
 			"name": "preload"
 		}
 	],
@@ -135,6 +135,26 @@
 			"name": "description_json",
 			"type": "json",
 			"url": "config/description.json"
+		},
+		{
+			"name": "common_white_png",
+			"type": "image",
+			"url": "assets/Panel/common_white.png"
+		},
+		{
+			"name": "common_black_png",
+			"type": "image",
+			"url": "assets/Panel/common_black.png"
+		},
+		{
+			"name": "common_empty_png",
+			"type": "image",
+			"url": "assets/Panel/common_empty.png"
+		},
+		{
+			"name": "common_line_png",
+			"type": "image",
+			"url": "assets/Panel/common_line.png"
 		}
 	]
 }

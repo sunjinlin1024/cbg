@@ -54,6 +54,22 @@ module HttpUtil {
         return "https://xyq.cbg.163.com/equip?s="+serverid+"&eid="+eid+"&view_loc=equip_list"
     }
 
+    export function getPetParam(serverId:number,pageIndex:number,pageCount=30){
+        return {
+            // "callback":"Request.JSONP.request_map.request_0",
+            "_":Math.random(),
+            "act":"recommd_by_role",
+            "server_id": serverId,
+            "server_name": encodeURI(config.server[serverId].name),
+            "areaid":config.server[serverId].area_id,
+            "page":pageIndex,
+            "query_order":"selling_time%20DESC",
+            "view_loc":"equip_list",
+            "kindid":Const.Kind.PET,
+            "count":pageCount      
+        }
+    }
+
     export function getAllServerRoleParam(pageIndex:number,maxPrice:number=5000,pageCount=30){
         let param={
             // "callback":"Request.JSONP.request_map.request_0",

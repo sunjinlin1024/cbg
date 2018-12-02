@@ -13,7 +13,7 @@ class CBGModel extends BaseModel{
 			let price=Math.floor(item.price_int*0.01)
 			let income=evaVal-price
 			let incomeRate=(evaVal-price)/price
-			if(income*incomeRate>250&&income>400&&incomeRate>0.4){
+			if(item.isHighValue(income,incomeRate)){
 				let incomeVal=income*incomeRate
 				if(!this._valuableList[item.equipid]||this._valuableList[item.equipid]!=incomeVal){
 					this._valuableList[item.equipid]=incomeVal

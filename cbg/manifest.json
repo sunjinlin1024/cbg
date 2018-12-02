@@ -11,14 +11,15 @@
 	],
 	"game": [
 		"bin-debug/modules/BaseModel.js",
+		"bin-debug/modules/BaseController.js",
 		"bin-debug/modules/BaseItemModel.js",
 		"bin-debug/modules/BaseModule.js",
 		"bin-debug/modules/BaseView.js",
-		"bin-debug/modules/BaseController.js",
-		"bin-debug/utils/StringUtil.js",
-		"bin-debug/manager/TimerManager.js",
+		"bin-debug/manager/ModuleManager.js",
+		"bin-debug/common/view/Chart.js",
 		"bin-debug/common/view/CommonButton.js",
 		"bin-debug/config/config.js",
+		"bin-debug/config/Const.js",
 		"bin-debug/config/GameConfig.js",
 		"bin-debug/events/GameEvent.js",
 		"bin-debug/interfaces/IController.js",
@@ -28,8 +29,8 @@
 		"bin-debug/manager/LayerManager.js",
 		"bin-debug/manager/LoaderManager.js",
 		"bin-debug/manager/ModelManager.js",
-		"bin-debug/manager/ModuleManager.js",
-		"bin-debug/config/Const.js",
+		"bin-debug/Game.js",
+		"bin-debug/manager/TimerManager.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/modules/BaseEvaluator.js",
 		"bin-debug/LoadingUI.js",
@@ -47,6 +48,6 @@
 		"bin-debug/utils/FilterUtils.js",
 		"bin-debug/utils/HttpUtil.js",
 		"bin-debug/utils/NJson.js",
-		"bin-debug/Game.js"
+		"bin-debug/utils/StringUtil.js"
 	]
 }
