@@ -1,5 +1,50 @@
 module HttpUtil {
+    var elementId="aa00101"
+
+    export function parseData(data:Object){
+        let script=document.getElementById(elementId)
+        if(script&&script.parentNode){
+            script.parentNode.removeChild(script)
+        }
+    }
+
+    export function onCORSHttp(url:string,success:string,param?:Object,method:string="GET",header:Object=null,fail?:Function){
+        let fullUrl=url
+        if(method=="GET"){
+            fullUrl+="?"
+            param=param || {}
+            param["callback"]=success
+            for(let key in param){
+                fullUrl+=key+"="+param[key]+"&"
+            }
+            fullUrl=fullUrl.substr(0,fullUrl.length-1)
+        }
+        var script=document.createElement("script")
+        script.id=elementId
+        script.src=fullUrl
+        script.async=true
+        script.onload=function(info){
+            // console.log("onload",info)
+        }
+        script.onerror=function(){
+            // console.log("error")
+            if(fail!=null)fail()
+        }
+        document.body.appendChild(script)
+    }
+
     export function http(url:string,param?:Object,method:string="GET",header?:Object,success?:Function,fail?:Function){
+        let fullUrl=url
+        if(method=="GET"){
+            if(param){
+
+                fullUrl+="?"
+                for(let key in param){
+                    fullUrl+=key+"="+param[key]+"&"
+                }
+                fullUrl=fullUrl.substr(0,fullUrl.length-1)
+            }
+        }
         let request=new XMLHttpRequest()
         request.timeout=3000
         request.withCredentials=true
@@ -17,16 +62,7 @@ module HttpUtil {
         request.ontimeout=()=>{
             if(fail)fail("timeout")
         }
-        let fullUrl=url
-        if(method=="GET"){
-            if(param){
-                fullUrl+="?"
-                for(let key in param){
-                    fullUrl+=key+"="+param[key]+"&"
-                }
-                fullUrl=fullUrl.substr(0,fullUrl.length-1)
-            }
-        }
+        
         // if(DEBUG){
         //     fullUrl="resource/cbg/role_list.txt"
         //     header=null
@@ -54,9 +90,11 @@ module HttpUtil {
         return "https://xyq.cbg.163.com/equip?s="+serverid+"&eid="+eid+"&view_loc=equip_list"
     }
 
+    
+
     export function getPetParam(serverId:number,pageIndex:number,pageCount=30){
         return {
-            // "callback":"Request.JSONP.request_map.request_0",
+            "callback":"parseData",
             "_":Math.random(),
             "act":"recommd_by_role",
             "server_id": serverId,
@@ -72,7 +110,7 @@ module HttpUtil {
 
     export function getAllServerRoleParam(pageIndex:number,maxPrice:number=5000,pageCount=30){
         let param={
-            // "callback":"Request.JSONP.request_map.request_0",
+            "callback":"parseData",//Request.JSONP.request_map.request_0",
             "_":Math.random(),
             "act":"recommd_by_role",
             "price_max":maxPrice*100,
@@ -89,7 +127,7 @@ module HttpUtil {
 
     export function getServerRoleParam(serverId:number,pageIndex:number,pageCount=30){
         return {
-            // "callback":"Request.JSONP.request_map.request_0",
+            "callback":"parseData",//"Request.JSONP.request_map.request_0",
             "_":Math.random(),
             "act":"recommd_by_role",
             "server_id": serverId,

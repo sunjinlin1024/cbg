@@ -35,6 +35,38 @@
          data-show-fps="false" data-show-log="false"
          data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
     </div>
+
+<script>
+    window["ajax"]=function(url,param,successHandle,failHandle,method="GET"){
+        if(method=="GET"&&param){
+            let paramStr=""
+            for(let key in param){
+                paramStr+=key+"="+param[key]+"&"
+            }
+            if(paramStr.length>0){
+                url=url+"?"+paramStr
+            }
+        }
+        console.log(url)
+        $.ajax({  
+            url:url,  
+            async :true,  
+            type:"jsonp",  
+            success:function(data){  
+                console.log("data",data)
+                if(successHandle){
+                    successHandle(data)
+                }
+            },  
+            error:function(msg){  
+                alert("error",msg);  
+                if(failHandle!=null){
+                    failHandle(msg)
+                }
+            }  
+        });
+    }
+</script>
 <script>
     var loadScript = function (list, callback) {
         var loaded = 0;

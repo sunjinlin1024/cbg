@@ -9,19 +9,13 @@ class CBGModel extends BaseModel{
 		for(let data of list){
 			item=game.modelManager.createModelByKindid(data)
 			this._shopList[item.equipid]=item
-			let evaVal=game.gameConfig.CoinToRMB(item.evaluateValue,item.serverid)
-			let price=Math.floor(item.price_int*0.01)
-			let income=evaVal-price
-			let incomeRate=(evaVal-price)/price
-			if(item.isHighValue(income,incomeRate)){
-				let incomeVal=income*incomeRate
-				if(!this._valuableList[item.equipid]||this._valuableList[item.equipid]!=incomeVal){
-					this._valuableList[item.equipid]=incomeVal
-					console.log("[利润:"+String(income)+"("+Math.floor(incomeRate*100)+"%)][价格:"+price+"]"+item.toString()+"["+HttpUtil.initRoleDetailUrl(item.server_id,item.eid)+"]")
-				}
+			if(!this._valuableList[item.equipid]||this._valuableList[item.equipid]!=item.price_int){
+				this._valuableList[item.equipid]=item.price_int
+				itemList.push(item)
 			}
-			itemList.push(item)
 		}
 		return itemList
 	}
+
+	
 }

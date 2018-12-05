@@ -28,12 +28,13 @@
 			"webRoot": "${workspaceRoot}",
 			"preLaunchTask":"build",
 			"userDataDir":"${tmpdir}",
-			"port":15246,
-			"runtimeArgs": [
-				"--allow-file-access-from-files",
-				"--allow-file-access-frome-files",
-				" --disable-web-security"
-			]
+			"port":15246
+			// ,
+			// "runtimeArgs": [
+			// 	"--allow-file-access-from-files",
+			// 	"--allow-file-access-frome-files",
+			// 	" --disable-web-security"
+			// ]
 		}
 	]
 }
