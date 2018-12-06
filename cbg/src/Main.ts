@@ -42,43 +42,67 @@ class Main extends egret.DisplayObjectContainer {
 
     public constructor() {
         super();
-        this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
+        if(this.stage){
+            this.onAddToStage(null)
+        }else{
+            this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
+        }
+    }
+
+    
+    
+
+    private onResize(evt:egret.Event){
+        let scale=Math.min(this.stage.stageWidth/this.designWidth,this.stage.stageHeight/this.designHeight)
+        this.scaleX=this.scaleY=scale
+        if(evt){
+            game.dispatchEvent(evt)
+        }
     }
 
     private onAddToStage(event: egret.Event) {
-
-        egret.lifecycle.addLifecycleListener((context) => {
+        this.removeEventListener(egret.Event.ADDED_TO_STAGE,this.onAddToStage,this)
+        this.onResize(null)
+        this.stage.addEventListener(egret.Event.RESIZE,this.onResize,this);
+        
+         egret.lifecycle.addLifecycleListener((context) => {
             // custom lifecycle plugin
-
             context.onUpdate = () => {
 
             }
         })
 
         egret.lifecycle.onPause = () => {
-            // egret.ticker.pause();
+            // egret.ticker.pause();//此处如此处理，防止小游戏报错
+            // if(game.audioManager){
+            //     game.audioManager.setSoundAble(false, AUDIO_ABLE_FLAG.BACK_GROUND)
+            //     game.audioManager.pauseMusic(AUDIO_PAUSE_FLAG.BACK_GROUND)
+            // }
+            game.dispatchEvent(new GameEvent(GameEvent.ON_GAME_PAUSE))
         }
 
         egret.lifecycle.onResume = () => {
-            // egret.ticker.resume();
+            // egret.ticker.resume();//此处如此处理，防止小游戏报错
+            // if(Game.audioManager){
+            //     Game.audioManager.setSoundAble(true, AUDIO_ABLE_FLAG.BACK_GROUND)
+            //     Game.audioManager.resumeMusic(AUDIO_PAUSE_FLAG.BACK_GROUND)
+            // }
+            game.dispatchEvent(new GameEvent(GameEvent.ON_GAME_RESUME))
         }
 
+        //注入自定义的素材解析器
+        egret.registerImplementation("eui.IAssetAdapter", new AssetAdapter());
+        egret.registerImplementation("eui.IThemeAdapter", new ThemeAdapter());
+
         this.runGame().catch(e => {
-            console.log(e);
-        })
-
-
-
+            console.error(e);
+        });
     }
 
     private async runGame() {
         await this.loadResource()
-        // this.createGameScene();
-        const result = await RES.getResAsync("description_json")
-        // this.startAnimation(result);
         await platform.login();
         const userInfo = await platform.getUserInfo();
-        // console.log(userInfo);
         game.init(this)
     }
 
@@ -87,6 +111,7 @@ class Main extends egret.DisplayObjectContainer {
             const loadingView = new LoadingUI();
             this.stage.addChild(loadingView);
             await RES.loadConfig("resource/default.res.json", "resource/");
+            await this.loadTheme();
             await RES.loadGroup("preload", 0, loadingView);
             this.stage.removeChild(loadingView);
         }
@@ -95,103 +120,31 @@ class Main extends egret.DisplayObjectContainer {
         }
     }
 
-    private textfield: egret.TextField;
+    private loadTheme() {
+        return new Promise((resolve, reject) => {
+            // load skin theme configuration file, you can manually modify the file. And replace the default skin.
+            //加载皮肤主题配置文件,可以手动修改这个文件。替换默认皮肤。
+            let theme = new eui.Theme("resource/default.thm.json", this.stage);
+            theme.addEventListener(eui.UIEvent.COMPLETE, () => {
+                resolve();
+            }, this);
 
-    /**
-     * 创建游戏场景
-     * Create a game scene
-     */
-    private createGameScene() {
-        let sky = this.createBitmapByName("bg_jpg");
-        this.addChild(sky);
-        let stageW = this.stage.stageWidth;
-        let stageH = this.stage.stageHeight;
-        sky.width = stageW;
-        sky.height = stageH;
-
-        let topMask = new egret.Shape();
-        topMask.graphics.beginFill(0x000000, 0.5);
-        topMask.graphics.drawRect(0, 0, stageW, 172);
-        topMask.graphics.endFill();
-        topMask.y = 33;
-        this.addChild(topMask);
-
-        let icon = this.createBitmapByName("egret_icon_png");
-        this.addChild(icon);
-        icon.x = 26;
-        icon.y = 33;
-
-        let line = new egret.Shape();
-        line.graphics.lineStyle(2, 0xffffff);
-        line.graphics.moveTo(0, 0);
-        line.graphics.lineTo(0, 117);
-        line.graphics.endFill();
-        line.x = 172;
-        line.y = 61;
-        this.addChild(line);
-
-
-        let colorLabel = new egret.TextField();
-        colorLabel.textColor = 0xffffff;
-        colorLabel.width = stageW - 172;
-        colorLabel.textAlign = "center";
-        colorLabel.text = "Hello Egret";
-        colorLabel.size = 24;
-        colorLabel.x = 172;
-        colorLabel.y = 80;
-        this.addChild(colorLabel);
-
-        let textfield = new egret.TextField();
-        this.addChild(textfield);
-        textfield.alpha = 0;
-        textfield.width = stageW - 172;
-        textfield.textAlign = egret.HorizontalAlign.CENTER;
-        textfield.size = 24;
-        textfield.textColor = 0xffffff;
-        textfield.x = 172;
-        textfield.y = 135;
-        this.textfield = textfield;
-
+        })
     }
 
-    /**
-     * 根据name关键字创建一个Bitmap对象。name属性请参考resources/resource.json配置文件的内容。
-     * Create a Bitmap object according to name keyword.As for the property of name please refer to the configuration file of resources/resource.json.
-     */
-    private createBitmapByName(name: string) {
-        let result = new egret.Bitmap();
-        let texture: egret.Texture = RES.getRes(name);
-        result.texture = texture;
-        return result;
+    public get designWidth():number{
+        return 1280
     }
 
-    /**
-     * 描述文件加载成功，开始播放动画
-     * Description file loading is successful, start to play the animation
-     */
-    private startAnimation(result: string[]) {
-        let parser = new egret.HtmlTextParser();
+    public get designHeight():number{
+        return 720
+    }
 
-        let textflowArr = result.map(text => parser.parse(text));
-        let textfield = this.textfield;
-        let count = -1;
-        let change = () => {
-            count++;
-            if (count >= textflowArr.length) {
-                count = 0;
-            }
-            let textFlow = textflowArr[count];
+    public get relativeWidth():number{
+        return this.stage.stageWidth/this.scaleX
+    }
 
-            // 切换描述内容
-            // Switch to described content
-            textfield.textFlow = textFlow;
-            let tw = egret.Tween.get(textfield);
-            tw.to({ "alpha": 1 }, 200);
-            tw.wait(2000);
-            tw.to({ "alpha": 0 }, 200);
-            tw.call(change, this);
-        };
-
-        change();
+    public get relativeHeight():number{
+        return this.stage.stageHeight/this.scaleY
     }
 }

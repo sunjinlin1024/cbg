@@ -22,11 +22,17 @@ class ModuleManager extends egret.EventDispatcher {
     }
 
     public showModule(name:string,param?:any){
-        this._modules[name].show(param);
+        let gameModule=this._modules[name]
+        if(gameModule){
+            gameModule.show(param)
+        }
     }
 
     public hideModule(name:string){
-       this._modules[name].hide();
+        let gameModule=this._modules[name]
+        if(gameModule){
+            gameModule.hide();
+        }
     }
 
     public getModule(name:string):IModule{

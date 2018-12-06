@@ -29,8 +29,10 @@
 		"resource/eui_skins/ToggleSwitchSkin.exml",
 		"resource/eui_skins/VScrollBarSkin.exml",
 		"resource/eui_skins/VSliderSkin.exml",
-		"resource/ui/common/CommonButtonSkin.exml",
-		"resource/ui/evaluate/EvaluateShopItemSkin.exml",
+		"resource/ui/evaluate/EvaluateItemSkin.exml",
+		"resource/ui/evaluate/EvaluateUI.exml",
+		"resource/ui/common/button/CommonButtonIconSkin.exml",
+		"resource/ui/common/button/CommonButtonLabelSkin.exml",
 		"resource/ui/common/chart/ChartSkin.exml"
 	],
 	"path": "resource/default.thm.json"

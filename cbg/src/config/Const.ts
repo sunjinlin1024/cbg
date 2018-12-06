@@ -1,6 +1,23 @@
 module Const{
+	export const MODULE_TIP: string = "tip"
+    export const MODULE_LOADING: string = "loading"
+	export const MODULE_DIALOG: string = "dialog"
+
+	export const MODULE_LOGIN: string = "login"
 	export const MODULE_EVALUATE:string="evaluate"
 
+	
+	export enum COLOR{
+		GRAY=0x909090,
+		WHITE=0xe0e0e0,
+		GREEN=0x00ff00,
+		BLUE=0x00b0ff,
+		PURPLE=0xc050ff,
+		ORANGE=0xff8000,
+		RED=0xff0000,
+	}
+
+	export const QUALITY_COLOR:number[]=[COLOR.GRAY,COLOR.WHITE,COLOR.GREEN,COLOR.BLUE,COLOR.PURPLE,COLOR.ORANGE,COLOR.RED]
 
 	export enum Server{
 		SU_DI_CHUN_XIAO=137

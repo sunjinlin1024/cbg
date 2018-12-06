@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="CommonButtonLabelSkin" currentState="up" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" states="up,down,disabled">
+	<e:Image id="img_bg" horizontalCenter="0" verticalCenter="0" width.up="100%" height.up="100%" width.down="90%" height.down="90%" width="100%" height="100%" source.disabled="{bgGrayStr}" source="{bgImgName}" touchEnabled="true"/>
+	<e:Label id="lbl_label" text="" horizontalCenter="0" verticalCenter="0" textAlign="center" verticalAlign="middle" size="24"/>
+</e:Skin>

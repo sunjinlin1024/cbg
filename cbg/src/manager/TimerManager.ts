@@ -1,70 +1,92 @@
 
-interface TimerObject {
-    id: number;
-    callback: Function;
-    time:number;
-    interval:number;
-    repeatCount:number;
+interface timerObj{
+    call:Function,
+    callObj:any,
+    time:number,
+    interval:number,
+    repeatCount:number,
+    id:number
 }
 
-class TimerManager extends egret.EventDispatcher {
+class TimerManager {
     private _id:number=0;
+    private _timers:timerObj[];
 
-    private _timers:TimerObject[];
-    private _interval:number;
-    private _curTime=egret.getTimer()
-
+    // private _onPauseTime: number;
+    // private _bgPassTime: number;
+    private _lastTime:number
     public constructor(){
-        super()
         this._timers=[];
+        
+        // game.addEventListener(GameEvent.ON_GAME_PAUSE, this.onPause, this);
+        // game.addEventListener(GameEvent.ON_GAME_RESUME,this.onResume,this);
     }
 
-    public registTimer(callback:Function,interval:number,repeatCount:number=0):number{
-        this._timers.push({callback:callback,time:0,interval:interval,repeatCount:repeatCount,id:++this._id});
+    // private onPause(){
+    //     this._onPauseTime = egret.getTimer();
+    // }
+
+    // private onResume(){
+    //     this._bgPassTime = egret.getTimer() - this._onPauseTime;
+    // }
+
+    public regist(callback:Function,thisObj:any,interval:number,repeatCount:number=0):number{
+        this._timers.push({call:callback,callObj:thisObj,time:0,interval:interval,repeatCount:repeatCount,id:++this._id});
         if(this._timers.length==1){
-            this._interval=egret.setInterval(this.onTimer,this,1/30)
+            this._lastTime=egret.getTimer()
+            egret.Ticker.getInstance().register(this.onTimerCount,this)
         }
         return this._id;
     }
 
-    public unregistTimer(id:number){
-        for(var i=this._timers.length;i>=0;i--){
-            if(this._timers[i].id==id)
-            {
+    public unregist(id:number){
+        for(let i=this._timers.length-1;i>=0;i--){
+            if(this._timers[i].id==id){
                 this._timers.splice(i,1)
-                break
+                return true
             }
         }
+        return false
     }
 
-    private onTimer(){
-        let curTime=egret.getTimer()
-        let dt=(curTime-this._curTime)*0.001
-        this._curTime=curTime
-        var count=this._timers.length
-        var obj
-        for(var i=count-1;i>=0;i--){
+    public getTimerCount(){
+        if(!this._timers)return 0
+        return this._timers.length
+    }
+
+    public getTimers(){
+        return this._timers
+    }
+
+    private onTimerCount(){
+        let time=egret.getTimer()
+        let dt=(time-this._lastTime)*0.001
+        this._lastTime=time
+
+        let count=this._timers.length
+        let obj:timerObj
+        let removeIds=[]
+        for(let i=0;i<count;i++){
             obj=this._timers[i];
+            if(!obj)continue
             obj.time+=dt;
-            if(obj.time>=obj.interval)
-            {
-                obj.callback();
-                obj.time-=obj.interval;
-                if(obj.repeatCount>0)
-                {
-                    obj.repeatCount--;
-                    if(obj.repeatCount==0)
-                    {
-                        this._timers.splice(i,1)
+            if(obj.time>=obj.interval){
+                obj.time-=obj.interval
+                obj.call.apply(obj.callObj,[dt])
+                if(obj.repeatCount>0){
+                    obj.repeatCount--
+                    if(obj.repeatCount==0){
+                        removeIds.push(obj.id)
                     }
                 }
-
             }
         }
-        if(this._timers.length==0&&this._interval!=0)
-        {
-            egret.clearInterval(this._interval)
-            this._interval=0
+        for(let id of removeIds){
+            this.unregist(Number(id))
+        }
+
+        if(this._timers.length==0){
+            egret.Ticker.getInstance().unregister(this.onTimerCount,this)
         }
     }
 

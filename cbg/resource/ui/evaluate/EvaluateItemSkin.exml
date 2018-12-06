@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EvaluateItemSkin" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" height="32" width="1121">
+	<e:Image id="img_bg" width="1121" height="100%" includeInLayout="false" horizontalCenter="0" verticalCenter="0" source="common_panel_bg_1_png" x="0" y="0" scale9Grid="10,10,9,13"/>
+	<e:Group width="100%" horizontalCenter="0" verticalCenter="0">
+		<e:Label id="lbl_rate" text="1149%" x="50" y="76" size="24" verticalAlign="middle" lineSpacing="4" textAlign="center" width="80"/>
+		<e:Label id="lbl_gain" text="999999" x="60" y="86" size="24" verticalAlign="middle" lineSpacing="4" textAlign="center" width="85"/>
+		<e:Label id="lbl_price" text="999999" x="60" y="86" scaleX="1" scaleY="1" size="24" width="90" textAlign="center" verticalAlign="middle"/>
+		<e:Label id="lbl_area" text="浙江2区-苏堤春晓" x="70" y="96" scaleX="1" scaleY="1" size="24" width="200" textAlign="center" verticalAlign="middle"/>
+		<e:Label id="lbl_lv" text="155" x="80" y="106" size="24" width="50" textAlign="center" verticalAlign="middle"/>
+		<e:Label id="lbl_type" text="剑侠客-大唐官府" x="90" y="116" scaleX="1" scaleY="1" size="24" width="180" textAlign="center" verticalAlign="middle"/>
+		<e:Label id="lbl_extra" text="已飞升 成就:2764 总修:55 总宠修:40" x="100" y="126" scaleX="1" scaleY="1" size="24" width="400" textAlign="left" verticalAlign="middle"/>
+		<e:layout>
+			<e:HorizontalLayout/>
+		</e:layout>
+	</e:Group>
+</e:Skin>

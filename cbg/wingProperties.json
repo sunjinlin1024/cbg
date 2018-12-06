@@ -1,4 +1,6 @@
 {
+	"close": false,
+	"projectType": "egret",
 	"resourcePlugin":{
 		"configs":[{
 			"configPath":"resource/default.res.json",

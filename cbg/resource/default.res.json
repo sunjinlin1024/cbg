@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,common_white_png,common_black_png,common_empty_png,common_line_png",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,common_white_png,common_black_png,common_empty_png,common_line_png,common_blue_png,common_panel_bg_1_png,common_panel_bg_2_png",
 			"name": "preload"
 		}
 	],
@@ -30,16 +30,6 @@
 			"url": "assets/ItemRenderer/selected.png",
 			"type": "image",
 			"name": "selected_png"
-		},
-		{
-			"url": "assets/Panel/border.png",
-			"type": "image",
-			"name": "border_png"
-		},
-		{
-			"url": "assets/Panel/header.png",
-			"type": "image",
-			"name": "header_png"
 		},
 		{
 			"url": "assets/RadioButton/radiobutton_select_disabled.png",
@@ -122,39 +112,39 @@
 			"name": "track_sb_png"
 		},
 		{
-			"url": "assets/bg.jpg",
+			"url": "assets/Panel/common_white.png",
 			"type": "image",
-			"name": "bg_jpg"
+			"name": "common_white_png"
 		},
 		{
-			"url": "assets/egret_icon.png",
+			"url": "assets/Panel/common_black.png",
 			"type": "image",
-			"name": "egret_icon_png"
+			"name": "common_black_png"
 		},
 		{
-			"name": "description_json",
-			"type": "json",
-			"url": "config/description.json"
+			"url": "assets/Panel/common_empty.png",
+			"type": "image",
+			"name": "common_empty_png"
 		},
 		{
-			"name": "common_white_png",
+			"url": "assets/Panel/common_line.png",
 			"type": "image",
-			"url": "assets/Panel/common_white.png"
+			"name": "common_line_png"
 		},
 		{
-			"name": "common_black_png",
+			"url": "assets/Panel/common_blue.png",
 			"type": "image",
-			"url": "assets/Panel/common_black.png"
+			"name": "common_blue_png"
 		},
 		{
-			"name": "common_empty_png",
+			"name": "common_panel_bg_1_png",
 			"type": "image",
-			"url": "assets/Panel/common_empty.png"
+			"url": "assets/Panel/common_panel_bg_1.png"
 		},
 		{
-			"name": "common_line_png",
+			"name": "common_panel_bg_2_png",
 			"type": "image",
-			"url": "assets/Panel/common_line.png"
+			"url": "assets/Panel/common_panel_bg_2.png"
 		}
 	]
 }

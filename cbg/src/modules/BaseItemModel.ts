@@ -142,6 +142,22 @@ class BaseItemModel extends BaseModel{
 		return ""
 	}
 
+	public get typeDesc():string{
+		return this.typeName
+	}
+
+	public getTypeColor():number{
+		return Const.COLOR.WHITE
+	}
+
+	public getLevelColor():number{
+		return Const.COLOR.WHITE
+	}
+
+	public get serverInfo():string{
+		return this.area_name+"-"+this.server_name
+	}
+
 	public initByData(data:any){
 		super.initByData(data)
 		if(this.other_info&&this.other_info!=""){
@@ -165,6 +181,10 @@ class BaseItemModel extends BaseModel{
     }
 
 	public isHighValue(income:number,incomeRate:number){
+		return false
+	}
+
+	public isNoticeValue(income:number,incomeRate){
 		return false
 	}
 

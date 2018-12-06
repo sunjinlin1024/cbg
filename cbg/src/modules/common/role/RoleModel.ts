@@ -107,6 +107,9 @@ interface IRoleDesc extends IDesc{
 	iHp_Max:number,
 }
 class RoleModel extends BaseItemModel{
+
+	public ava_id:number
+
     public static get_role_kind_name(icon) {
         var kindid = icon;
         if (icon > 200) {
@@ -114,7 +117,8 @@ class RoleModel extends BaseItemModel{
         } else {
             kindid = ((icon - 1) % 12 + 1);
         }
-        return config.role[kindid].name;
+		return kindid
+        // return config.role[kindid].name;
     }
 
     public static get_role_iconid(type_id) {
@@ -128,6 +132,8 @@ class RoleModel extends BaseItemModel{
         }
         return type_id;
     }
+
+	
 
     public get descInfo():IRoleDesc{
         return this.desc0 as IRoleDesc
@@ -143,21 +149,89 @@ class RoleModel extends BaseItemModel{
             let desc=data.desc.replace(/\(\[/g,"{").replace(/\(\{/g,"[").replace(/\,\]\)/g,"}").replace(/\,\}\)/g,"]").replace(/\]\)/g,"}").replace(/\}\)/g,"]")
             this.desc0=NJson.decode(desc)[0]
         }
+		this.ava_id=RoleModel.get_role_kind_name(RoleModel.get_role_iconid(this.descInfo.iIcon))
     }
 
 	public isHighValue(income:number,incomeRate:number){
 		return income*incomeRate>250&&income>400&&incomeRate>0.4
 	}
 
+	public isNoticeValue(income:number,incomeRate){
+		return incomeRate>=0.8||(income>1200&&incomeRate>0.5)
+	}
+
     public get typeName():string{
-        return RoleModel.get_role_kind_name(RoleModel.get_role_iconid(this.descInfo.iIcon))
+		return config.role[this.ava_id].name
+        // return RoleModel.get_role_kind_name(RoleModel.get_role_iconid(this.descInfo.iIcon))
     }
 
     public get name():string{
 		return this.descInfo.cName
 	}
 
+	public get typeDesc():string{
+		return this.typeName+"-"+config.school[this.descInfo.iSchool].name
+	}
+
+	public getLevelColor():number{
+		if(this.descInfo.i3FlyLv>0){
+			return Const.QUALITY_COLOR[4+Math.min(3,Math.floor(this.descInfo.i3FlyLv/3))]
+		}
+		return Const.QUALITY_COLOR[this.descInfo.iZhuanZhi+1]
+	}
+
+	public getTypeColor():number{
+		let colorQuality=6//新女
+		switch(this.ava_id){
+			case 3:
+			case 4:
+			case 7:
+			case 8:
+			case 11:
+			case 12://女
+				colorQuality=5
+				break
+			case 201:
+			case 205:
+			case 209:
+				colorQuality=4
+				break//新男
+			case 6:
+			case 5:
+			case 9://便宜男
+				colorQuality=3
+				break
+			case 1:
+			case 2:
+			case 10://贵男
+				colorQuality=2
+				break
+			default:
+				colorQuality=6
+				break
+		}
+
+		
+
+		let schoolId=config.school[this.descInfo.iSchool].id
+		switch(schoolId){
+			case 1:
+			case 9:
+			case 12:
+				colorQuality-=2
+				break
+			case 2:
+			case 4:
+			case 14:
+			case 17:
+				colorQuality-=1
+				break
+
+		}
+		return Const.QUALITY_COLOR[colorQuality]
+	}
+
     public toString():string{
-        return "["+this.area_name+"-"+this.server_name+"]["+this.name+"(Lv."+this.level+")]["+this.typeName+"]["+config.school[this.descInfo.iSchool].name+"]["+this.other_info0.summary+"]"
+		return "["+this.serverInfo+"]["+this.name+"(Lv."+this.level+")]["+this.typeName+"]["+config.school[this.descInfo.iSchool].name+"]["+this.other_info0.summary+"]"
     }
 }

@@ -1,4 +1,4 @@
-class CommonButton extends eui.Button {
+class CommonButtonIcon extends eui.Button {
     public bgImgName: string = "";
     public bgGrayStr: string = "";
     public customData: string = "";

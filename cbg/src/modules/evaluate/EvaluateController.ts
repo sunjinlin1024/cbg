@@ -6,9 +6,21 @@ module evaluator{
 }
 
 class EvaluateController extends BaseController{
+
+    public static ON_UPDATE_SHOP_LIST:string="ON_UPDATE_SHOP_LIST"
+
     private _curPageIndex:number=1
     private _maxPage:number=0
     private _flushComplete:boolean=false
+    private _model:EvaluateModel=new EvaluateModel()
+
+    protected createView():BaseView{
+        return new EvaluateView();
+    }
+
+    public get model():EvaluateModel{
+        return this._model
+    }
 
     public show(param?:any):boolean{
         let result=super.show()
@@ -17,6 +29,7 @@ class EvaluateController extends BaseController{
     }
 
     private onNoticeQQ(msg:string,index:number=0){
+        
         console.log(msg)
         if(index>=0)return
         if(index>1){
@@ -61,6 +74,8 @@ class EvaluateController extends BaseController{
         })
     }
 
+
+
     public onGetData(info){
         if(!info.status||info.status!=1){
             this.onNoticeQQ("[ERROR]请求失败:"+info.status)
@@ -78,18 +93,18 @@ class EvaluateController extends BaseController{
                 if(item.isHighValue(income,incomeRate)){
                     has=true
                     let incomeVal=income*incomeRate
-                    // if(!this._valuableList[item.equipid]||this._valuableList[item.equipid]!=incomeVal){
-                    //     this._valuableList[item.equipid]=incomeVal
                     let noticeStr="[利润:"+String(income)+"("+Math.floor(incomeRate*100)+"%)][价格:"+price+"]"+item.toString()+"["+HttpUtil.initRoleDetailUrl(item.server_id,item.eid)+"]"
                     console.log(noticeStr)
-                    if(incomeRate>=0.8||(income>1000&&incomeRate>0.5)){
-                        this.onNoticeQQ(noticeStr)
+                    this._model.appendNotice(item,incomeRate,income)
+                    if(item.isNoticeValue(income,incomeRate)){
+                        // this.onNoticeQQ(noticeStr)
                     }
-                    // }
                 }
             }
         }
-        
+        if(has){
+            this.dispatchViewEvent(new GameEvent(EvaluateController.ON_UPDATE_SHOP_LIST))
+        }  
         if(this._curPageIndex>=this._maxPage){
             this._flushComplete=true
             console.log("-------------------history flush complete-------------------")
@@ -98,13 +113,13 @@ class EvaluateController extends BaseController{
         }
         if(!this._flushComplete){
             ++this._curPageIndex
-            game.timerManager.registTimer(()=>{
+            game.timerManager.regist(()=>{
                 this.reqInfo(this._curPageIndex)
-            },3.5,1)
+            },this,3.5,1)
         }else{                                               
-            game.timerManager.registTimer(()=>{
+            game.timerManager.regist(()=>{
                 this.reqInfo(1)
-            },5,1)
+            },this,5,1)
         }
     }
 }
